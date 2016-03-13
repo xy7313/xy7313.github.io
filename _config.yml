@@ -1,7 +1,7 @@
 # Site settings
 title: Xiaolu Yang's CV 
 description: Xiaolu Yang's CV
-favicon: http://postimg.org/image/y9x8mtm5t/
+favicon: /xy7313.github.io/assets/img/avatar.JPG
 baseurl: http://xy7313.github.io/
 url: http://xy7313.github.io/
 rss_url: /resumecard/pages/atom.xml
@@ -23,7 +23,7 @@ author:
   github: xy7313
   linkedin: Xiaolu Yang
   twitter: 103393089
-  gavatar: http://postimg.org/image/y9x8mtm5t/
+  gavatar: /xy7313.github.io/assets/img/avatar.JPG
   stackoverflow:
 #  stackoverflow: 4582127
   workHistory:
