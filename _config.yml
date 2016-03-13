@@ -1,7 +1,7 @@
 # Site settings
 title: Xiaolu Yang's CV 
 description: Xiaolu Yang's CV
-favicon: img/avatar.JPG
+favicon: img/avatar.jpg
 baseurl: http://xy7313.github.io/
 url: http://xy7313.github.io/
 rss_url: /resumecard/pages/atom.xml
@@ -19,11 +19,11 @@ author:
   address: Rutgers-New Brunswick
   email: path20110729@gmail.com
   link: https://github.com/xy7313
-  weibo:
-  github: Xiaolu Yang
+  weibo: xy7313
+  github: xy7313
   linkedin: Xiaolu Yang
-  twitter: Xiaolu Yang
-  gavatar: img/avatar.JPG
+  twitter: 103393089
+  gavatar: img/avatar.jpg
   stackoverflow:
 #  stackoverflow: 4582127
   workHistory:
