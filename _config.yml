@@ -14,16 +14,16 @@ exclude: [vendor]
 
 # Author settings
 author:
-  name: Dong Liang
-  title: Java Developer
-  address: Auckland, New Zealand
-  email: dongg.liang@gmail.com
-  link: http://ddbullfrog.com
+  name: Xiaolu Yang
+  title: Graduate Student
+  address: Rutgers-New Brunswick
+  email: path20110729@gmail.com
+  link: https://github.com/xy7313
   weibo:
-  github: ddbullfrog
-  linkedin: ddbullfrog
-  twitter: ddbullfrog
-  gavatar: /resumecard/assets/img/avatar.JPG
+  github: Xiaolu Yang
+  linkedin: Xiaolu Yang
+  twitter: Xiaolu Yang
+  gavatar: img/avatar.JPG
   stackoverflow:
 #  stackoverflow: 4582127
   workHistory:
