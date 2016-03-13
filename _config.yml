@@ -1,7 +1,7 @@
 # Site settings
 title: Xiaolu Yang's CV 
 description: Xiaolu Yang's CV
-favicon: img/avatar.jpg
+favicon: http://postimg.org/image/y9x8mtm5t/
 baseurl: http://xy7313.github.io/
 url: http://xy7313.github.io/
 rss_url: /resumecard/pages/atom.xml
