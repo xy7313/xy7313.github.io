@@ -2,7 +2,7 @@
 title: Xiaolu Yang's CV 
 description: Xiaolu Yang's CV
 favicon: /xy7313.github.io/assets/img/avatar.JPG
-baseurl: http://xy7313.github.io/
+baseurl: 
 url: http://xy7313.github.io/
 rss_url: /resumecard/pages/atom.xml
 google_analytics: UA-63653234-1
@@ -40,7 +40,7 @@ author:
       title: Consulting
       started: 2014
       duration: (2014 - 2014)
-      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
+      description: I 11111111111111111am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
     - work3:
       company: Oracle (Intern-group work inside of college)
       location: TIANJIN, CHINA
