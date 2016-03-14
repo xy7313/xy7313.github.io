@@ -91,6 +91,16 @@ h3, h4, h5, h6 {
   color:#494949;
 }
 
+canvas {
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    cursor: pointer;
+}
+
 a {
   color:#39c;
   text-decoration:none;
