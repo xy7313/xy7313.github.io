@@ -2,8 +2,8 @@
 title: Xiaolu Yang's CV 
 description: Xiaolu Yang's CV
 favicon: /xy7313.github.io/assets/img/avatar.JPG
-baseurl: http://xy7313.github.io/
-url: http://xy7313.github.io/
+baseurl: 
+url: https://xy7313.github.io/
 rss_url: /resumecard/pages/atom.xml
 google_analytics: UA-63653234-1
 
@@ -19,10 +19,10 @@ author:
   address: Rutgers-New Brunswick, US
   email: path20110729@gmail.com
   link: https://github.com/xy7313
-  weibo: 
+  weibo:
   github: xy7313
-  linkedin: Xiaolu Yang
-  twitter: 
+  linkedin: 
+  twitter: 103393089
   gavatar: /xy7313.github.io/assets/img/avatar.JPG
   stackoverflow:
 #  stackoverflow: 4582127
@@ -40,22 +40,14 @@ author:
       title: Consulting
       started: 2014
       duration: (2014 - 2014)
-      description: I 11111111111111111am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
+      description: As a consulting my resposibility is to ommunicate with clients to solve their problems about our product.I learned a lot of database(of clients) management and SQL. Also our group got the top2 bonus and won my own bonus as an excellent fresher. 
     - work3:
       company: Oracle (Intern-group work inside of college)
       location: TIANJIN, CHINA
       title: NETWROK Engineer(ENTRY LEVEL)
       started: 2013
       duration: (2013 - 2014)
-      description: I am not a description.
-    - work4:
-      company: Ambow Ltd (Intern-group work inside of college)
-      location: TIANJIN, CHINA
-      title: Software Programmer(ENTRY LEVEL)
-      started: 2012
-      duration: (2012 - 2012)
-      description: 
-  
+      description: Our group designed and Set up a frame relay network for a industry factory. Learned how to set routers and contact them with OSPF/RIP such network protocols. Out group got 93/100 (average) in Enterprise Project Practice1-5 at last, which is really a great grades. 
   educationHistory:
     - education1:
       organization: Tianjin Polytechnic University
@@ -64,7 +56,7 @@ author:
       major: Network Engineering
       started: 2010
       duration: (2010 - 2014)
-      description: Coursework: C Programming Language; Java Programming Language; Operating Systems; Data Structure; ASP.NET Programming; Object-orient Programming(java); Principle of Databases; Computer Architecture...</br>GPA 83 of 100;(93 in practice training and top 8% (8th/98) in the latest three years) 
+      description: Coursework including-- C Programming Language; Java Programming Language; Operating Systems; Data Structure; ASP.NET Programming; Object-orient Programming(java); Principle of Databases; Computer Architecture...</br>GPA 83 of 100;(93 in practice training and top 8% (8th/98) in the latest three years).
   languages:
     - language1:
       name: Chinese
@@ -87,7 +79,7 @@ author:
       percentage: 80%
     - skill4:
       name: Java/Java EE
-      percentage: 80%
+      percentage: 70%
     - skill5:
-      name: Linux
+      name: linux
       percentage: 80%
