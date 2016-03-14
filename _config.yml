@@ -33,7 +33,7 @@ author:
       title: Testing Engineer
       started: 2014
       duration: (2014 - 2015)
-      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
+      description: I worked for the website www.sogou.com. My test job need to design test cases; run the test cases with proper nginx and resin; also write some automatic scripts for testing until the front-end of the website works well. During the half year I worked there. I learn lots of Linux and Front-end technics. such as HTML/CSS/JS; XML/XSD/XSL/XSLT.
     - work2:
       company: Beijing DaShengZhiXing Technology Ltd
       location: BEIJING, CHINA
@@ -62,9 +62,9 @@ author:
       location: TIANJIN, CHINA
       degree: Bachelor
       major: Network Engineering
-      started: 2005
+      started: 2010
       duration: (2010 - 2014)
-      description: Coursework: C Programming Language; Java Programming Language; Operating Systems; Data Structure; ASP.NET Programming; Object-orient Programming(java); Principle of Databases; Computer Architecture...</br>GPA 83 of 100, 93 in practice training, and top 8% (8th/98) in the latest three years
+      description: Coursework: C Programming Language; Java Programming Language; Operating Systems; Data Structure; ASP.NET Programming; Object-orient Programming(java); Principle of Databases; Computer Architecture...</br>GPA 83 of 100;(93 in practice training and top 8% (8th/98) in the latest three years) 
   languages:
     - language1:
       name: Chinese
