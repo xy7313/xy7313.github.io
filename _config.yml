@@ -1,9 +1,9 @@
 # Site settings
-title: Xiaolu Yang's CV 
-description: Xiaolu Yang's CV
-favicon: /xy7313.github.io/assets/img/avatar.JPG
-baseurl: 
-url: http://xy7313.github.io/
+title: Dong Liang's CV 
+description: ddbullfrog's CV
+favicon: /resumecard/assets/img/avatar.JPG
+baseurl: https://ddbullfrog.github.io/resumecard
+url: https://ddbullfrog.github.io/resumecard
 rss_url: /resumecard/pages/atom.xml
 google_analytics: UA-63653234-1
 
@@ -14,57 +14,49 @@ exclude: [vendor]
 
 # Author settings
 author:
-  name: Xiaolu Yang
-  title: Graduate Student
-  address: Rutgers-New Brunswick
-  email: path20110729@gmail.com
-  link: https://github.com/xy7313
-  weibo: xy7313
-  github: xy7313
-  linkedin: Xiaolu Yang
-  twitter: 103393089
-  gavatar: /xy7313.github.io/assets/img/avatar.JPG
+  name: Dong Liang
+  title: Java Developer
+  address: Auckland, New Zealand
+  email: dongg.liang@gmail.com
+  link: http://ddbullfrog.com
+  weibo:
+  github: ddbullfrog
+  linkedin: ddbullfrog
+  twitter: ddbullfrog
+  gavatar: /resumecard/assets/img/avatar.JPG
   stackoverflow:
 #  stackoverflow: 4582127
   workHistory:
     - work1:
-      company: Beyondsoft Technology Ltd
-      location: BEIJING, CHINA
-      title: Testing Engineer
+      company: Finzsoft Solutions Ltd
+      location: Auckland, New Zealand
+      title: Java Developer
       started: 2014
-      duration: (2014 - 2015)
-      description: I worked for the website www.sogou.com. My test job need to design test cases; run the test cases with proper nginx and resin; also write some automatic scripts for testing until the front-end of the website works well. During the half year I worked there. I learn lots of Linux and Front-end technics. such as HTML/CSS/JS; XML/XSD/XSL/XSLT.
+      duration: (2014 - Present)
+      description: 1111111111111 description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
     - work2:
-      company: Beijing DaShengZhiXing Technology Ltd
-      location: BEIJING, CHINA
-      title: Consulting
-      started: 2014
-      duration: (2014 - 2014)
-      description: I 11111111111111111am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
-    - work3:
-      company: Oracle (Intern-group work inside of college)
-      location: TIANJIN, CHINA
-      title: NETWROK Engineer(ENTRY LEVEL)
-      started: 2013
-      duration: (2013 - 2014)
-      description: I am not a description.
-    - work4:
-      company: Ambow Ltd (Intern-group work inside of college)
-      location: TIANJIN, CHINA
-      title: Software Programmer(ENTRY LEVEL)
+      company: Agfa HealthCare
+      location: Shanghai, China
+      title: Java Developer
       started: 2012
-      duration: (2012 - 2012)
-      description: 
-  
+      duration: (2012 - 2014)
+      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
+    - work3:
+      company: Citigroup Services and Technology (China) Limited
+      location: Shanghai, China
+      title: Java Developer
+      started: 2009
+      duration: (2009 - 2012)
+      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
   educationHistory:
     - education1:
-      organization: Tianjin Polytechnic University
-      location: TIANJIN, CHINA
+      organization: Northeastern University
+      location: Shenyang, China
       degree: Bachelor
-      major: Network Engineering
-      started: 2010
-      duration: (2010 - 2014)
-      description: Coursework: C Programming Language; Java Programming Language; Operating Systems; Data Structure; ASP.NET Programming; Object-orient Programming(java); Principle of Databases; Computer Architecture...</br>GPA 83 of 100;(93 in practice training and top 8% (8th/98) in the latest three years) 
+      major: Software Engineering
+      started: 2005
+      duration: (2005 - 2009)
+      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
   languages:
     - language1:
       name: Chinese
@@ -86,8 +78,8 @@ author:
       name: JavaScript
       percentage: 80%
     - skill4:
-      name: Java/Java EE
+      name: AngularJS
       percentage: 80%
     - skill5:
-      name: Linux
-      percentage: 80%
+      name: Java/Java EE
+      percentage: 90%
