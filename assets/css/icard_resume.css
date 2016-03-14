@@ -11,6 +11,7 @@ canvas {
     right: 0;
     top: 0;
     cursor: pointer;
+    z-index: 100;
 }
 a {
     color: #333;
