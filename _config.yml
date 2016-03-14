@@ -55,7 +55,22 @@ author:
       started: 2013
       duration: (2013 - 2014)
       description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
-
+ projectHistory:
+    - work1:
+      company: Beyondsoft Technology Ltd
+      location: BEIJING, CHINA
+      title: Testing Engineer
+      started: 2014
+      duration: (2014 - 2015)
+      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
+    - work2:
+      company: Beijing DaShengZhiXing Technology Ltd
+      location: BEIJING, CHINA
+      title: Consulting
+      started: 2014
+      duration: (2014 - 2014)
+      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
+    
   educationHistory:
     - education1:
       organization: Tianjin Polytechnic University
