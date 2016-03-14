@@ -42,35 +42,20 @@ author:
       duration: (2014 - 2014)
       description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
     - work3:
-      company: Oracle (Intern(group work inside of college)
+      company: Oracle (Intern-group work inside of college)
       location: TIANJIN, CHINA
       title: NETWROK Engineer(ENTRY LEVEL)
       started: 2013
       duration: (2013 - 2014)
       description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
     - work4:
-      company: Oracle (Intern(group work inside of college)
+      company: Ambow Ltd (Intern-group work inside of college)
       location: TIANJIN, CHINA
-      title: NETWROK Engineer(ENTRY LEVEL)
-      started: 2013
-      duration: (2013 - 2014)
+      title: Software Programmer(ENTRY LEVEL)
+      started: 2012
+      duration: (2012 - 2012)
       description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
- projectHistory:
-    - work1:
-      company: Beyondsoft Technology Ltd
-      location: BEIJING, CHINA
-      title: Testing Engineer
-      started: 2014
-      duration: (2014 - 2015)
-      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
-    - work2:
-      company: Beijing DaShengZhiXing Technology Ltd
-      location: BEIJING, CHINA
-      title: Consulting
-      started: 2014
-      duration: (2014 - 2014)
-      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
-    
+  
   educationHistory:
     - education1:
       organization: Tianjin Polytechnic University
@@ -79,7 +64,7 @@ author:
       major: Network Engineering
       started: 2005
       duration: (2010 - 2014)
-      description: I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description. I am not a description. I am not description.I am not description.
+      description: Coursework: C Programming Language; Java Programming Language; Operating Systems; Data Structure; ASP.NET Programming; Object-orient Programming(java); Principle of Databases; Computer Architecture...</br>GPA 83 of 100, 93 in practice training, and top 8% (8th/98) in the latest three years
   languages:
     - language1:
       name: Chinese
