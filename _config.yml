@@ -1,85 +1,55 @@
-# Site settings
-title: Xiaolu Yang's CV 
-description: Xiaolu Yang's CV
-favicon: /xy7313.github.io/assets/img/avatar.JPG
-baseurl: 
-url: https://xy7313.github.io/
-rss_url: /resumecard/pages/atom.xml
-google_analytics: UA-63653234-1
+# Basic
+title: Xiaolu Yang
+subtitle: 
+welcome_message: Welcome to my protfolio!
+description: Graduate student in Rutgers-New Brunswick
+creator: <a href="http://xy7313.github.io/">xy7313</a>
 
-# Build settings
-markdown: kramdown
+url: "http://xy7313.github.io"
 
-exclude: [vendor]
+permalink: /:year/:month/:title/
 
-# Author settings
-author:
-  name: Xiaolu Yang
-  title: Graduate Student
-  address: Rutgers-New Brunswick, US
-  email: path20110729@gmail.com
-  link: https://github.com/xy7313
-  weibo:
-  github: xy7313
-  linkedin: 
-  twitter: 103393089
-  gavatar: /xy7313.github.io/assets/img/avatar.JPG
-  stackoverflow:
-#  stackoverflow: 4582127
-  workHistory:
-    - work1:
-      company: Beyondsoft Technology Ltd
-      location: BEIJING, CHINA
-      title: Testing Engineer
-      started: 2014
-      duration: (2014 - 2015)
-      description: I worked for the website www.sogou.com. My test job need to design test cases; run the test cases with proper nginx and resin; also write some automatic scripts for testing until the front-end of the website works well. During the half year I worked there. I learn lots of Linux and Front-end technics. such as HTML/CSS/JS; XML/XSD/XSL/XSLT.
-    - work2:
-      company: Beijing DaShengZhiXing Technology Ltd
-      location: BEIJING, CHINA
-      title: Consulting
-      started: 2014
-      duration: (2014 - 2014)
-      description: As a consulting my resposibility is to ommunicate with clients to solve their problems about our product.I learned a lot of database(of clients) management and SQL. Also our group got the top2 bonus and won my own bonus as an excellent fresher. 
-    - work3:
-      company: Oracle (Intern-group work inside of college)
-      location: TIANJIN, CHINA
-      title: NETWROK Engineer(ENTRY LEVEL)
-      started: 2013
-      duration: (2013 - 2014)
-      description: Our group designed and Set up a frame relay network for a industry factory. Learned how to set routers and contact them with OSPF/RIP such network protocols. Out group got 93/100 (average) in Enterprise Project Practice1-5 at last, which is really a great grades. 
-  educationHistory:
-    - education1:
-      organization: Tianjin Polytechnic University
-      location: TIANJIN, CHINA
-      degree: Bachelor
-      major: Network Engineering
-      started: 2010
-      duration: (2010 - 2014)
-      description: Coursework including-- C Programming Language; Java Programming Language; Operating Systems; Data Structure; ASP.NET Programming; Object-orient Programming(java); Principle of Databases; Computer Architecture...</br>GPA 83 of 100;(93 in practice training and top 8% (8th/98) in the latest three years).
-  languages:
-    - language1:
-      name: Chinese
-      proficiency: Native
-    - language2:
-      name: English
-      proficiency: Professional
-    - language3:
-      name: Japanese
-      proficiency: Limit
-  programmingSkills:
-    - skill1:
-      name: HTML
-      percentage: 100%
-    - skill2:
-      name: Bootstrap
-      percentage: 90%
-    - skill3:
-      name: JavaScript
-      percentage: 80%
-    - skill4:
-      name: Java/Java EE
-      percentage: 70%
-    - skill5:
-      name: linux
-      percentage: 80%
+# Format
+highlighter: rouge
+# markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript", tables]
+
+# supported colors: blue, green, purple, red, orange or slate. If you need clear, leave it empty.
+cover_color: 
+
+# The blog button should not be removed.
+blog_button:
+    title: Blog
+    description: Visit blog
+
+# Navigation buttons in the front page.
+nav:
+    - {title: Resume, description: My Resume, url: 'http://xy7313.github.io/resume.html'}
+    # - {title: Another Button, description: A button, url: 'http://example.com'}
+    - {title: About, description: About, url: 'http://xy7313.github.io/about.html#/bored'}
+   
+
+
+# Pagination
+gems: [jekyll-paginate]
+paginate: 10
+paginate_path: "page/:num/"
+
+# Comment
+comment:
+    disqus: vno-jekyll
+    # duoshuo: 
+    
+# Social
+social:
+    weibo: 
+    github: xy7313
+    twitter: 103393089
+    gplus: 
+    mail: path20110729@gmail.com
+
+# Google Analytics
+ga:
+    # id: your_ga_id
+    # host: your_host
