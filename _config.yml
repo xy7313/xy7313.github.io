@@ -28,7 +28,7 @@ author:
     github:    https://github.com/xy7313
     # facebook:  none
     # twitter:   none
-    # weibo:     none
+    # weibo:     http://www.jianshu.com/u/a0278d80ab76
     # email:     path20110729@gmail.com
 
 # Navigation (2nd level links supported)
@@ -43,8 +43,8 @@ nav:
     - 'http://xy7313.github.io/about.html#/bored'
   Resume: 
     - 'http://xy7313.github.io/resume.html'
-  Github Project: 
-    - 'https://github.com/xy7313'
+  Jianshu Blog: 
+    - 'http://www.jianshu.com/u/a0278d80ab76'
 
 # Where are tags and categories displayed
 tag_page: '/blog/tags/'
