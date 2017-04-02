@@ -40,7 +40,7 @@ nav:
     - { Categories: '/blog/categories/' }
     - { Tags: '/blog/tags/' }
   About:          
-    - 'http://xy7313.github.io/about.html#/bored'
+    - '/about/'
   Resume: 
     - 'http://xy7313.github.io/resume.html'
   Jianshu Blog: 
