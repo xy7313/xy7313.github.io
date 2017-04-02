@@ -22,14 +22,14 @@ permalink: pretty
 author:
   name: xy
   description: xy's blog
-  gravatar: 7f9673f1bc034bad53a37df330910b58 # md5 hash of your email address, you can get one in http://en.gravatar.com/
+  gravatar: d4d8df06f6fa9dcbe4dc845db3c84a7c # md5 hash of your email address, you can get one in http://en.gravatar.com/
   contact:
-    linkedin:  www.linkedin.com/in/xiaolu-yang
+    linkedin:  https://www.linkedin.com/in/xiaolu-yang
     github:    https://github.com/xy7313
     # facebook:  none
     # twitter:   none
     # weibo:     none
-    # email:     kenshinsyrup@gmail.com
+    # email:     path20110729@gmail.com
 
 # Navigation (2nd level links supported)
 nav:
@@ -51,9 +51,9 @@ tag_page: '/blog/tags/'
 category_page: '/blog/categories/'
 
 hero:
-  image: /public/img/skyrim.jpg
+  image: /public/img/background-cover.jpg
 
 # Puglins
 mathjax: true # whether support mathjax
 google_analytics_token: 'UA-91673465-1' # leave blank if you don't want google analytics
-disqus_short_name: 'kenshin' # leave blank if you don't want disqus
+disqus_short_name: 'xy' # leave blank if you don't want disqus
