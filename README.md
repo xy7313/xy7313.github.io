@@ -1,5 +1,5 @@
+## About
 
+使用Jekyll制作的Gihub的个人博客页面
 
-#Jekyll
-See my [homepage](http://xy7313.github.io/)
-fork from [onevcat](https://github.com/onevcat)
+模版来自于[Codinfox Lanyon](http://jekyllthemes.org/themes/codinfox-lanyon/)

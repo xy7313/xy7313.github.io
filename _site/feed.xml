@@ -1,98 +1,51 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Xiaolu Yang</title>
-    <description>Graduate student in Rutgers-New Brunswick</description>
-    <link>http://xy7313.github.io/</link>
-    <atom:link href="http://xy7313.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 15 Mar 2016 02:27:21 -0400</pubDate>
-    <lastBuildDate>Tue, 15 Mar 2016 02:27:21 -0400</lastBuildDate>
-    <generator>Jekyll v3.1.1</generator>
-    
-      <item>
-        <title>Hello World - Vno</title>
-        <description>&lt;h4 id=&quot;whats-this&quot;&gt;What’s this&lt;/h4&gt;
+<?xml version="1.0" encoding="utf-8"?><?xml-stylesheet type="text/xml" href="http://localhost:4000/feed.xslt.xml"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.4.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-02-09T18:38:59-05:00</updated><id>http://localhost:4000//</id><title type="html">Kenshin</title><author><name>Kenshin</name></author><entry><title type="html">Hello World!</title><link href="http://localhost:4000/other/2017/02/09/Hello-World/" rel="alternate" type="text/html" title="Hello World!" /><published>2017-02-09T00:00:00-05:00</published><updated>2017-02-09T00:00:00-05:00</updated><id>http://localhost:4000/other/2017/02/09/Hello-World</id><content type="html" xml:base="http://localhost:4000/other/2017/02/09/Hello-World/">&lt;h2 id=&quot;博客页面搭建完毕&quot;&gt;博客页面搭建完毕&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/onevcat/vno-jekyll&quot;&gt;Vno Jekyll&lt;/a&gt; is a theme for &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;. It is a port of my Ghost theme &lt;a href=&quot;https://github.com/onevcat/vno&quot;&gt;vno&lt;/a&gt;, which is originally developed from &lt;a href=&quot;https://github.com/daleanthony/uno&quot;&gt;Dale Anthony’s Uno&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;最近&lt;del&gt;又&lt;/del&gt;比较浮躁，刚好发现自己去年测试Jekyll时候搭建的Github个人页面不怎么好看，于是想重新弄一个，以后也算有个地方写东西&lt;/p&gt;
 
-&lt;h4 id=&quot;usage&quot;&gt;Usage&lt;/h4&gt;
+&lt;p&gt;期间&lt;del&gt;又&lt;/del&gt;踩到了坑，这里随便记录下&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bash
-$ git clone https://github.com/onevcat/vno-jekyll.git your_site
-$ cd your_site
-$ bundler install
-$ bundler exec jekyll serve
-&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;使用Jekyll搭建Github个人页面的帖子满世界都是，肯定不用我重复了，毕竟我也是菜&lt;/p&gt;
 
-&lt;p&gt;Your site with &lt;code class=&quot;highlighter-rouge&quot;&gt;Vno Jekyll&lt;/code&gt; enabled should be accessible in http://127.0.0.1:4000.&lt;/p&gt;
+&lt;p&gt;OK，直接说遇到的问题&lt;/p&gt;
 
-&lt;p&gt;For more information about Jekyll, please visit &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll’s site&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;could-not-locate-gemfile-or-bundle-directory&quot;&gt;Could not locate Gemfile or .bundle/ directory&lt;/h3&gt;
 
-&lt;h4 id=&quot;configuration&quot;&gt;Configuration&lt;/h4&gt;
+&lt;p&gt;这个问题的来历比较神奇&lt;/p&gt;
 
-&lt;p&gt;All configuration could be done in &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;. Remember you need to restart to serve the page when after changing the config file. Everything in the config file should be self-explanatory.&lt;/p&gt;
+&lt;p&gt;首先，我前端内容并不是特别熟悉，所以博客模版也是直接从&lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Jekyll Themes&lt;/a&gt;找的，这里我使用的是&lt;a href=&quot;http://jekyllthemes.org/themes/codinfox-lanyon/&quot;&gt;Codinfox Lanyon
+&lt;/a&gt;模版，其源码仓库地址是&lt;a href=&quot;https://github.com/codinfox/codinfox-lanyon&quot;&gt;这里&lt;/a&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;background-image-and-avatar&quot;&gt;Background image and avatar&lt;/h4&gt;
+&lt;p&gt;由于种种原因，我没有直接fork上面的仓库，而是donwload之后自行修改成自己喜欢的样子，改完之后push到了我自己的Github&lt;a href=&quot;https://github.com/kenshinsyrup/kenshinsyrup.github.io&quot;&gt;仓库&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;You could replace the background and avatar image in &lt;code class=&quot;highlighter-rouge&quot;&gt;assets/images&lt;/code&gt; folder to change them.&lt;/p&gt;
+&lt;p&gt;但是，转折来了，在我把模版改成喜欢对样子，本地试图查看效果时，&lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec jekyll serve&lt;/code&gt;命令提示错误&lt;code class=&quot;highlighter-rouge&quot;&gt;Could not locate Gemfile or .bundle/ directory&lt;/code&gt;&lt;/p&gt;
 
-&lt;h4 id=&quot;sites-using-vno&quot;&gt;Sites using Vno&lt;/h4&gt;
+&lt;p&gt;Google了半天，遇到了很多同样有该错误的人，但各种解决方案都不适合我这里的情况。最后终于发现，原因是模版代码里没有&lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile.lock&lt;/code&gt;两个文件ORZ&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://onevcat.com&quot;&gt;My blog&lt;/a&gt; is using &lt;code class=&quot;highlighter-rouge&quot;&gt;Vno Jekyll&lt;/code&gt; as well, you could see how it works in real. There are some other sites using the same theme. You can find them below:&lt;/p&gt;
+&lt;p&gt;解决办法就是自行创建这两个文件，当然最简单的就是让Jekyll给我创建了，执行&lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll new myblog&lt;/code&gt;，创建一个全新的博客，然后在&lt;code class=&quot;highlighter-rouge&quot;&gt;myblog&lt;/code&gt;里面把&lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile&lt;/code&gt;和&lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile.lock&lt;/code&gt;文件拷贝到模版根目录，done&lt;/p&gt;
 
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Site Name&lt;/th&gt;
-      &lt;th&gt;URL&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;OneV’s Den&lt;/td&gt;
-      &lt;td&gt;http://onevcat.com&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;p&gt;那么，就祝所有人新年大吉&lt;del&gt;吧&lt;/del&gt;!&lt;/p&gt;</content><author><name>Kenshin</name></author><category term="Other" /><summary type="html">博客页面搭建完毕
 
-&lt;blockquote&gt;
-  &lt;p&gt;If you happen to be using this theme, welcome to &lt;a href=&quot;https://github.com/onevcat/vno-jekyll/pulls&quot;&gt;send me a pull request&lt;/a&gt; to add your site link here. :)&lt;/p&gt;
-&lt;/blockquote&gt;
+最近又比较浮躁，刚好发现自己去年测试Jekyll时候搭建的Github个人页面不怎么好看，于是想重新弄一个，以后也算有个地方写东西
 
-&lt;h4 id=&quot;license&quot;&gt;License&lt;/h4&gt;
+期间又踩到了坑，这里随便记录下
 
-&lt;p&gt;Great thanks to &lt;a href=&quot;https://github.com/daleanthony&quot;&gt;Dale Anthony&lt;/a&gt; and his &lt;a href=&quot;https://github.com/daleanthony/uno&quot;&gt;Uno&lt;/a&gt;. Vno Jekyll is based on Uno, and contains a lot of modification on page layout, animation, font and some more things I can not remember. Vno Jekyll is followed with Uno and be licensed as &lt;a href=&quot;http://creativecommons.org/licenses/by/4.0/&quot;&gt;Creative Commons Attribution 4.0 International&lt;/a&gt;. See the link for more information.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 16 Feb 2016 01:32:24 -0500</pubDate>
-        <link>http://xy7313.github.io/2016/02/hello-world-vno/</link>
-        <guid isPermaLink="true">http://xy7313.github.io/2016/02/hello-world-vno/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Sample Post</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+使用Jekyll搭建Github个人页面的帖子满世界都是，肯定不用我重复了，毕竟我也是菜
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+OK，直接说遇到的问题
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+Could not locate Gemfile or .bundle/ directory
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Tom&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &#39;Hi, Tom&#39; to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+这个问题的来历比较神奇
 
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+首先，我前端内容并不是特别熟悉，所以博客模版也是直接从Jekyll Themes找的，这里我使用的是Codinfox Lanyon
+模版，其源码仓库地址是这里
 
-</description>
-        <pubDate>Mon, 15 Feb 2016 01:32:24 -0500</pubDate>
-        <link>http://xy7313.github.io/2016/02/sample-post/</link>
-        <guid isPermaLink="true">http://xy7313.github.io/2016/02/sample-post/</guid>
-        
-        
-      </item>
-    
-  </channel>
-</rss>
+由于种种原因，我没有直接fork上面的仓库，而是donwload之后自行修改成自己喜欢的样子，改完之后push到了我自己的Github仓库
+
+但是，转折来了，在我把模版改成喜欢对样子，本地试图查看效果时，bundle exec jekyll serve命令提示错误Could not locate Gemfile or .bundle/ directory
+
+Google了半天，遇到了很多同样有该错误的人，但各种解决方案都不适合我这里的情况。最后终于发现，原因是模版代码里没有Gemfile和Gemfile.lock两个文件ORZ
+
+解决办法就是自行创建这两个文件，当然最简单的就是让Jekyll给我创建了，执行jekyll new myblog，创建一个全新的博客，然后在myblog里面把Gemfile和Gemfile.lock文件拷贝到模版根目录，done
+
+那么，就祝所有人新年大吉吧!</summary></entry></feed>
