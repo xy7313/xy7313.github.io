@@ -55,5 +55,5 @@ hero:
 
 # Puglins
 mathjax: true # whether support mathjax
-google_analytics_token:  # leave blank if you don't want google analytics
+google_analytics_token:  UA-96647657-1 # leave blank if you don't want google analytics
 disqus_short_name: 'xy7313' # leave blank if you don't want disqus
