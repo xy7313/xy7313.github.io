@@ -108,18 +108,18 @@ PriorityQueue<Map.Entry<Integer, Integer>> maxHeap =  new PriorityQueue<>((a,b)-
 ###### [2.8  Array vs. ArrayList vs. LinkedList](#jump8)
 ###### [2.9 stringbuilder vs string buffer](#jump9)
 ###### [2.10 error vs. exception](#jump10)
-###### 2.11 between method and constructor.
-###### 2.12  void main
-###### 2.13  Primitive types
-###### 2.14 when try catch?  How will you handle the exception without using try-catch block?
-###### 2.15 access modifier
-###### 2.16 static
-###### 2.17  J2EE, J2SE, JSP
-###### 2.18  why do we need package the program.
-###### 2.19 MVC
-###### 2.20 what is JDK,JRE,JVM
-###### 2.21 GC
-###### 2.22 Java里shared memory在哪儿
+###### [2.11 between method and constructor](#jump11)
+###### [2.12  void main](#jump12)
+###### [2.13  Primitive types](#jump13)
+###### [2.14 when try catch?  How will you handle the exception without using try-catch block?](#jump14)
+###### [2.15 access modifier](#jump15)
+###### [2.16 static](#jump16)
+###### [2.17  J2EE, J2SE, JSP](#jump17)
+###### [2.18  why do we need package the program](#jump18)
+###### [2.19 MVC](#jump19)
+###### [2.20 what is JDK,JRE,JVM](#jump20)
+###### [2.21 GC](#jump21)
+###### [2.22 Java里shared memory在哪儿](#jump22)
 
 非重点：
 ###### 2.   HashSet vs. TreeSet vs. LinkedHashSet
@@ -243,15 +243,18 @@ When and which to use is an important question. In brief, if you need a fast set
 3. Error along with RuntimeException & their subclasses are unchecked exceptions. All other Exception classes are checked exceptions.
 4. In Java exceptions under Error and RuntimeException classes are unchecked exceptions, everything else under throwable is checked.
 
+<span id="jump11"></span>
 ###### 3.11 method vs. constructor.
 1. Constructors can't be called directly; they are called implicitly when the new keyword creates an object. Methods can be called directly on an object that has already been created with new.
 2. Constructors must be named with the same name as the class name. They can't return anything, even void (the object itself is the implicit return).
 Methods must be declared to return something, although it can be void.
 
+<span id="jump12"></span>
 ###### 3.12  void main
 1. Void is the return type of this method, indicating that this method doesn't return anything.
 2. Main is the name of a function. main() is special because it is the start of the program.
 
+<span id="jump13"></span>
 ###### 3.13  Primitive types
 1. Byte: 8-bit signed two's complement integer, [-128, 127]. The byte data type can be useful for saving memory in large arrays, where the memory savings actually matters.
 2. Short: 16-bit signed two's complement integer. Save memory in large arrays of floating point numbers.
@@ -261,20 +264,23 @@ Methods must be declared to return something, although it can be void.
 6. Double: double-precision 64-bit IEEE 754 floating point. For decimal values, this data type is generally the default choice. As mentioned above, this data type should never be used for precise values, such as currency. 7. Boolean: true / false. Use this data type for simple flags that track true/false conditions. This data type represents one bit of information, but its "size" isn't something that's precisely defined.
 8. Char: single 16-bit Unicode character. It has a minimum value of '\u0000' (or 0) and a maximum value of '\uffff' (or 65,535 inclusive).
 
+<span id="jump14"></span>
 ###### 3.14 when try catch?  How will you handle the exception without using try-catch block?
 1. When you want to do any "work" after exception is thrown you will definitely go for using "Try/Catch" block.
 2. By default, the JVM handles uncaught exceptions by printing the stack-trace to System.err stream. Java allows us to customize this behavior by providing our own routine which implements Thread.UncaughtExceptionHandler interface.
 
-
+<span id="jump15"></span>
 ###### 3.15 access modifier
 ![屏幕快照 2017-03-30 04.50.46.png](http://upload-images.jianshu.io/upload_images/260723-91977fd194836ca2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+<span id="jump16"></span>
 ###### 3.16 static
 1. Static indicates that this method can be called without creating an instance of this class
 1. In Java, a  static  member is a member of a class that isn’t associated with an instance of a class. Instead, the member belongs to the class itself. As a result, you can access the static member without first creating a class instance.
 2. static members belong to the class instead of a specific instance.
 3. It means that only one instance of a static field exists
 
+<span id="jump17"></span>
 ###### 3.17  J2EE, J2SE, JSP
 1. JavaSE (Standard Edition): For general-purpose use on desktop PCs,servers and similar devices.
 
@@ -282,13 +288,16 @@ Methods must be declared to return something, although it can be void.
 
 3. Java ServerPages (JSP) are server-side Java EEcomponents that generate responses, typically HTMLpages, to HTTP requests from clients. JSPsembed Java code in an HTML page by using the special delimiters<% and %>. A JSP is compiled to a Java servlet,a Java application in its own right, the first time it is accessed.After that, the generated servlet creates the response.
 
+<span id="jump18"></span>
 ###### 3.18  why do we need package the program.
 A package is a namespace that organizes a set of related classes and interfaces
 
+<span id="jump19"></span>
 ###### 3.19 MVC
 MVC:  is a software architecture - the structure of the system
 MVC:  (Model, View, Controller) is a pattern for organising code in an application to improve maintainability.
 
+<span id="jump20"></span>
 ###### 3.20 what is JDK,JRE,JVM
 1. JVM:  
   1. The Java Virtual Machine (JVM) is an abstract computing machine. The JVM is a program that looks like a machine to the programs written to execute in it. 
@@ -296,7 +305,7 @@ MVC:  (Model, View, Controller) is a pattern for organising code in an applicati
 2. JRE:  is an acronym for Java Runtime Environment.It is used to provide runtime environment.It is the implementation of JVM. It physically exists.
 3. JDK:  is an acronym for Java Development Kit.It physically exists.It contains JRE + development tools.
 
-
+<span id="jump21"></span>
 ###### 3.21 GC
 Generational garbage collector
 1. because: most objects have short lifetimes, a few live very long
@@ -306,6 +315,7 @@ Generational garbage collector
   1. One Eden space
   2. Two Survivor spaces
 
+<span id="jump22"></span>
 ###### 3.22 Java里shared memory在哪儿
 static  heap stack, static和heap都可以，depends on your program
 
