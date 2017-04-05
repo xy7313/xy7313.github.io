@@ -99,15 +99,15 @@ PriorityQueue<Map.Entry<Integer, Integer>> maxHeap =  new PriorityQueue<>((a,b)-
 
 ## 2. interview questions
 ###### [2.1 interface vs abstract class](#jump1)
-###### 2.2 Pass by reference vs. pass by value
-###### 2.3 Final / finalize /finally
-###### 2.4  OOP
-###### 2.5 OOP concepts
-###### 2.6 overloading/overriding
-###### 2.7 hashmap vs. hash table  vs. hashset 
-###### 2.8  Array vs. ArrayList vs. LinkedList
-###### 2.9 stringbuilder vs string buffer
-###### 2.10 error vs. exception
+###### [2.2 Pass by reference vs. pass by value](#jump2)
+###### [2.3 Final / finalize /finally](#jump3)
+###### [2.4  OOP](#jump4)
+###### [2.5 OOP concepts](#jump5)
+###### [2.6 overloading/overriding](#jump6)
+###### [2.7 hashmap vs. hash table  vs. hashset](#jump7) 
+###### [2.8  Array vs. ArrayList vs. LinkedList](#jump8)
+###### [2.9 stringbuilder vs string buffer](#jump9)
+###### [2.10 error vs. exception](#jump10)
 ###### 2.11 between method and constructor.
 ###### 2.12  void main
 ###### 2.13  Primitive types
@@ -140,11 +140,13 @@ differences
 2. with interface, all fields are automatic public, static, final, and all methods you declare or defined are public. But with abstract class, you can declare fields that are not static and final, and define public, protected, and private concrete method.
 3. we can extend only one class, whether or not it is abstract, whereas you can implement any number if interfaces.
 
+<span id="jump2"></span>
 ###### 3.2 Pass by reference vs. pass by value
 1. java is pass-by-value 
 2. Pass by value (primitives): make a copy in memory of the actual parameter's value that is passed in.
 3. Pass by reference (objects): pass a copy of the address of the actual parameter.
 
+<span id="jump3"></span>
 ###### 3.3 Final / finalize /finally
 1. Final
   1. final is a key word, used to apply restrictions on class, method and variable. 
@@ -159,10 +161,12 @@ differences
 3. Finalize
   1. Finalize is a method, used to perform clean up processing just before object is garbage collected.
 
+<span id="jump4"></span>
 ###### 3.4  OOP
 1. Object Oriented Programming: programming language model organized around  objects rather than "actions" and data rather than logic
 3. Your program consists of a number of "objects", which are combinations of data  and operations that you can do with that data. We can sent "Messages" to objects, and the messages make them perform operations. that is call a method.  The program consist of collections of objects that send messages to each other.
 
+<span id="jump5"></span>
 ###### 3.5 OOP concepts
 1. Abstraction: 
 The process of picking out (abstracting) common features of objects and procedures.
@@ -190,10 +194,12 @@ a feature that represents the "is a" relationship between different classes. Inh
 7. How will you access the properties of that class?
 !!!!!!!!!!!!!
 
+<span id="jump6"></span>
 ###### 3.6 overloading/overriding
 1. Overloading :  define two method, same name but they have different parameters 
 2. Overriding:  When you redefine a method which has already define in parent class(using exact same paremeters)
 
+<span id="jump7"></span>
 ###### 3.7 hashmap vs. hash table  vs. hashset 
 1. HashMap 
   1. is implemented as a hash table, and there is no ordering on keys or values.
@@ -207,6 +213,7 @@ When and which to use is an important question. In brief, if you need a fast set
     - Synchronized:  keyword prevents concurrent access to a block of code or object by multiple Threads
   2. Hashtable  does not allow  null  keys or values.  HashMap  allows one  null  key and any number of  null  values.
 
+<span id="jump8"></span>
 ###### 3.8  Array vs. ArrayList vs. LinkedList
 1. Array
   1. Array is a container object that holds a fixed number of values of a single type.
@@ -223,11 +230,13 @@ When and which to use is an important question. In brief, if you need a fast set
   3. Inserts Performance: LinkedList add method gives O(1) performance while ArrayList gives O(n) in worst case.  Reason is same as explained for remove.
   4. Memory Overhead: ArrayList maintains indexes and element data while LinkedList maintains element data and two pointers for neighbor nodes hence the memory consumption is high in LinkedList comparatively.
 
+<span id="jump9"></span>
 ###### 3.9 stringbuilder vs string buffer
 1. String class is used to manipulate character strings that cannot be changed. Objects of type String are read only and immutable.
 2. The StringBuffer class is used to represent characters that can be modified.
 3. StringBuilder is faster than StringBuffer because it's not synchronized. StringBuffer thread safe
 
+<span id="jump10"></span>
 ###### 3.10 error vs. exception
 1. An Error "indicates serious problems that a reasonable application should not try to catch."
 2. An Exception "indicates conditions that a reasonable application might want to catch."
