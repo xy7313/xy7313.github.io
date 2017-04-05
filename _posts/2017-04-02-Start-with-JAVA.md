@@ -36,10 +36,17 @@ tags: Java #post tag, seperated by spcace
 1. terminal run java project:
     1. javac className.java
     2. java className
+    3. start point of any program: main()
+    1. As per the OOPS of Java, main() must be inside a class, it is also a member of a class
+    2. before creating any object, main() must be identified from within the clas
+    3. main() is declared as static, which can be accessed without creating any object
+4. class: An object is an instance of a class used to access the members of a class.
+5. method: A block which has a name, a return type (void if does not return anything) & contains set of statements to be executed is called as a method. 
+    - method signature: return type, method name, parameters(doesn't include access specifiers like public...)
 2.  scope of 
     1. local variable: only within a particular block. **Variables which are declared inside a block can be accessed only within the same block is called as Local Variables.**
     2. global variable: (There is no direct concept of global variable in java) 
-        3. class variable(static): A class variable is a variable defined in a class  of which a single copy exists, regardless of how many instances of the class exist.
+        1. class variable(static): A class variable is a variable defined in a class  of which a single copy exists, regardless of how many instances of the class exist.
         ```
         class classVariable{
                 //one fixed memory location shared by every instance
@@ -47,7 +54,7 @@ tags: Java #post tag, seperated by spcace
                 ...
         }
         ```
-        1. quiet like instance variable: declared in class, out of method, are only initialized when the class is instantiated.(Variables, which are  declared outside of any block but inside a class can be accessed throughout the class)
+        2. quiet like instance variable: declared in class, out of method, are only initialized when the class is instantiated.(Variables, which are  declared outside of any block but inside a class can be accessed throughout the class)
 6. static：
     1. Any method which is static can access only other static members(static context)  directly,
     2. Any method which is static wants to access non-static members, an object of a class must be created.
@@ -57,16 +64,33 @@ tags: Java #post tag, seperated by spcace
     6. static method, static block: (and static variables) are all execuated before main `static { statement1; ...}`
     7. static class
     8. only 5,6,7, static variable, static method, static block, static class these four things can be static 
-    9. 
-    10. 
+    9. Can class be static?
+        Inner class can be static, top-level class can not.
+    10. Is there will be a static variable inside of a function?
+        Local variables can not be static, no private static(后半句很有可能是记错了)
+        an explaination form stackoverflow
+        ```
+        /*
+        where I use the private static variables is when you need to use a variable in a static function. For the static functions you can only use static variables, so you make them private to not access them from other classes. That is the only case I use private static for.
+        Here is an example:
+        */
+        Class test {
+                public static String name = "AA";
+                private static String age;
 
-3. start point of any program: main()
-    1. As per the OOPS of Java, main() must be inside a class, it is also a member of a class
-    2. before creating any object, main() must be identified from within the clas
-    3. main() is declared as static, which can be accessed without creating any object
-4. class: An object is an instance of a class used to access the members of a class.
-5. method: A block which has a name, a return type (void if does not return anything) & contains set of statements to be executed is called as a method. 
-    - method signature: return type, method name, parameters(doesn't include access specifiers like public...)
+                public static void setAge(String yourAge) {
+                    //here if the age variable is not static you will get an error that you cannot access non static variables from static procedures so you have to make it static and private to not be accessed from other classes
+                    age = yourAge;
+                }
+        }
+        ```
+6. inner class
+    1. 
+    2. 
+
+
+
+
 7. constructor:
     1. defination:
         1. A block which contains same name as a class name, which does not have any return type,
