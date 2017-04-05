@@ -98,8 +98,7 @@ PriorityQueue<Map.Entry<Integer, Integer>> maxHeap =  new PriorityQueue<>((a,b)-
 
 
 ## 2. interview questions
- [hello](#jump)
-###### 2.1 interface vs abstract class
+###### [2.1 interface vs abstract class](#jump1)
 ###### 2.2 Pass by reference vs. pass by value
 ###### 2.3 Final / finalize /finally
 ###### 2.4  OOP
@@ -128,7 +127,7 @@ PriorityQueue<Map.Entry<Integer, Integer>> maxHeap =  new PriorityQueue<>((a,b)-
 
 
 ## 3. anwers
-<span id="jump">Hello World</span>
+<span id="jump1"></span>
 ###### 3.1 interface vs abstract class
 we use them for different purposes
  1. We use abstract class when we want to share code among several closely classes.
