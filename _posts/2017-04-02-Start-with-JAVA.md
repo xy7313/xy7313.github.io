@@ -49,10 +49,17 @@ tags: Java #post tag, seperated by spcace
         ```
         1. quiet like instance variable: declared in class, out of method, are only initialized when the class is instantiated.(Variables, which are  declared outside of any block but inside a class can be accessed throughout the class)
 6. static：
-    1. Any method which is static can access only other static members  directly,
+    1. Any method which is static can access only other static members(static context)  directly,
     2. Any method which is static wants to access non-static members, an object of a class must be created.
-    3. Where  as  a  non-static  method  can  access  both  static  &  non-static  members directly. 
+    3. Where as a non-static method can access both static & non-static members directly. 
     4. The static modifier, in combination with the final modifier, is also used to define constants. The final modifier indicates that the value of this field cannot change.
+    5. static variable: memory share variable x the whole class
+    6. static method, static block: (and static variables) are all execuated before main `static { statement1; ...}`
+    7. static class
+    8. only 5,6,7, static variable, static method, static block, static class these four things can be static 
+    9. 
+    10. 
+
 3. start point of any program: main()
     1. As per the OOPS of Java, main() must be inside a class, it is also a member of a class
     2. before creating any object, main() must be identified from within the clas
@@ -80,12 +87,25 @@ tags: Java #post tag, seperated by spcace
         }
         ```
         4. if we use this() to invoke another constructor, we must put this() in the first line, or we will get a syntax error. 
+        5. if we want to customize a constructor with parameters meanwhile, there is some obj using the default contructor, we need to write the default constructor, then write the new constructor(yes, we need to write 2 constructors).
+        6. `class G extend F{ ... }` F's default constructor is invoked first, then invoke G's default or G(arg) constructor
 8. Polymorphism: In a class, if more than one method is defined with a same name, then there must be a difference in type/number of parameters is called as Polymorphism (Method Overloading).
     - In method overloading, if the return type is changed, then there must be a change in type/number of parameters also.
+9. toString
+    1. The toString() method returns a textual representation of an object. A basic implementation is already included in java.lang.Object and so because all objects inherit from java.lang.Object it is guaranteed that every object in Java has this method.
+    2. It is automatically invoked when the object is passed to println, print, printf, String.format() assert or the string concatenation operator. 
+    3. if we want print a specific format of an object, we need to override toString() method in class
+10. this
+    1. to identify global variables within a local scope
+    2. to invoke constructor of the same class from one constructor using this()
 
 
 
-####some english
+
+
+
+#### some english
 1. as per: both per and as per have existed in English in the sense “according to” for a very long time
 2. identified from : be identified from within the class
 3. instantiated: when the class is instantiated
+4. semicolon  ['sɛmɪkolən] 分号

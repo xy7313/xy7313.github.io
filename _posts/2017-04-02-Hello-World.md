@@ -9,6 +9,6 @@ tags: Other #post tag, seperated by spcace
 
 <del>Blog Guide</del> To do list:
 
-1. 简书blog迁移
-2. 周更
-3. about me
+1. moving blogs from Jianshu
+2. update blog once a week
+3. re-create about me page
