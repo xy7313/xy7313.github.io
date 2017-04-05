@@ -1,6 +1,6 @@
 ---
 layout: post #post
-title: Hello World! #post title
+title: Core Jave Interview Questions & Answers #post title
 categories: Java Interview #post category, seperated by spcace
 tags: Java Interview OOP #post tag, seperated by spcace
 ---

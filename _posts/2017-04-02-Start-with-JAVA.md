@@ -1,6 +1,6 @@
 ---
 layout: post #post
-title: Hello World! #post title
+title: Start from Java #post title
 categories: Java #post category, seperated by spcace
 tags: Java #post tag, seperated by spcace
 ---
