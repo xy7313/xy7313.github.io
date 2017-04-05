@@ -7,7 +7,7 @@ tags: Java #post tag, seperated by spcace
 
 ## Start from Java
 
-####concepts list:
+#### concepts list:
 1. class
 2. object
 3. constructors
@@ -32,7 +32,7 @@ tags: Java #post tag, seperated by spcace
 11. inner classea
 12. package 
 
-####Details:
+#### Details:
 1. terminal run java project:
     1. javac className.java
     2. java className
@@ -42,9 +42,9 @@ tags: Java #post tag, seperated by spcace
         3. class variable(static): A class variable is a variable defined in a class  of which a single copy exists, regardless of how many instances of the class exist.
         ```
         class classVariable{
-            //one fixed memory location shared by every instance
-            private static int i = 0;
-            ...
+                //one fixed memory location shared by every instance
+                private static int i = 0;
+                ...
         }
         ```
         1. quiet like instance variable: declared in class, out of method, are only initialized when the class is instantiated.(Variables, which are  declared outside of any block but inside a class can be accessed throughout the class)
@@ -71,12 +71,12 @@ tags: Java #post tag, seperated by spcace
         3. If we have two constructor in a class, and we called the default constructor, then we want to invoke another constructor, we can use keyword: this()
         ```
         class Example1{
-            Example1(){
+                Example1(){
 
-            }
-            Example1(int i){
+                }
+                Example1(int i){
 
-            }
+                }
         }
         ```
         4. if we use this() to invoke another constructor, we must put this() in the first line, or we will get a syntax error. 
