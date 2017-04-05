@@ -6,7 +6,7 @@ tags: Java Interview OOP #post tag, seperated by spcace
 ---
 
 ## Core Jave Interview Questions & Answers
-##1. basis:
+## 1. basis:
 #### 1.1 concepts terminologies
 1. 语句— statement
 2. Instance variable
@@ -84,7 +84,7 @@ PriorityQueue<Map.Entry<Integer, Integer>> maxHeap =  new PriorityQueue<>((a,b)-
 5. q.isEmpty();
 6. q.size();
 
-#####1.2.5 hashmap/ hashset
+##### 1.2.5 hashmap/ hashset
 1. if (map.containsKey('c')) {...}
 2. if (map.containsValue(1)) {...}
 3. for (Character d : map.keySet()){...}
@@ -97,36 +97,36 @@ PriorityQueue<Map.Entry<Integer, Integer>> maxHeap =  new PriorityQueue<>((a,b)-
 10. set.isEmpty();
 
 
-##2. interview questions
-######2.1 interface vs abstract class
+## 2. interview questions
+###### 2.1 interface vs abstract class
 ###### 2.2 Pass by reference vs. pass by value
-######2.3 Final / finalize /finally
-######2.4  OOP
-######2.5 OOP concepts
-######2.6 overloading/overriding
-######2.7 hashmap vs. hash table  vs. hashset 
-######2.8  Array vs. ArrayList vs. LinkedList
-######2.9 stringbuilder vs string buffer
-######2.10 error vs. exception
-######2.11 between method and constructor.
-######2.12  void main
-######2.13  Primitive types
-######2.14 when try catch?  How will you handle the exception without using try-catch block?
-######2.15 access modifier
-######2.16 static
-######2.17  J2EE, J2SE, JSP
-######2.18  why do we need package the program.
-######2.19 MVC
-######2.20 what is JDK,JRE,JVM
-######2.21 GC
-######2.22 Java里shared memory在哪儿
+###### 2.3 Final / finalize /finally
+###### 2.4  OOP
+###### 2.5 OOP concepts
+###### 2.6 overloading/overriding
+###### 2.7 hashmap vs. hash table  vs. hashset 
+###### 2.8  Array vs. ArrayList vs. LinkedList
+###### 2.9 stringbuilder vs string buffer
+###### 2.10 error vs. exception
+###### 2.11 between method and constructor.
+###### 2.12  void main
+###### 2.13  Primitive types
+###### 2.14 when try catch?  How will you handle the exception without using try-catch block?
+###### 2.15 access modifier
+###### 2.16 static
+###### 2.17  J2EE, J2SE, JSP
+###### 2.18  why do we need package the program.
+###### 2.19 MVC
+###### 2.20 what is JDK,JRE,JVM
+###### 2.21 GC
+###### 2.22 Java里shared memory在哪儿
 
 非重点：
-######2.   HashSet vs. TreeSet vs. LinkedHashSet
-######2.   HashMap vs. TreeMap vs. HashTable vs. 
+###### 2.   HashSet vs. TreeSet vs. LinkedHashSet
+###### 2.   HashMap vs. TreeMap vs. HashTable vs. 
 
 
-##3. anwers
+## 3. anwers
 
 ###### 3.1 interface vs abstract class
 we use them for different purposes
@@ -145,7 +145,7 @@ differences
 2. Pass by value (primitives): make a copy in memory of the actual parameter's value that is passed in.
 3. Pass by reference (objects): pass a copy of the address of the actual parameter.
 
-######3.3 Final / finalize /finally
+###### 3.3 Final / finalize /finally
 1. Final
   1. final is a key word, used to apply restrictions on class, method and variable. 
   2. final class can not be inherited, 
@@ -159,11 +159,11 @@ differences
 3. Finalize
   1. Finalize is a method, used to perform clean up processing just before object is garbage collected.
 
-######3.4  OOP
+###### 3.4  OOP
 1. Object Oriented Programming: programming language model organized around  objects rather than "actions" and data rather than logic
 3. Your program consists of a number of "objects", which are combinations of data  and operations that you can do with that data. We can sent "Messages" to objects, and the messages make them perform operations. that is call a method.  The program consist of collections of objects that send messages to each other.
 
-######3.5 OOP concepts
+###### 3.5 OOP concepts
 1. Abstraction: 
 The process of picking out (abstracting) common features of objects and procedures.
 
@@ -190,11 +190,11 @@ a feature that represents the "is a" relationship between different classes. Inh
 7. How will you access the properties of that class?
 !!!!!!!!!!!!!
 
-######3.6 overloading/overriding
+###### 3.6 overloading/overriding
 1. Overloading :  define two method, same name but they have different parameters 
 2. Overriding:  When you redefine a method which has already define in parent class(using exact same paremeters)
 
-######3.7 hashmap vs. hash table  vs. hashset 
+###### 3.7 hashmap vs. hash table  vs. hashset 
 1. HashMap 
   1. is implemented as a hash table, and there is no ordering on keys or values.
   2. what happens when a duplicate key is putting into a hashmap? Overwrite that key if hashmap has the same key. the old value is simply replaced.
@@ -207,7 +207,7 @@ When and which to use is an important question. In brief, if you need a fast set
     - Synchronized:  keyword prevents concurrent access to a block of code or object by multiple Threads
   2. Hashtable  does not allow  null  keys or values.  HashMap  allows one  null  key and any number of  null  values.
 
-######3.8  Array vs. ArrayList vs. LinkedList
+###### 3.8  Array vs. ArrayList vs. LinkedList
 1. Array
   1. Array is a container object that holds a fixed number of values of a single type.
   1. Array has fix size, and the size is set when we initialize an array.
@@ -223,27 +223,27 @@ When and which to use is an important question. In brief, if you need a fast set
   3. Inserts Performance: LinkedList add method gives O(1) performance while ArrayList gives O(n) in worst case.  Reason is same as explained for remove.
   4. Memory Overhead: ArrayList maintains indexes and element data while LinkedList maintains element data and two pointers for neighbor nodes hence the memory consumption is high in LinkedList comparatively.
 
-######3.9 stringbuilder vs string buffer
+###### 3.9 stringbuilder vs string buffer
 1. String class is used to manipulate character strings that cannot be changed. Objects of type String are read only and immutable.
 2. The StringBuffer class is used to represent characters that can be modified.
 3. StringBuilder is faster than StringBuffer because it's not synchronized. StringBuffer thread safe
 
-######3.10 error vs. exception
+###### 3.10 error vs. exception
 1. An Error "indicates serious problems that a reasonable application should not try to catch."
 2. An Exception "indicates conditions that a reasonable application might want to catch."
 3. Error along with RuntimeException & their subclasses are unchecked exceptions. All other Exception classes are checked exceptions.
 4. In Java exceptions under Error and RuntimeException classes are unchecked exceptions, everything else under throwable is checked.
 
-######3.11 method vs. constructor.
+###### 3.11 method vs. constructor.
 1. Constructors can't be called directly; they are called implicitly when the new keyword creates an object. Methods can be called directly on an object that has already been created with new.
 2. Constructors must be named with the same name as the class name. They can't return anything, even void (the object itself is the implicit return).
 Methods must be declared to return something, although it can be void.
 
-######3.12  void main
+###### 3.12  void main
 1. Void is the return type of this method, indicating that this method doesn't return anything.
 2. Main is the name of a function. main() is special because it is the start of the program.
 
-######3.13  Primitive types
+###### 3.13  Primitive types
 1. Byte: 8-bit signed two's complement integer, [-128, 127]. The byte data type can be useful for saving memory in large arrays, where the memory savings actually matters.
 2. Short: 16-bit signed two's complement integer. Save memory in large arrays of floating point numbers.
 3. Int: 32-bit signed two's complement integer, [-231, 231-1]. In Java SE 8 and later, you can use the int data type to represent an unsigned 32-bit integer, which has a minimum value of 0 and a maximum value of 232-1. Static methods like compareUnsigned, divideUnsigned etc have been added to the Integer class to support the arithmetic operations for unsigned integers.
@@ -252,35 +252,35 @@ Methods must be declared to return something, although it can be void.
 6. Double: double-precision 64-bit IEEE 754 floating point. For decimal values, this data type is generally the default choice. As mentioned above, this data type should never be used for precise values, such as currency. 7. Boolean: true / false. Use this data type for simple flags that track true/false conditions. This data type represents one bit of information, but its "size" isn't something that's precisely defined.
 8. Char: single 16-bit Unicode character. It has a minimum value of '\u0000' (or 0) and a maximum value of '\uffff' (or 65,535 inclusive).
 
-######3.14 when try catch?  How will you handle the exception without using try-catch block?
+###### 3.14 when try catch?  How will you handle the exception without using try-catch block?
 1. When you want to do any "work" after exception is thrown you will definitely go for using "Try/Catch" block.
 2. By default, the JVM handles uncaught exceptions by printing the stack-trace to System.err stream. Java allows us to customize this behavior by providing our own routine which implements Thread.UncaughtExceptionHandler interface.
 
 
-######3.15 access modifier
+###### 3.15 access modifier
 ![屏幕快照 2017-03-30 04.50.46.png](http://upload-images.jianshu.io/upload_images/260723-91977fd194836ca2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-######3.16 static
+###### 3.16 static
 1. Static indicates that this method can be called without creating an instance of this class
 1. In Java, a  static  member is a member of a class that isn’t associated with an instance of a class. Instead, the member belongs to the class itself. As a result, you can access the static member without first creating a class instance.
 2. static members belong to the class instead of a specific instance.
 3. It means that only one instance of a static field exists
 
-######3.17  J2EE, J2SE, JSP
+###### 3.17  J2EE, J2SE, JSP
 1. JavaSE (Standard Edition): For general-purpose use on desktop PCs,servers and similar devices.
 
 2. JavaEE (Enterprise Edition): Java SE plus various APIs useful formulti-tier client–serverenterprise applications. Theplatform was known as Java2 Platform, Enterprise Editionor J2EEuntil the name was changed to JavaEEin version 5. The current version is called JavaEE 6.
 
 3. Java ServerPages (JSP) are server-side Java EEcomponents that generate responses, typically HTMLpages, to HTTP requests from clients. JSPsembed Java code in an HTML page by using the special delimiters<% and %>. A JSP is compiled to a Java servlet,a Java application in its own right, the first time it is accessed.After that, the generated servlet creates the response.
 
-######3.18  why do we need package the program.
+###### 3.18  why do we need package the program.
 A package is a namespace that organizes a set of related classes and interfaces
 
-######3.19 MVC
+###### 3.19 MVC
 MVC:  is a software architecture - the structure of the system
 MVC:  (Model, View, Controller) is a pattern for organising code in an application to improve maintainability.
 
-######3.20 what is JDK,JRE,JVM
+###### 3.20 what is JDK,JRE,JVM
 1. JVM:  
   1. The Java Virtual Machine (JVM) is an abstract computing machine. The JVM is a program that looks like a machine to the programs written to execute in it. 
   2. (Java Virtual Machine) is an abstract machine. It is a specification that provides runtime environment in which java bytecode can be executed
@@ -288,7 +288,7 @@ MVC:  (Model, View, Controller) is a pattern for organising code in an applicati
 3. JDK:  is an acronym for Java Development Kit.It physically exists.It contains JRE + development tools.
 
 
-######3.21 GC
+###### 3.21 GC
 Generational garbage collector
 1. because: most objects have short lifetimes, a few live very long
 2. 2 or more generations
@@ -297,18 +297,18 @@ Generational garbage collector
   1. One Eden space
   2. Two Survivor spaces
 
-######3.22 Java里shared memory在哪儿
+###### 3.22 Java里shared memory在哪儿
 static  heap stack, static和heap都可以，depends on your program
 
 不太重要：
-######3.   HashSet vs. TreeSet vs. LinkedHashSet
+###### 3.   HashSet vs. TreeSet vs. LinkedHashSet
 Set interface: A Set contains no duplicate elements. That is one of the major reasons to use a set.
 When and which to use is an important question. In brief, if you need a fast set, you should use HashSet; if you need a sorted set, then TreeSet should be used; if you need a set that can be store the insertion order, LinkedHashSet should be used.
 HashSet is Implemented using a hash table. Elements are not ordered. The add, remove, and contains methods have constant time complexity O(1).
 TreeSet is implemented using a tree structure(red-black tree in algorithm book). The elements in a set are sorted, but the add, remove, and contains methods has time complexity of O(log (n)). It offers several methods to deal with the ordered set like first(), last(), headSet(), tailSet(), etc.
 LinkedHashSet is between HashSet and TreeSet. It is implemented as a hash table with a linked list running through it, so it provides the order of insertion. The time complexity of basic methods is O(1).
 
-######3.  HashMap vs. TreeMap vs. HashTable vs. LinkedHashMap vs. ConcurrentHashMap
+###### 3.  HashMap vs. TreeMap vs. HashTable vs. LinkedHashMap vs. ConcurrentHashMap
 HashMap is implemented as a hash table, and there is no ordering on keys or values. TreeMap is implemented based on red-black tree structure, and it is ordered by the key. LinkedHashMap preserves the insertion order
 Hashtable is synchronized, in contrast to HashMap. It has an overhead for synchronization. All methods of Hashtable are synchronized which makes them quite slow due to contention if a number of thread increases. ConcurrentHashMap is thread safe without synchronizing the whole map. Reads can happen very fast while write is done with a lock. There is no locking at the object level. Unlike Hashtable and Synchronized Map, it never locks whole Map, instead, it divides the map into segments and locking is done on those. Though it performs better if a number of reader threads are greater than the number of writer threads.
 
