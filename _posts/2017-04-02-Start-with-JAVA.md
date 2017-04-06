@@ -125,8 +125,18 @@ tags: Java #post tag, seperated by spcace
 11. overriding：if a subclass contains a method, which has the same name, return type and parameters as a super class method, it's called method overriding
     1. private method of super class can not be overriding, it is just called redefined (because the private method is not visible in the subclass.).
     2. can not restrict it. eg: The default method of super class can be overridden by default, protected & public method of subclass; The protected method of super class can be overridden by protected & public method of subclass; The public method of super class can be overridden by only public method of subclass.
-12. abstract
+12. abstract:
+    1. method: if only a method name must be declared, but not a body--abstract method
+    2. class: In a class if any one of the method is abstract, then the whole class must be declared as abstract.
+    3. Only a class & method can be declared as abstract. But not a variable.
+    4. 
 13. interface
+
+
+
+
+
+
 
 
 

@@ -243,7 +243,7 @@ When and which to use is an important question. In brief, if you need a fast set
 3. Error along with RuntimeException & their subclasses are unchecked exceptions. All other Exception classes are checked exceptions.
 4. （in another words）In Java exceptions under Error and RuntimeException classes are unchecked exceptions, everything else under throwable is checked.
 5. Checked exceptions are the exceptions that are checked at compile time; Unchecked exceptions are the exceptions that are not checked at compiled time.
-
+6. More about check exception and uncheck exception: http://netjs.blogspot.com/2015/05/difference-between-checked-unchecked-exception-java.html 
 <span id="jump11"></span>
 ###### 3.11 method vs. constructor.
 1. Constructors can't be called directly; they are called implicitly when the new keyword creates an object. Methods can be called directly on an object that has already been created with new.
