@@ -6,7 +6,7 @@ tags: Java Interview OOP #post tag, seperated by spcace
 ---
 
 ## Core Jave Interview Questions & Answers
-## 1. basis:
+## 1. Basis:
 #### 1.1 concepts terminologies
 1. 语句— statement
 2. Instance variable
@@ -14,9 +14,9 @@ tags: Java Interview OOP #post tag, seperated by spcace
 4. func( parameter variables ){…}
 
 
-#### 1.2 common methods
+#### 1.2 Common Methods
 
-###### 1.2.1. string
+###### 1.2.1. String
 4. s.substring(0, 1);
 23. s.substring(1);
 24. s.equals("b");
@@ -40,7 +40,7 @@ sb.reverse();
 sb.toString();
   ```
 
-###### 1.2.2. array arraylist
+###### 1.2.2. Array Arraylist
 2. int max = Integer.MAX_VALUE;
 3. int min = Integer.MIN_VALUE;
 4. Arrays.sort()
@@ -67,7 +67,7 @@ PriorityQueue<Map.Entry<Integer, Integer>> maxHeap =  new PriorityQueue<>((a,b)-
 // pq: pq.add(0); pq.remove(); pq.peek(); pq.isEmpty(); pq.size();
 ```
 
-###### 1.2.3. stack
+###### 1.2.3. Stack
 72. Stack<Integer> stack = new Stack<Integer>();
 73. stack.push(0);
 74. stack.pop();
@@ -76,7 +76,7 @@ PriorityQueue<Map.Entry<Integer, Integer>> maxHeap =  new PriorityQueue<>((a,b)-
 77. stack.size();
 **more**：pop 和 peak 区别：peek()： This method looks at the object at the top of this stack without removing it from the stack.
 
-##### 1.2.4. queue
+##### 1.2.4. Queue
 1. Queue<Integer> q = new LinkedList<Integer>();
 80. q.add(0);
 81. q.remove();
@@ -84,7 +84,7 @@ PriorityQueue<Map.Entry<Integer, Integer>> maxHeap =  new PriorityQueue<>((a,b)-
 5. q.isEmpty();
 6. q.size();
 
-##### 1.2.5 hashmap/ hashset
+##### 1.2.5 Hashmap/ Hashset
 1. if (map.containsKey('c')) {...}
 2. if (map.containsValue(1)) {...}
 3. for (Character d : map.keySet()){...}
@@ -97,7 +97,7 @@ PriorityQueue<Map.Entry<Integer, Integer>> maxHeap =  new PriorityQueue<>((a,b)-
 10. set.isEmpty();
 
 
-## 2. interview questions
+## 2. Interview Questions
 ###### [2.1 interface vs abstract class](#jump1)
 ###### [2.2 Pass by reference vs. pass by value](#jump2)
 ###### [2.3 Final / finalize /finally](#jump3)
@@ -126,7 +126,7 @@ PriorityQueue<Map.Entry<Integer, Integer>> maxHeap =  new PriorityQueue<>((a,b)-
 ###### 2.   HashMap vs. TreeMap vs. HashTable vs. 
 
 
-## 3. anwers
+## 3. Anwers To Questions in 2
 <span id="jump1"></span>
 ###### 3.1 interface vs abstract class
 we use them for different purposes
@@ -337,7 +337,7 @@ Hashtable is synchronized, in contrast to HashMap. It has an overhead for synchr
 
 
 ## 4.其他 
-######4.1 For real-time video conference application, how do you choose between TCP and UDP?
+###### 4.1 For real-time video conference application, how do you choose between TCP and UDP?
 TCP for stored video and UDP for live video
 本题的关键在于比较TCP和UDP的特点，并且根据real-time video conference这个特定的应用场景进行选择。前面提到过，TCP的重传机制会增加延迟，所以不适用于当前场景。其次，视频音频编码本身可以容忍数据出错甚至数据丢失。因此，并不需要采用TCP进行可靠的数据传输。当某一视频帧出现丢包时，可以直接跳过这一帧或者继续播放上一帧。再次，一旦出现网络堵塞的状况，发送端应该主动丢弃一部分数据。原因是，即使这些视频帧发送到了接收端，也可能已经“过期”了，不会被解码显示。采用自己设计的UDP更便于实现对数据包的控制。然而，即使使用UDP，也需要实现TCP的某些模块：比如需要flow control和congestion control来判断接收端的播放情况和网络情况，并且也需要反馈机制判断接收端的接收状况。尽管对于当前场景我们不需要ACK每个数据包，但是接收端可以反馈当前收到的最新完整视频帧的序号。这样，如果一旦发生丢包，发送端可以以接收端收到的最新视频帧为基础，压缩后继的视频。
 
@@ -351,7 +351,7 @@ In order to deliver videos, platforms adopt/rent Content Delievery Networks (CDN
   3. Live video is normally a constant-bandwidth stream recorded off a camera; pre-recorded video streams come off a disk. The loss-backoff dynamics of TCP make it harder to serve live video when the source streams are at a constant bandwidth (as would happen for a live-event). If you buffer to disk off a camera, be sure you have enough buffer for unpredictable network events and variable TCP send/backoff rates. Note that if TCP loses too many packets, the connection dies; thus, UDP gives you much more control for this application since UDP doesn't care about networkt transport layer drops.
 FYI, please don't use the word "packages" when describing networks. Networks send "packets".
 
-######4.2 What happens after you typed a URL in your browser and pressed return key?
+###### 4.2 What happens after you typed a URL in your browser and pressed return key?
 如果要连到远程服务器，首先需要知道服务器的IP地址和端口。其次需要发送接入请求到服务器，服务器返回响应数据。因此，如何寻址和如何建立链接是本题的关键。本题属于知识性问题，没有太多的解题技巧，直接给出解答如下
   1. 进行寻址：如果在浏览器缓存中存有URL的对应IP，则直接查询其IP；否则，访问DNS(Domain Name System)进行寻址(Domain Name Resolution)。
   2. DNS或者URL cache返回网页服务器的IP地址。
