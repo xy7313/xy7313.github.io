@@ -241,7 +241,8 @@ When and which to use is an important question. In brief, if you need a fast set
 1. An Error "indicates serious problems that a reasonable application should not try to catch."
 2. An Exception "indicates conditions that a reasonable application might want to catch."
 3. Error along with RuntimeException & their subclasses are unchecked exceptions. All other Exception classes are checked exceptions.
-4. In Java exceptions under Error and RuntimeException classes are unchecked exceptions, everything else under throwable is checked.
+4. （in another words）In Java exceptions under Error and RuntimeException classes are unchecked exceptions, everything else under throwable is checked.
+5. Checked exceptions are the exceptions that are checked at compile time; Unchecked exceptions are the exceptions that are not checked at compiled time.
 
 <span id="jump11"></span>
 ###### 3.11 method vs. constructor.
