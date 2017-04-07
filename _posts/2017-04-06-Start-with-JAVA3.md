@@ -6,4 +6,7 @@ tags: Java #post tag, seperated by spcace
 ---
 
 ## Singleton
+1. 
+
 ## Exception Handling
+1. 
