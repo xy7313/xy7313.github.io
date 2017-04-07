@@ -89,7 +89,7 @@ tags: Java #post tag, seperated by spcace
         1. A block which contains same name as a class name, which does not have any return type,
         2. used for initializing the variables & objects
         3. will be executed automaticcly when an object of a class is initialized
-    2. properties:
+    2. rules:
         1. By default, every class has default constructor, which initializes and object, and will be lost when a specific constructor is defined manually.
         2. A class can have any number of constructors, with a difference in type/number of parameters is called constructor overloading
         3. If we have two constructor in a class, and we called the default constructor, then we want to invoke another constructor, we can use keyword: this()
@@ -132,4 +132,4 @@ tags: Java #post tag, seperated by spcace
 1. as per: both per and as per have existed in English in the sense “according to” for a very long time
 2. identified from : be identified from within the class
 3. instantiated: when the class is instantiated
-4. semicolon  ['sɛmɪkolən] 分号
+4. semicolon  ['sɛmɪkolən] 
