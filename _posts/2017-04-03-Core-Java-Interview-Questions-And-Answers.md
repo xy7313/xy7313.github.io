@@ -39,6 +39,7 @@ sb.deleteCharAt(sb.length() ‐ 1);
 sb.reverse();
 sb.toString();
   ```
+11. //a weird representation: I saw indexOf(int ch) in java document, actually we always pass character like 'a'... here. An explaination on StackOverFlow: The real reason is that indexOf(int) expects a Unicode codepoint, not a 16-bit UTF-16 "character". Unicode code points are actually up to 21 bits in length. Characters in Java are stored in their unicode integer representation
 
 ###### 1.2.2. Array Arraylist
 2. int max = Integer.MAX_VALUE;
@@ -180,7 +181,7 @@ The process of picking out (abstracting) common features of objects and procedur
   2. Encapsulation in Java is a mechanism of wrapping the data (variables) and code acting on the data (methods) together as a single unit. 
   3. In encapsulation, the variables of a class will be hidden from other classes, and can be accessed only through the methods of their current class
 
-4. Inheritance: // [in'heritəns] 
+4. Inheritance: // [in'heritəns]
 a feature that represents the "is a" relationship between different classes. Inheritance in OOP enable a programmer to extend the capabilities of class without changing the class. 
 
 5. Interface: the languages and codes that the applications use to communicate with each other and with the hardware.

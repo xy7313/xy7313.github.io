@@ -6,6 +6,13 @@ tags: Java #post tag, seperated by spcace
 ---
 
 ## Inner Class
+1. 
+
+
+
+
+
+
 ## Abstract Class Vs Interface
 0. abstract:
     1. method: if only a method name must be declared, but not a body--abstract method
