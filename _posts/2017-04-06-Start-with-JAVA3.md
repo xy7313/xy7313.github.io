@@ -10,3 +10,9 @@ tags: Java #post tag, seperated by spcace
 
 ## Exception Handling
 1. 
+
+## Serialization
+1. 
+
+## Collections
+1. 
