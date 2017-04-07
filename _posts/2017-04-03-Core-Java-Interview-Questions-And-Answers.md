@@ -172,14 +172,14 @@ differences
 1. Abstraction: 
 The process of picking out (abstracting) common features of objects and procedures.
 
-2. Class: 
-  1. A category of objects. The class defines all the common properties of the different objects that belong to it.
-  2. A class, in the context of Java, are templates that are used to create objects, and to define object data types and methods.
+2. Class:
+    1. A category of objects. The class defines all the common properties of the different objects that belong to it.
+    2. A class, in the context of Java, are templates that are used to create objects, and to define object data types and methods.
 
 3. Encapsulation: //   [ɪn,kæpsə'leʃən]
-  1. Encapsulation enable programmers to hide the data of one class from another class. This is needed to protect the normal behavior of one class. We implemented it  using key words including public, private, and protect
-  2. Encapsulation in Java is a mechanism of wrapping the data (variables) and code acting on the data (methods) together as a single unit. 
-  3. In encapsulation, the variables of a class will be hidden from other classes, and can be accessed only through the methods of their current class
+    1. Encapsulation enable programmers to hide the data of one class from another class. This is needed to protect the normal behavior of one class. We implemented it  using key words including public, private, and protect
+    2. Encapsulation in Java is a mechanism of wrapping the data (variables) and code acting on the data (methods) together as a single unit. 
+    3. In encapsulation, the variables of a class will be hidden from other classes, and can be accessed only through the methods of their current class
 
 4. Inheritance: // [in'heritəns]
 a feature that represents the "is a" relationship between different classes. Inheritance in OOP enable a programmer to extend the capabilities of class without changing the class. 
@@ -189,8 +189,8 @@ a feature that represents the "is a" relationship between different classes. Inh
 5. Object: a self-contained entity that consists of both data and procedures to manipulate the data.
 
 6. Polymorphism: // [,pɔli'mɔ:fizm] 
-  1. Subclasses of a class can define their own unique behaviors and yet share some of the same functionality of the parent class. 
-  2. Polymorphism enables programmers to use a different object in place of another provided that object can do the task (implements the same interface).
+    1. Subclasses of a class can define their own unique behaviors and yet share some of the same functionality of the parent class. 
+    2. Polymorphism enables programmers to use a different object in place of another provided that object can do the task (implements the same interface).
 
 7. How will you access the properties of that class?
 !!!!!!!!!!!!!
@@ -203,33 +203,33 @@ a feature that represents the "is a" relationship between different classes. Inh
 <span id="jump7"></span>
 ###### 3.7 hashmap vs. hash table  vs. hashset 
 1. HashMap 
-  1. is implemented as a hash table, and there is no ordering on keys or values.
-  2. what happens when a duplicate key is putting into a hashmap? Overwrite that key if hashmap has the same key. the old value is simply replaced.
+    1. is implemented as a hash table, and there is no ordering on keys or values.
+    2. what happens when a duplicate key is putting into a hashmap? Overwrite that key if hashmap has the same key. the old value is simply replaced.
 2. HashSet 
 is Implemented using a hash table. Elements are not ordered. The add, remove, and contains methods have constant time complexity O(1).
-  1. set： Set interface: A Set contains no duplicate elements. That is one of the major reasons to use a set.
+    1. set： Set interface: A Set contains no duplicate elements. That is one of the major reasons to use a set.
 When and which to use is an important question. In brief, if you need a fast set, you should use HashSet;
 2. Hashtable vs hashmap
-  1. hashtable is synchronized, whereas  HashMap  is not （in contrast to HashMap）. It has an overhead for synchronization. All methods of Hashtable are synchronized which makes them quite slow due to contention if a number of thread increases. This makes  HashMap  better for non-threaded applications, as unsynchronized Objects typically perform better than synchronized ones.
+    1. hashtable is synchronized, whereas  HashMap  is not （in contrast to HashMap）. It has an overhead for synchronization. All methods of Hashtable are synchronized which makes them quite slow due to contention if a number of thread increases. This makes  HashMap  better for non-threaded applications, as unsynchronized Objects typically perform better than synchronized ones.
     - Synchronized:  keyword prevents concurrent access to a block of code or object by multiple Threads
-  2. Hashtable  does not allow  null  keys or values.  HashMap  allows one  null  key and any number of  null  values.
+    2. Hashtable  does not allow  null  keys or values.  HashMap  allows one  null  key and any number of  null  values.
 
 <span id="jump8"></span>
 ###### 3.8  Array vs. ArrayList vs. LinkedList
 1. Array
-  1. Array is a container object that holds a fixed number of values of a single type.
-  1. Array has fix size, and the size is set when we initialize an array.
-  2. Array can contain primitive types, can be multi-dimensional, **while ArrayList is resizable, cannot contain primitive types, only one-dimensional.**
+    1. Array is a container object that holds a fixed number of values of a single type.
+    1. Array has fix size, and the size is set when we initialize an array.
+    2. Array can contain primitive types, can be multi-dimensional, **while ArrayList is resizable, cannot contain primitive types, only one-dimensional.**
 2. ArrayList and LinkedList both implements List interface, maintain the insertion order, non-synchronized (can use Collections.synchronizedList to synchronize). 
-  1. Arraylist is implemented by array. 
-  2. Linked list is implemented by doubly linked list.
+    1. Arraylist is implemented by array. 
+    2. Linked list is implemented by doubly linked list.
 3. Operations:
-  1. Search: ArrayList search operation is pretty fast compared to the LinkedList search operation. get(int index) in ArrayList gives the performance of O(1) while LinkedList performance is O(n).
+    1. Search: ArrayList search operation is pretty fast compared to the LinkedList search operation. get(int index) in ArrayList gives the performance of O(1) while LinkedList performance is O(n).
      - Reason: ArrayList maintains index based system for its elements as it uses array data structure implicitly which makes it faster for searching an element in the list. On the other side LinkedList implements doubly linked list which requires the traversal through all the elements for searching an element.
-  2. Deletion: LinkedList remove operation gives O(1) performance while ArrayList gives variable performance: O(n) in worst case (while removing first element) and O(1) in best case (While removing last element).
+    2. Deletion: LinkedList remove operation gives O(1) performance while ArrayList gives variable performance: O(n) in worst case (while removing first element) and O(1) in best case (While removing last element).
     - Reason: LinkedList’s each element maintains two pointers (addresses) which points to the both neighbor elements in the list. Hence removal only requires change in the pointer location in the two neighbor nodes (elements) of the node which is going to be removed. While In ArrayList all the elements need to be shifted to fill out the space created by removed element.
-  3. Inserts Performance: LinkedList add method gives O(1) performance while ArrayList gives O(n) in worst case.  Reason is same as explained for remove.
-  4. Memory Overhead: ArrayList maintains indexes and element data while LinkedList maintains element data and two pointers for neighbor nodes hence the memory consumption is high in LinkedList comparatively.
+    3. Inserts Performance: LinkedList add method gives O(1) performance while ArrayList gives O(n) in worst case.  Reason is same as explained for remove.
+    4. Memory Overhead: ArrayList maintains indexes and element data while LinkedList maintains element data and two pointers for neighbor nodes hence the memory consumption is high in LinkedList comparatively.
 
 <span id="jump9"></span>
 ###### 3.9 stringbuilder vs string buffer
@@ -302,8 +302,8 @@ MVC:  (Model, View, Controller) is a pattern for organising code in an applicati
 <span id="jump20"></span>
 ###### 3.20 what is JDK,JRE,JVM
 1. JVM:  
-  1. The Java Virtual Machine (JVM) is an abstract computing machine. The JVM is a program that looks like a machine to the programs written to execute in it. 
-  2. (Java Virtual Machine) is an abstract machine. It is a specification that provides runtime environment in which java bytecode can be executed
+    1. The Java Virtual Machine (JVM) is an abstract computing machine. The JVM is a program that looks like a machine to the programs written to execute in it. 
+    2. (Java Virtual Machine) is an abstract machine. It is a specification that provides runtime environment in which java bytecode can be executed
 2. JRE:  is an acronym for Java Runtime Environment.It is used to provide runtime environment.It is the implementation of JVM. It physically exists.
 3. JDK:  is an acronym for Java Development Kit.It physically exists.It contains JRE + development tools.
 
@@ -314,8 +314,8 @@ Generational garbage collector
 2. 2 or more generations
 3. old generation: The objects that did not become unreachable and survived from the young generation are copied here. + young generation: Most of the newly created objects are located here.
 4. Composition of the Young Generation 
-  1. One Eden space
-  2. Two Survivor spaces
+    1. One Eden space
+    2. Two Survivor spaces
 
 <span id="jump22"></span>
 ###### 3.22 Java里shared memory在哪儿
@@ -355,13 +355,12 @@ FYI, please don't use the word "packages" when describing networks. Networks sen
 
 ###### 4.2 What happens after you typed a URL in your browser and pressed return key?
 如果要连到远程服务器，首先需要知道服务器的IP地址和端口。其次需要发送接入请求到服务器，服务器返回响应数据。因此，如何寻址和如何建立链接是本题的关键。本题属于知识性问题，没有太多的解题技巧，直接给出解答如下
-  1. 进行寻址：如果在浏览器缓存中存有URL的对应IP，则直接查询其IP；否则，访问DNS(Domain Name System)进行寻址(Domain Name Resolution)。
-  2. DNS或者URL cache返回网页服务器的IP地址。
-  3. 浏览器与网页服务器通过三次握手建立TCP连接。由于是网页浏览服务，故浏览器连接到服务器的80端口。
-  4. 浏览器与服务器建立HTTP会话(session)，接收来自服务器的HTTP数据。
-  5. 浏览器解析HTTP数据，在本地窗口内渲染并显示网页。
-  6. 当浏览器页面被关闭时，终止HTTP会话并关闭链接。
-7. 
+    1. 进行寻址：如果在浏览器缓存中存有URL的对应IP，则直接查询其IP；否则，访问DNS(Domain Name System)进行寻址(Domain Name Resolution)。
+    2. DNS或者URL cache返回网页服务器的IP地址。
+    3. 浏览器与网页服务器通过三次握手建立TCP连接。由于是网页浏览服务，故浏览器连接到服务器的80端口。
+    4. 浏览器与服务器建立HTTP会话(session)，接收来自服务器的HTTP数据。
+    5. 浏览器解析HTTP数据，在本地窗口内渲染并显示网页。
+    6. 当浏览器页面被关闭时，终止HTTP会话并关闭链接。
 
   In an extremely rough and simplified sketch, assuming the simplest possible HTTP request, no proxies, IPv4 and no problems in any step:
 1. browser checks cache; if requested object is in cache and is fresh, skip to #9
