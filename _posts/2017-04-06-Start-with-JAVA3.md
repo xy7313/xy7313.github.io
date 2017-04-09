@@ -32,22 +32,24 @@ public class EagerInitialized {
 3. Lazy initialize: declare first but not initialize
 ```
 public class LazyInitialized {
-        //private constructor to avoid client applications to use constructor
+        /*
+        1. private constructor to avoid client applications to use constructor
+        2. initialize an object using keyword: static to ensure only one object exist.
+        3. we need to check if the instance existed before we create a new one
+        */
         private LazyInitialized(){
 
         }
         
-        //initialize an object using keyword: static to ensure only one object exist.
         private static final LazyInitialized instance;
 
-        //we need to check if the instance existed  before we create a new one
         public static LazyInitialized getInstance(){
-                if(instance == null) instance = new LazyInitializedSingleton();
-                return instance;
+            if(instance == null) instance = new LazyInitializedSingleton();
+            return instance;
         }
 
         public static void main(String a[]) {
-                LazyInitialized obj = LazyInitialized.getInstance();
+            LazyInitialized obj = LazyInitialized.getInstance();
                 //...
         }
 }
@@ -165,7 +167,7 @@ class A implements Serialization{
 class B{
         public static void main(String a[]) {
                //Chain of stream:
-               
+
         }
 }
 ```
