@@ -161,7 +161,8 @@ class A implements Serialization{
 
         }
 }
-
+```
+```
 //service class to write and read(serialize and deserialize the obj)
 class B{
         public static void main(String a[]) {
