@@ -153,9 +153,9 @@ public class LazyInitialized {
 ## Serialization
 1. Objects are temporary, files are permanent. When we want to write object to file, we serialize the object first.
 2. Example:
-    1. we have a class A, which implements Serialization, if not implements this mock interface, our writing can not succeed.
+    1. we have a class A, which implements Serializable, if not implements this mock interface, our writing can not succeed.
     ```
-    class A implements Serialization{
+    class A implements Serializable{
             private int id;
             private String name;
             A(){
@@ -166,12 +166,42 @@ public class LazyInitialized {
     2. service class to write and read(serialize and deserialize the obj)
     ```
     class B{
-            public static void main(String a[]) {
-                //Chain of stream:
+            FileOutputStream fos;
+            ObjectOutputStream os;
+            A ca;
 
+            FileInputStream fis;
+            ObjectInputStream ois;
+        
+            public static void main(String a[]) {
+                
+                //Chain of stream:
+                //serialize
+                try{
+                    fos = new FileOutputStream("aFile.txt");
+                    os = new ObjectOutputStream(fos);
+                    ca = new A(11, "JB");
+                    os.writeObject(ca);
+                    System.out.println("Saved!");
+                } catch(Exception e) {
+                    e.printStackTrace();
+                }
+
+                //deserialize
+                A obj = null;
+                try{
+                    fis = new FileInputStream("aFile.txt");
+                    ois = new ObjectInputStream(fis);
+                    obj = (A) ois.readObject();
+                    System.out.println("obj: " + obj);	
+                } catch(Exception e) {
+                    e.printStackTrace();
+                }
+                return obj;
             }
     }
     ```
 3. mock interface: they do not have any functions.
-
+4. keyword: transient: `private transient int id;`, so the instance variable id will not be serialized nor deserialized, only variable can use this keyword, and all static variable can not be transient.
+5. `ca instanceof Serializable` true
 
