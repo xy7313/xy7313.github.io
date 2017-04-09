@@ -79,6 +79,7 @@ The class which contains an Inner class is known as an enclosed class or Outer c
 
 
 ## final:
-- final class can not be inherited
-- final method can not be overriden in subclass
+- final class can not be inherited (compile error)
+- final method can not be overriden in subclass (compile error)
 - the value of a final variable can not be changed
+- the reason to declare a method or class "final" is to improve the speed of a program

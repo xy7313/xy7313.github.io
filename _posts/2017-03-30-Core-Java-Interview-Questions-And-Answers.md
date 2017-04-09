@@ -1,11 +1,11 @@
 ---
 layout: post #post
-title: Core Jave Interview Questions & Answers #post title
+title: Core Java Interview Questions & Answers #post title
 categories: Java Interview #post category, seperated by space
 tags: Java Interview OOP #post tag, seperated by space
 ---
 
-## Core Jave Interview Questions & Answers
+## Core Java Interview Questions & Answers
 ## 1. Basis:
 #### 1.1 concepts terminologies
 1. 语句— statement
@@ -136,7 +136,7 @@ we use them for different purposes
  3. For example, the interface Comparable and Cloneable are implemented by unrelated class.
 
 differences
-1. abstrat class--extend, interface--implement
+1. abstract class--extend, interface--implement
 4. interface is a a collection of abstract methods, which only contains method signatures and fields, not implementations. Abstract class can contain a mix of methods declared with or without implementation.
 2. with interface, all fields are automatic public, static, final, and all methods you declare or defined are public. But with abstract class, you can declare fields that are not static and final, and define public, protected, and private concrete method.
 3. we can extend only one class, whether or not it is abstract, whereas you can implement any number if interfaces.
@@ -244,7 +244,7 @@ When and which to use is an important question. In brief, if you need a fast set
 3. Error along with RuntimeException & their subclasses are unchecked exceptions. All other Exception classes are checked exceptions.
 4. （in another words）In Java exceptions under Error and RuntimeException classes are unchecked exceptions, everything else under throwable is checked.
 5. Checked exceptions are the exceptions that are checked at compile time; Unchecked exceptions are the exceptions that are not checked at compiled time.
-6. More about check exception and uncheck exception: http://netjs.blogspot.com/2015/05/difference-between-checked-unchecked-exception-java.html 
+6. More about check exception and unchecked exception: http://netjs.blogspot.com/2015/05/difference-between-checked-unchecked-exception-java.html 
 <span id="jump11"></span>
 ###### 3.11 method vs. constructor.
 1. Constructors can't be called directly; they are called implicitly when the new keyword creates an object. Methods can be called directly on an object that has already been created with new.
@@ -286,9 +286,9 @@ Methods must be declared to return something, although it can be void.
 ###### 3.17  J2EE, J2SE, JSP
 1. JavaSE (Standard Edition): For general-purpose use on desktop PCs,servers and similar devices.
 
-2. JavaEE (Enterprise Edition): Java SE plus various APIs useful formulti-tier client–serverenterprise applications. Theplatform was known as Java2 Platform, Enterprise Editionor J2EEuntil the name was changed to JavaEEin version 5. The current version is called JavaEE 6.
+2. JavaEE (Enterprise Edition): Java SE plus various APIs useful for multi-tier client–server enterprise applications. The platform was known as Java2 Platform, Enterprise Edition or J2EE until the name was changed to JavaEEin version 5. The current version is called JavaEE 6.
 
-3. Java ServerPages (JSP) are server-side Java EEcomponents that generate responses, typically HTMLpages, to HTTP requests from clients. JSPsembed Java code in an HTML page by using the special delimiters<% and %>. A JSP is compiled to a Java servlet,a Java application in its own right, the first time it is accessed.After that, the generated servlet creates the response.
+3. Java ServerPages (JSP) are server-side Java EE components that generate responses, typically HTML pages, to HTTP requests from clients. JSPs embed Java code in an HTML page by using the special delimiters<% and %>. A JSP is compiled to a Java servlet,a Java application in its own right, the first time it is accessed.After that, the generated servlet creates the response.
 
 <span id="jump18"></span>
 ###### 3.18  why do we need package the program.
@@ -303,7 +303,7 @@ MVC:  (Model, View, Controller) is a pattern for organising code in an applicati
 ###### 3.20 what is JDK,JRE,JVM
 1. JVM:  
     1. The Java Virtual Machine (JVM) is an abstract computing machine. The JVM is a program that looks like a machine to the programs written to execute in it. 
-    2. (Java Virtual Machine) is an abstract machine. It is a specification that provides runtime environment in which java bytecode can be executed
+    2. (Java Virtual Machine) is an abstract machine. It is a specification that provides runtime environment in which java byte code can be executed
 2. JRE:  is an acronym for Java Runtime Environment.It is used to provide runtime environment.It is the implementation of JVM. It physically exists.
 3. JDK:  is an acronym for Java Development Kit.It physically exists.It contains JRE + development tools.
 
@@ -345,12 +345,12 @@ TCP for stored video and UDP for live video
 
   Video streaming meets with TCP in their nature. First, video streaming adopts pre-fetching and buffering to achieve smooth play-out. TCP provides such (network) buffer, as well as the reliable transmission guarantee for no loss of frame (a frame could still miss the play-out deadline and discarded, however). Second, TCP's bandwidth probing and congestion control will attempt to use all of the available bandwidth between server and client, fetching content as quick as possible while being friendly to other (TCP) traffic on the same links.
 However, live streaming opts in UDP, because little pre-fetching can be done and buffering will add delay to the video play-out. Since UDP serves only the most basic transport layer functionality, it is used jointly with other application layer protocols such as RTSP  to do video streaming. Firewalls (from enterprise, ISPs) dislike these protocols, making video traffic difficult to traverse through or being throttled.
-In order to deliver videos, platforms adopt/rent Content Delievery Networks (CDN). Most of the CDN servers (e.g. Akamai's) are configured to support web services as their primary course. Thus, streaming video over HTTP works out the box without setting up dedicated servers, and most of the firewalls won't block HTTP traffic. In fact, Dynamic Adaptive Streaming over HTTP (DASH) has become a common practice. Although in theory HTTP can be encapsulated other protocols, they still need to provide reliable transfer, which again precludes UDP. Notably, for companies such as Google and Netflix, they build their own CDN.
+In order to deliver videos, platforms adopt/rent Content Delivery Networks (CDN). Most of the CDN servers (e.g. Akamai's) are configured to support web services as their primary course. Thus, streaming video over HTTP works out the box without setting up dedicated servers, and most of the firewalls won't block HTTP traffic. In fact, Dynamic Adaptive Streaming over HTTP (DASH) has become a common practice. Although in theory HTTP can be encapsulated other protocols, they still need to provide reliable transfer, which again precludes UDP. Notably, for companies such as Google and Netflix, they build their own CDN.
 
   Drawbacks of using TCP for live video:
   1. Typically live video-streaming appliances are not designed with TCP streaming in mind. If you use TCP, the OS must buffer the unacknowledged segments for every client. This is undesirable, particularly in the case of live events; presumably your list of simultaneous clients is long due to the singularity of the event. Pre-recorded video-casts typically don't have as much of a problem with this because viewers stagger their replay activity; therefore TCP is more appropriate for replaying a video-on-demand.
   2. IP multicast significantly reduces video bandwidth requirements for large audiences; TCP prevents the use of IP multicast, but UDP is well-suited for IP multicast.
-  3. Live video is normally a constant-bandwidth stream recorded off a camera; pre-recorded video streams come off a disk. The loss-backoff dynamics of TCP make it harder to serve live video when the source streams are at a constant bandwidth (as would happen for a live-event). If you buffer to disk off a camera, be sure you have enough buffer for unpredictable network events and variable TCP send/backoff rates. Note that if TCP loses too many packets, the connection dies; thus, UDP gives you much more control for this application since UDP doesn't care about networkt transport layer drops.
+  3. Live video is normally a constant-bandwidth stream recorded off a camera; pre-recorded video streams come off a disk. The loss-backoff dynamics of TCP make it harder to serve live video when the source streams are at a constant bandwidth (as would happen for a live-event). If you buffer to disk off a camera, be sure you have enough buffer for unpredictable network events and variable TCP send/backoff rates. Note that if TCP loses too many packets, the connection dies; thus, UDP gives you much more control for this application since UDP doesn't care about network transport layer drops.
 FYI, please don't use the word "packages" when describing networks. Networks send "packets".
 
 ###### 4.2 What happens after you typed a URL in your browser and pressed return key?
