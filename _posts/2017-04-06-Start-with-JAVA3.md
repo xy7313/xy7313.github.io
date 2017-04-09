@@ -128,7 +128,7 @@ public class LazyInitialized {
             }
         
     }
-
+    
     class TestArgument {
 	
             public void test(double arg) throws InvalidArgumentException {
