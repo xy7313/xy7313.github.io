@@ -46,7 +46,8 @@ public class LazyInitialized {
         private static final LazyInitialized instance;
 
         public static LazyInitialized getInstance(){
-            if(instance == null) instance = new LazyInitializedSingleton();
+            if(instance == null) 
+                instance = new LazyInitializedSingleton();
             return instance;
         }
 
@@ -130,9 +131,11 @@ public class LazyInitialized {
         ```
         class TestArgument {    
                 public void test(double arg) throws InvalidArgumentException {
-                        if(arg < 10 && art > 0) System.out.println("Great!!");
+                        if(arg < 10 && art > 0) 
+                            System.out.println("Great!!");
                         //throw a new customized exception
-                        else throw new InvalidArgumentException(arg);
+                        else 
+                            throw new InvalidArgumentException(arg);
                 }
                 public static void main(String a[]) {
                         Test t = new TestArgument();
