@@ -70,13 +70,13 @@ public class LazyInitialized {
     ```
     FileInputStream f = new FileInputStream("fileName");
     try{
-        statementX;
-        return 1;
+            statementX;
+            return 1;
     } catch (IOException e) {
-        e.printStackTrace();
-        return 2;
+            e.printStackTrace();
+            return 2;
     } finally {
-        f.close;
+            f.close;
     }
     ```
     7. Rules:
