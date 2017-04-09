@@ -10,22 +10,24 @@ tags: Java #post tag, seperated by space
 2. Eager initialize: before invoke, it has initialized already. The class is loading, the variable is initialized.
 ```
 public class EagerInitialized {
-        //private constructor to avoid client applications to use constructor
+        /*
+            1. private constructor to avoid client applications to use constructor
+            2. initialize an object using keyword: static to ensure only one object exist.
+            3. we need a public method to make an EagerInitialized obj visible to others
+        */
         private EagerInitialized(){
 
         }
         
-        //initialize an object using keyword: static to ensure only one object exist.
-        private static final EagerInitialized instance = new EagerInitialized();
+        private static EagerInitialized instance = new EagerInitialized();
 
-        //we need a public method to make an EagerInitialized obj visible to others
         public static EagerInitialized getInstance(){
-                return instance;
+            return instance;
         }
 
         public static void main(String a[]) {
-                EagerInitialized obj = EagerInitialized.getInstance();
-                //...
+            EagerInitialized obj = EagerInitialized.getInstance();
+            //...
         }
 }
 ```
@@ -152,25 +154,25 @@ public class LazyInitialized {
 ## Serialization
 1. Objects are temporary, files are permanent. When we want to write object to file, we serialize the object first.
 2. Example:
-```
-//we have a class A, which implements Serialization, if not implements this mock interface, our writing can not succeed.
-class A implements Serialization{
-        private int id;
-        private String name;
-        A(){
+    1. we have a class A, which implements Serialization, if not implements this mock interface, our writing can not succeed.
+    ```
+    class A implements Serialization{
+            private int id;
+            private String name;
+            A(){
 
-        }
-}
-```
-```
-//service class to write and read(serialize and deserialize the obj)
-class B{
-        public static void main(String a[]) {
-               //Chain of stream:
+            }
+    }
+    ```
+    2. service class to write and read(serialize and deserialize the obj)
+    ```
+    class B{
+            public static void main(String a[]) {
+                //Chain of stream:
 
-        }
-}
-```
+            }
+    }
+    ```
 3. mock interface: they do not have any functions.
 
 
