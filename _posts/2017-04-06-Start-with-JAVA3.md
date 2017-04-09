@@ -130,14 +130,12 @@ public class LazyInitialized {
     }
     ```
     ```
-    class TestArgument {
-	
+    class TestArgument {    
             public void test(double arg) throws InvalidArgumentException {
                     if(arg < 10 && art > 0) System.out.println("Great!!");
                     //throw a new customized exception
                     else throw new InvalidArgumentException(arg);
             }
-
             public static void main(String a[]) {
                     Test t = new TestArgument();
                     try{
