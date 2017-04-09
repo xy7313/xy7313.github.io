@@ -116,39 +116,39 @@ public class LazyInitialized {
     4. must be declared with a throws clause.
     5. The method which is declared with the throws declaration must be called within a try catch block or that block must also be declared with the “throws” keyword.
     6. Example:
-    ```
-    class InvalidArgException extends Exception {
+        ```
+        class InvalidArgException extends Exception {
 
-            double arg;
+                double arg;
 
-            InvalidArgException(double arg) {
-                    this.arg = arg;
-            }
+                InvalidArgException(double arg) {
+                        this.arg = arg;
+                }
 
-            public String toString() {
-                    return "InvalidArgException : " + arg;
-            }
-        
-    }
-    ```
-    ```
-    class TestArgument {    
-            public void test(double arg) throws InvalidArgumentException {
-                    if(arg < 10 && art > 0) System.out.println("Great!!");
-                    //throw a new customized exception
-                    else throw new InvalidArgumentException(arg);
-            }
-            public static void main(String a[]) {
-                    Test t = new TestArgument();
-                    try{
-                        t.test(Double.parseDouble(a[0]));
-                    } catch(InvalidArgumentException iae) {
-                        iae.printStackTrace();
-                        System.out.println(iae);
-                    }
-            }
-    }
-    ```
+                public String toString() {
+                        return "InvalidArgException : " + arg;
+                }
+            
+        }
+        ```
+        ```
+        class TestArgument {    
+                public void test(double arg) throws InvalidArgumentException {
+                        if(arg < 10 && art > 0) System.out.println("Great!!");
+                        //throw a new customized exception
+                        else throw new InvalidArgumentException(arg);
+                }
+                public static void main(String a[]) {
+                        Test t = new TestArgument();
+                        try{
+                            t.test(Double.parseDouble(a[0]));
+                        } catch(InvalidArgumentException iae) {
+                            iae.printStackTrace();
+                            System.out.println(iae);
+                        }
+                }
+        }
+        ```
     7. 
 
 ## Serialization
