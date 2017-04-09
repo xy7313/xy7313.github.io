@@ -118,17 +118,13 @@ public class LazyInitialized {
     6. Example:
         ```
         class InvalidArgException extends Exception {
-
                 double arg;
-
                 InvalidArgException(double arg) {
                         this.arg = arg;
                 }
-
                 public String toString() {
                         return "InvalidArgException : " + arg;
                 }
-            
         }
         ```
         ```
