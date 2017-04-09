@@ -29,7 +29,7 @@ tags: Java #post tag, seperated by spcace
     7. native
 9. abstract class
 10. interface
-11. inner classea
+11. inner class
 12. package 
 
 #### Details:
@@ -38,7 +38,7 @@ tags: Java #post tag, seperated by spcace
     2. java className
     3. start point of any program: main()
     1. As per the OOPS of Java, main() must be inside a class, it is also a member of a class
-    2. before creating any object, main() must be identified from within the clas
+    2. before creating any object, main() must be identified from within the class
     3. main() is declared as static, which can be accessed without creating any object
 4. class: An object is an instance of a class used to access the members of a class.
 5. method: A block which has a name, a return type (void if does not return anything) & contains set of statements to be executed is called as a method. 
@@ -61,7 +61,7 @@ tags: Java #post tag, seperated by spcace
     3. Where as a non-static method can access both static & non-static members directly. 
     4. The static modifier, in combination with the final modifier, is also used to define constants. The final modifier indicates that the value of this field cannot change.
     5. static variable: memory share variable x the whole class
-    6. static method, static block: (and static variables) are all execuated before main `static { statement1; ...}`
+    6. static method, static block: (and static variables) are all executed before main `static { statement1; ...}`
     7. static class
     8. only 5,6,7, static variable, static method, static block, static class these four things can be static 
     9. Can class be static?
@@ -85,10 +85,10 @@ tags: Java #post tag, seperated by spcace
         }
         ```
 7. constructor:
-    1. defination:
+    1. definition:
         1. A block which contains same name as a class name, which does not have any return type,
         2. used for initializing the variables & objects
-        3. will be executed automaticcly when an object of a class is initialized
+        3. will be executed automatically when an object of a class is initialized
     2. rules:
         1. By default, every class has default constructor, which initializes and object, and will be lost when a specific constructor is defined manually.
         2. A class can have any number of constructors, with a difference in type/number of parameters is called constructor overloading
@@ -104,7 +104,7 @@ tags: Java #post tag, seperated by spcace
         }
         ```
         4. if we use this() to invoke another constructor, we must put this() in the first line, or we will get a syntax error. 
-        5. if we want to customize a constructor with parameters meanwhile, there is some obj using the default contructor, we need to write the default constructor, then write the new constructor(yes, we need to write 2 constructors).
+        5. if we want to customize a constructor with parameters meanwhile, there is some obj using the default constructor, we need to write the default constructor, then write the new constructor(yes, we need to write 2 constructors).
         6. `class G extend F{ ... }` F's default constructor is invoked first, then invoke G's default or G(arg) constructor
 8. Polymorphism: In a class, if more than one method is defined with a same name, then there must be a difference in type/number of parameters is called as Polymorphism (Method Overloading).
     - In method overloading, if the return type is changed, then there must be a change in type/number of parameters also.

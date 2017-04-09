@@ -6,9 +6,9 @@ tags: Java #post tag, seperated by spcace
 ---
 
 ## Inner Class
-1. defination: A class defined in another class is called as an Inner Class.
+1. Definition: A class defined in another class is called as an Inner Class.
 The class which contains an Inner class is known as an enclosed class or Outer class.
-2. scope: The scope of an Inner class is limited to the boundary of Outer Class.
+2. Scope: The scope of an Inner class is limited to the boundary of Outer Class.
 3. Inner class and Outer class:
     1. An Inner class can access all the members from Outer class including private members directly.(different from subclass). 
     2. However, an Outer class can access the Inner class members only through an object of Inner class.
@@ -47,20 +47,16 @@ The class which contains an Inner class is known as an enclosed class or Outer c
                 /*
                     what we can not do:
                     OuterA.InnerA in = new InnerA(); 
-                    in.shouIn();
-                    because the perfix of OuterA.InnerA is supposed to be a package name rather than class name
+                    in.showIn();
+                    because the prefix of OuterA.InnerA is supposed to be a package name rather than class name
                 */
             }
-
     }
     ```
     4. An Inner class defined within a method can access everything from outside the method but only final type of variables or objects from within the method in which it is defined.（wt？？）
 4. & static:
     1. Whenever an Inner class contains at least one static member, the whole Inner class must be declared as static Inner class.
     2. A static Inner class can access only static members of Outer class directly & to access Non-static members it has to create an Object of Outer class.
-
-
-
 
 
 
@@ -73,10 +69,16 @@ The class which contains an Inner class is known as an enclosed class or Outer c
     4. abstract and static cannot be used together for a method.
     5. An abstract class can not be instantiated as it is termed as incomplete (non-concrete) in terms of its definition.(The class which is having all the methods defined with a body is called as concrete class.)
 1. interface
-    1. defination:
+    1. definition:
     contains only abstract methods, which will be used for multiple inheritance.
     2. rules:
         1. A class can implement any number of Interfaces
         2. A class which implements an interface must override all the methods of Interface, otherwise the class must be declared as abstract.
         2. All the methods of an interface must be overridden by “public” access specifier.
         2. An interface cannot be instantiated.(the same as abstract class)
+
+
+## final:
+- final class can not be inherited
+- final method can not be overriden in subclass
+- the value of a final variable can not be changed

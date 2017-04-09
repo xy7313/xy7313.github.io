@@ -1,8 +1,8 @@
 ---
 layout: post #post
 title: Core Jave Interview Questions & Answers #post title
-categories: Java Interview #post category, seperated by spcace
-tags: Java Interview OOP #post tag, seperated by spcace
+categories: Java Interview #post category, seperated by space
+tags: Java Interview OOP #post tag, seperated by space
 ---
 
 ## Core Jave Interview Questions & Answers
