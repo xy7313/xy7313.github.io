@@ -30,7 +30,7 @@ tags: Salesforce #post tag, seperated by spcace
  
 
 ##### 1. Quick start: Create the Trailblazer App -- salesforce classic
-1. When you complete this quick start, you’ll have a working app with its own menu, a tab, and a custom object that tracks the names of places you want to visit.
+1. Intro: build an app, which helps you on your personal journey to your local park — by keeping track of the places you want to go and the things you want to see. When you complete this quick start, you’ll have a working app with its own menu, a tab, and a custom object that tracks the names of places you want to visit.
 1. When we want to build an app on the salesforce platform, there is a bunch of built-in functionality, such as:
     1. Database to organize information
     2. Security for protecting data and defining access across your organization
@@ -62,5 +62,12 @@ tags: Salesforce #post tag, seperated by spcace
     6. For mobile: 
         1. create quick action: create --> global actions --> global actions --> new action --> target object: your tab name( waypoint )
         2. add that Quick Action to the Publisher:  Create --> Global Actions --> Publisher Layouts --> drag(Remove action by dragging it up to the Global Layout area, add action by dragging it from the Global Layout and dropping it into the Global Publisher below.)
+        3. /one/one.app
 
 ##### 2. Quick start: Create a New Process on the Account Object -- lightening process builder
+1. Intro: Lightning Process Builder is a workflow tool that helps automate business processes without writing a single line of code. This quick start creates a new process that updates Contact records whenever the Account billing address changes
+2. 
+
+8. Steps:
+    1. Search builder and select process builder --> click new -->type name --> when start: a record changes --> save --> +add project
+    2. Process Criteria： 
