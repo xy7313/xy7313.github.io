@@ -98,6 +98,89 @@ cal.set(2017,0,1);
 
 ## JDBC
 //unknow field
+1. Connection
+2. Statement
+3. PreparedStatement:
+    1. PreparedStatement ps = con.prepareStatement("...values(?,?,?)");use Statement, it will be very difficult. so we use preparedStatement, who extends Statement interface
+    2. ps.setString(1, astring);...
+    3. int x = ps.executeUpdate();//insert an entry, x=1??
+4. what VM argument? min max memory,for heap,start execute, all objects on heap
+5. orical: procedure...store block, we can reuse, a lot long business logic, demand of supply,
+6. 3 procedure: just execute, have argument, can return
+
+1. operations in terminal(windows)
+    1. connect system/password-->connected
+    2. create or replace procedure helloproc(x IN number, y IN number, z IN number) as begin
+    z:=x+y;
+    end;
+    /
+    exec helloproc(10,20);
+
+    //receive return value
+    set SERVEROUTPUT ON
+    declare x1 number;
+    begin
+    helloproc(100,200,x1);
+    dbms_output.put_line(x1);
+    end;
+    /
+    backslash, recall/re-execute previous ...
+3. maven can only .. open source, so oracle can not use maven. nmp install, get oracle, register local server custom everything
+4. pom.xml add dependency: oracle
+5. : colon??
+6. JDBC drawback: queries, because queries is only for one database. If I change a database, I need to change ...
+7. implement cashing, JDBC api, not able to do that 
+8. class level -- mapping to a table
+
+
+## Hibernate
+1.  Java persistent API include:
+    1. JPA
+    2. JTA
+    3. Hibernate
+    4. iBATis
+    5. MyBATis
+1. model class + test class 
+2. 2 executable file: hibernate.cfg.xml and <orm-class-name>.hbm.xml
+    1. create hibernate.cfg.xml, copy from document, 
+        1. change mapping resource to someclassname.hbm.xml(depends on our project) 
+        2. and change password
+        3. set url
+        4. example:
+        ```
+        <?xml version="1.0" encoding="utf-8"?>
+        <!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+        <hibernate-configuration>
+            <session-factory>
+                <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+                <property name="hibernate.hbm2ddl.auto">update</property>
+                <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+                <property name="hibernate.connection.password">sqlyxl</property>
+                <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/tables?autoReconnect=true&amp;useSSL=false</property>
+                <property name="hibernate.connection.username">root</property>
+                <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+                <property name="show_sql">true</property>
+                <mapping resource="Author.hbm.xml"></mapping>
+            </session-factory>
+        </hibernate-configuration>
+        ```
+    2. then create someclassname.hbm.xml: change field according to your program
+6. convert to maven(if not)
+7. add dependencies of hibernate and mysql to pom.xml
+8. in the test class, configuration, import form ...hibernate...
+9. must t.commit(); or it only saved in JVM.
+10. steps in terminal in sql:
+    1. use tables
+    2. (optional)source /Users/xy/Desktop/salesforce/10Apr2017/authors.sql;
+    3. select * from auth123;
+
+
+## Q&A
+4. ssl :
+    1. jdbc: jdbc:mysql://localhost:3306/tables?autoReconnect=true&useSSL=false;
+    2. hibernate: jdbc:mysql://localhost:3306/tables?autoReconnect=true&amp;useSSL=false(;)
 
 
 ## Question list

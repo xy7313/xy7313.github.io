@@ -66,8 +66,21 @@ tags: Salesforce #post tag, seperated by spcace
 
 ##### 2. Quick start: Create a New Process on the Account Object -- lightening process builder
 1. Intro: Lightning Process Builder is a workflow tool that helps automate business processes without writing a single line of code. This quick start creates a new process that updates Contact records whenever the Account billing address changes
-2. 
-
+2. Process Builder allows you to choose not just fields on Accounts, but fields that are related to Accounts.
+3. you could add multiple actions for one criteria.
 8. Steps:
     1. Search builder and select process builder --> click new -->type name --> when start: a record changes --> save --> +add project
     2. Process Criteria： 
+    3. Process Action: 
+
+##### 3. TRY TRAIL: Admin Beginner
+1. CRM : a place to store your customer data, processes to nurture and convert prospective customers, and ways to collaborate and engage
+2. Salesforce is CRM, it also includes the platform, where customers and partners can use our suite of technologies to build amazing, connected apps.
+3. Terminology
+    1. Record: an item you are tracking in your database -- a row on the spreadsheet.
+    2. Field: a place where you store a value, like a name or address -- a column on the spreadsheet.
+    3. Object: a table in the database -- a tab on the spreadsheet
+    4. Org: short for "Organization", the place where all your data, configuration, and customization lives -- your instance of Salesforce. you and your user log in to access it.
+    5. Force.com: The suite of configuration tools and programming languages, and APIs native to Salesforce, including Apex and Visualforce
+    6. App: A set of fields, objects, permissions, and functionality to support a business process. Not a thing you download onto your phone.
+    
