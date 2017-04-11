@@ -97,10 +97,22 @@ cal.set(2017,0,1);
 13. -->
 
 ## JDBC
+//unknow field
+
 
 ## Question list
 1. Difference between handling checked exceptions and handling unchecked exceptions
 2. An Inner class defined within a method can access everything from outside the method but only final type of variables or objects from within the method in which it is defined.（wt??）
 3. no private static?
 4. only want 3 objs of a class
-5. 
+
+
+## Problem occured when setting java
+1. When you want to check what jdks you have, keep in mind that all jdks you have are located in this directory : cd /Library/Java/JavaVirtualMachines/
+2. what you need to add in ~/.bash_profile
+```
+JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_31.jdk/Contents/Home  
+PATH=$JAVA_HOME/bin:$PATH  
+CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar 
+```
+3. After modify the ~/.bash_profile, you need source it : `source ~/.bash_profile` , so that this file can come into effect.
