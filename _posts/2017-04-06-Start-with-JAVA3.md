@@ -124,24 +124,23 @@ public class LazyInitialized {
                         this.arg = arg;
                 }
                 public String toString() {
-                        return "InvalidArgException : " + arg;
+                        return "InvalidArgException of argument: " + arg;
                 }
         }
         ```
         ```
-        class TestArgument {    
-                public void test(double arg) throws InvalidArgumentException {
+        class Test {    
+                public void testExp(double arg) throws InvalidArgException {
                         if(arg < 10 && art > 0) 
                             System.out.println("Great!!");
-                        //throw a new customized exception
                         else 
-                            throw new InvalidArgumentException(arg);
+                            throw new InvalidArgException(arg);
                 }
                 public static void main(String a[]) {
-                        Test t = new TestArgument();
+                        Test t = new Test();
                         try{
-                            t.test(Double.parseDouble(a[0]));
-                        } catch(InvalidArgumentException iae) {
+                            t.testExp(Double.parseDouble(a[0]));
+                        } catch(InvalidArgException iae) {
                             iae.printStackTrace();
                             System.out.println(iae);
                         }

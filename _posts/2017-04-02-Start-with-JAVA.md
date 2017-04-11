@@ -40,13 +40,13 @@ tags: Java #post tag, seperated by spcace
     1. As per the OOPS of Java, main() must be inside a class, it is also a member of a class
     2. before creating any object, main() must be identified from within the class
     3. main() is declared as static, which can be accessed without creating any object
-4. class: An object is an instance of a class used to access the members of a class.
-5. method: A block which has a name, a return type (void if does not return anything) & contains set of statements to be executed is called as a method. 
+4. class: An object is an instance of a class used to access the members(properties and methods) of a class.
+5. method: A block which has a name, a return type (void if does not return anything) sometimes parameters and a set of statements, which would be executed is called as a method. 
     - method signature: return type, method name, parameters(doesn't include access specifiers like public...)
 2.  scope of 
     1. local variable: only within a particular block. **Variables which are declared inside a block can be accessed only within the same block is called as Local Variables.**
     2. global variable: (There is no direct concept of global variable in java) 
-        1. class variable(static): A class variable is a variable defined in a class  of which a single copy exists, regardless of how many instances of the class exist.
+        1. class variable(static): A class variable is a variable defined in a class of which a single copy exists, regardless of how many instances of the class exist.
         ```
         class classVariable{
                 //one fixed memory location shared by every instance
@@ -54,7 +54,7 @@ tags: Java #post tag, seperated by spcace
                 ...
         }
         ```
-        2. quiet like instance variable: declared in class, out of method, are only initialized when the class is instantiated.(Variables, which are  declared outside of any block but inside a class can be accessed throughout the class)
+        2. instance variable(without static): declared in class, out of method, are only initialized when the class is instantiated.(Variables, which are  declared outside of any block but inside a class can be accessed throughout the class)
 6. static：
     1. Any method which is static can access only other static members(static context)  directly,
     2. Any method which is static wants to access non-static members, an object of a class must be created.
@@ -68,7 +68,7 @@ tags: Java #post tag, seperated by spcace
         Inner class (more details of inner class, see [start with java 2](http://xy7313.github.io/java/2017/04/04/Start-with-JAVA2/)) can be static, top-level class can not.
     10. Is there will be a static variable inside of a function?
         Local variables can not be static
-        an explaination form stackoverflow
+        an explaination from stackoverflow
         ```
         /*
         where I use the private static variables is when you need to use a variable in a static function. For the static functions you can only use static variables, so you make them private to not access them from other classes. That is the only case I use private static for.

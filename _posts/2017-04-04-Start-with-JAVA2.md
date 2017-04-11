@@ -16,14 +16,14 @@ The class which contains an Inner class is known as an enclosed class or Outer c
     example(way-2):
     ```
     class OuterA {
-            int x = 25;
-            private String name = "Smith";
+            int x = 2;
+            private String name = "James";
 
             class InnerA {
 
                 double d = 23.45;
 
-                void showIn() {
+                void in() {
                     System.out.println(d);
                     System.out.println(name);
                     System.out.println(x);
@@ -31,33 +31,32 @@ The class which contains an Inner class is known as an enclosed class or Outer c
 
             }
 
-            // this method is part of the first way to invoke showIn() inside main
-            void showOut() {
+            // this method is part of the first way to invoke in() inside main
+            void out() {
                 InnerA obj = new InnerA();
-                obj.showIn();
+                obj.in();
             }
 
             public static void main(String a[]) {
                 OuterA o1 = new OuterA();
-                //two ways to invoke showIn()
+                //two ways to invoke in()
                 //1. 
-                o1.showOut();	
-                //2. InnerA is a member of o1, just like other variables and methods
-                o1.new InnerA().showIn();
+                o1.out();	
+                //2. InnerA is a member of o1, like variables and methods
+                o1.new InnerA().in();
                 /*
                     what we can not do:
-                    OuterA.InnerA in = new InnerA(); 
-                    in.showIn();
+                    OuterA.InnerA inA = new InnerA(); 
+                    inA.in();
                     because the prefix of OuterA.InnerA is supposed to be a package name rather than class name
                 */
             }
     }
     ```
-    4. An Inner class defined within a method can access everything from outside the method but only final type of variables or objects from within the method in which it is defined.（wt？？）
-4. & static:
+    4. An Inner class defined within a method can access everything from outside the method but only final type of variables or objects from within the method in which it is defined.（wt??）
+4. With static:
     1. Whenever an Inner class contains at least one static member, the whole Inner class must be declared as static Inner class.
     2. A static Inner class can access only static members of Outer class directly & to access Non-static members it has to create an Object of Outer class.
-
 
 
 

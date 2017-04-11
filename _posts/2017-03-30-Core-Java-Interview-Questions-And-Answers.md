@@ -128,6 +128,7 @@ PriorityQueue<Map.Entry<Integer, Integer>> maxHeap =  new PriorityQueue<>((a,b)-
 
 
 ## 3. Anwers To Questions in 2
+Most are from google，wiki， stackoverflow.
 <span id="jump1"></span>
 ###### 3.1 interface vs abstract class
 we use them for different purposes
