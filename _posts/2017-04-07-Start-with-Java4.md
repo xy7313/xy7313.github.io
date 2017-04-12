@@ -97,17 +97,15 @@ cal.set(2017,0,1);
 13. -->
 
 ## JDBC
-//unknow field
 1. Connection
-2. Statement
-3. PreparedStatement:
+2. Statement: have some a drawback: `//st.executeUpdate("insert into authors (name, age, zipcode) values(" + newName + "', " + newAge + ", '" + newZip + "')");` this can be too complex.
+3. How to improve: **PreparedStatement:**
     1. PreparedStatement ps = con.prepareStatement("...values(?,?,?)");use Statement, it will be very difficult. so we use preparedStatement, who extends Statement interface
-    2. ps.setString(1, astring);...
+    2. ps.setString(1, aString);...
     3. int x = ps.executeUpdate();//insert an entry, x=1??
 4. what VM argument? min max memory,for heap,start execute, all objects on heap
-5. orical: procedure...store block, we can reuse, a lot long business logic, demand of supply,
+5. oracle: procedure...store block, we can reuse, a lot long business logic, demand of supply,
 6. 3 procedure: just execute, have argument, can return
-
 1. operations in terminal(windows)
     1. connect system/password-->connected
     2. create or replace procedure helloproc(x IN number, y IN number, z IN number) as begin
@@ -146,7 +144,7 @@ cal.set(2017,0,1);
         1. change mapping resource to someclassname.hbm.xml(depends on our project) 
         2. and change password
         3. set url
-        4. example:
+        4. example:(more details about url are in Q&A part)
         ```
         <?xml version="1.0" encoding="utf-8"?>
         <!DOCTYPE hibernate-configuration PUBLIC
@@ -157,7 +155,7 @@ cal.set(2017,0,1);
                 <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
                 <property name="hibernate.hbm2ddl.auto">update</property>
                 <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-                <property name="hibernate.connection.password">sqlyxl</property>
+                <property name="hibernate.connection.password">yourpwd</property>
                 <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/tables?autoReconnect=true&amp;useSSL=false</property>
                 <property name="hibernate.connection.username">root</property>
                 <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
@@ -167,7 +165,7 @@ cal.set(2017,0,1);
         </hibernate-configuration>
         ```
     2. then create someclassname.hbm.xml: change field according to your program
-6. convert to maven(if not)
+6. convert to maven(if is not)
 7. add dependencies of hibernate and mysql to pom.xml
 8. in the test class, configuration, import form ...hibernate...
 9. must t.commit(); or it only saved in JVM.
@@ -175,12 +173,10 @@ cal.set(2017,0,1);
     1. use tables
     2. (optional)source /Users/xy/Desktop/salesforce/10Apr2017/authors.sql;
     3. select * from auth123;
-
-
-## Q&A
-4. ssl :
-    1. jdbc: jdbc:mysql://localhost:3306/tables?autoReconnect=true&useSSL=false;
-    2. hibernate: jdbc:mysql://localhost:3306/tables?autoReconnect=true&amp;useSSL=false(;)
+11. Q & A
+    4. ssl :
+        1. jdbc: jdbc:mysql://localhost:3306/tables?autoReconnect=true&useSSL=false;
+        2. hibernate: jdbc:mysql://localhost:3306/tables?autoReconnect=true&amp;useSSL=false(;)
 
 
 ## Question list
