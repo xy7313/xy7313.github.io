@@ -160,11 +160,26 @@ cal.set(2017,0,1);
                 <property name="hibernate.connection.username">root</property>
                 <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
                 <property name="show_sql">true</property>
+                //important mapping for author
                 <mapping resource="Author.hbm.xml"></mapping>
             </session-factory>
         </hibernate-configuration>
         ```
-    2. then create someclassname.hbm.xml: change field according to your program
+    2. then create someclassname.hbm.xml: change field according to your program: the xml files: class author belong to author123 table
+    ```
+    <hibernate-mapping>
+    //author class belongs to table Auth123 with primary key:id
+        <class name="com.demo.model.Author" table="Auth123">
+            <id name="id">
+                <generator class="increment" />
+            </id>
+            <property name="name" length="30" />
+            <property name="age" />
+            <property name="zipcode" />    
+        </class>
+    </hibernate-mapping>
+    ```
+
 6. convert to maven(if is not)
 7. add dependencies of hibernate and mysql to pom.xml
 8. in the test class, configuration, import form ...hibernate...
@@ -173,11 +188,24 @@ cal.set(2017,0,1);
     1. use tables
     2. (optional)source /Users/xy/Desktop/salesforce/10Apr2017/authors.sql;
     3. select * from auth123;
+    4. others: desc table books
 11. Q & A
     4. ssl :
         1. jdbc: jdbc:mysql://localhost:3306/tables?autoReconnect=true&useSSL=false;
         2. hibernate: jdbc:mysql://localhost:3306/tables?autoReconnect=true&amp;useSSL=false(;)
+12. Another way to connect database, we do not need any xml configuration file (like someclassname.hbm.xml )for book class, but need annotation: @Entity, @Table(name = "book123")( class books belongs to table book123, like the xml configuration above)... before class declaration, and in class, we need id(primary key ) and generator setting to AUTO, all from javax.persistance not from hibernate.
+13. steps in book test class:
+    1. configuration cfg = new AnnotationConfigration();
+    2. Session ss
+    3. Transition tra
+    4. ss.add
+    5. tra.commit()
+    0. add mapping class = "com.demo.model.Book" in hibernate.cfg.xml
+    
 
+
+## Java Server Pages(JSP)
+1. 
 
 ## Question list
 1. Difference between handling checked exceptions and handling unchecked exceptions
