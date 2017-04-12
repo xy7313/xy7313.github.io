@@ -179,7 +179,6 @@ cal.set(2017,0,1);
         </class>
     </hibernate-mapping>
     ```
-
 6. convert to maven(if is not)
 7. add dependencies of hibernate and mysql to pom.xml
 8. in the test class, configuration, import form ...hibernate...
@@ -200,12 +199,65 @@ cal.set(2017,0,1);
     3. Transition tra
     4. ss.add
     5. tra.commit()
-    0. add mapping class = "com.demo.model.Book" in hibernate.cfg.xml
-    
+    0. add mapping class = "com.demo.model.Book" in hibernate.cfg.xml 
 
 
 ## Java Server Pages(JSP)
-1. 
+1. server side , java platform
+    1. CGI
+    2. Perl
+    3. Servlets
+    4. JSP: ont top of servlet, every JSP has servlet, technically
+    5. other platforms: PHP, ASP.net
+2. Servlet: primary implementation in java platform to show html
+3. Web containers / web servers:
+    1. Tomcat
+    2. jetty
+    3. apache
+    4. JavaWebServer
+4. Application servers: - Enterprise Architecture
+    1. JBoss
+    2. WebLogic
+    3. WebSphere
+    4. Glassfish
+    5. Oracle Java EE Server
+5. technical difference between 3, 4, 4, scalable, all can use 3, also can use 4. Some 3 can not handle, use 4
+6. all applications we run was desktop applications.
+7. a web proj:
+    1. webContent
+        - *.html
+        - *.jsp
+        - style folder
+            - *.css
+        - script folder
+            - *.js
+        - images
+            - *.png...
+        - WEB-INF
+            - web.xml
+                - *.JAR
+            - classes folder
+                - *.class files of entire source files
+            - *.tld
+    2. src
+        - all java source packages and files (*.java)
+            - Business layer files
+            - Controller classes
+            - service / DAO layer
+            - Servlets, are also called controller
+            - POJO / Model Objects / ORM (object oriented mapping)
+        - *.xml
+        - *.properties
+        - *.json
+    3. pom.xml
+
+
+
+
+
+
+
+
 
 ## Question list
 1. Difference between handling checked exceptions and handling unchecked exceptions
