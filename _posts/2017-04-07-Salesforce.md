@@ -27,7 +27,10 @@ tags: Salesforce #post tag, seperated by spcace
 5. icm essential
 
 
- 
+1. CRM intro
+2. Data Model
+3. crm essentials
+4. admin beginner
 
 ##### 1. Quick start: Create the Trailblazer App -- salesforce classic
 1. Intro: build an app, which helps you on your personal journey to your local park — by keeping track of the places you want to go and the things you want to see. When you complete this quick start, you’ll have a working app with its own menu, a tab, and a custom object that tracks the names of places you want to visit.
@@ -83,4 +86,40 @@ tags: Salesforce #post tag, seperated by spcace
     4. Org: short for "Organization", the place where all your data, configuration, and customization lives -- your instance of Salesforce. you and your user log in to access it.
     5. Force.com: The suite of configuration tools and programming languages, and APIs native to Salesforce, including Apex and Visualforce
     6. App: A set of fields, objects, permissions, and functionality to support a business process. Not a thing you download onto your phone.
-    
+        1. example: if you’re having an event and you want people to sign in,  you could create an Event app in Salesforce. The process/entity becomes an object (‘Event’), and those columns become fields (‘Attendee Name’, ‘Title’, ‘Company’, ‘Email’) on the object.
+        2. benefits:
+            - Get real-time access to data as it’s entered, via mobile or desktop.
+            - Create reports and dashboards to analyze attendees.
+            - Send follow up emails to attendees after the event.
+            - Relate attendees to marketing campaigns and sales information including order and purchase information.
+            - Engage with attendees in a community.
+            - Create automated processes to engage with the attendees over time.
+            - Take advantage of instant scalability, instant mobile access, secure data storage and backups.
+            - And much, much more
+4. An example using platform:
+    1. scenario:
+    2. solution: create a custom field for preferred phone number, and add a new section on the page layout [1] just for phone numbers and your new custom field.
+4. define declarative and programmatic development：
+    1. Declarative refers to point-and-click functionality in Salesforce. It means that you can configure and customize Salesforce without writing code.
+    2. Programmatic refers to code-driven functionality in Salesforce. It means that you can customize Salesforce using programmatic tools like Apex, Visualforce, and Lightning, and standard web technologies like JavaScript, CSS, and more.
+5. the golden rule is to always try to build with clicks before going to code, as it is more sustainable and maintainable moving forward.
+6. tips for identifying good processes to bring onto the platform
+    1. reliance on spreadsheets
+    2. Collaboration via email
+    3. Documents shared on local file directories
+    4. Time-intensive, manual steps
+    5. Impact to a few departments maximum (just as you’re getting started; keeping your number of stakeholders to a minimum will help you make progress)
+
+
+## you know
+
+1. resist the temptation to think ...
+2. the golden rule is to always do ...
+3. give you more granular control of customization
+4. or vice versa
+5. If you see a spinning wheel, your .. is still being processed
+6. Speed up the onboarding process with a
+7. Time off tracking
+8. Assign work to queues and use Chatter to collaborate on requests, and track everything in
+9. at an aggregate level.
+10. versatile
