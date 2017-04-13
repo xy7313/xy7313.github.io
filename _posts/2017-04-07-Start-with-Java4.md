@@ -32,6 +32,9 @@ tags: Java #post tag, seperated by space
     while(listIt.hasPrevious()){
 	       System.out.println(listIt.previous());
 	} 
+    // loops
+    for(ClassName cn : list){...}
+    list.forEach(System.out::println);
     ```
     7. Enumeration: hasMoreElements(); nextElement()
     ```
@@ -250,7 +253,19 @@ cal.set(2017,0,1);
         - *.properties
         - *.json
     3. pom.xml
+8. create:
+    1. tomcat--right click --> other --> create server --> apache tomcate
 
+
+9. Steps:
+    1. new other server use tomcat
+    2. new web dynamic web prj --> set target runtime == tomcat --> do not finish directly, click next, next and check the box with generate web.xml
+10. declaration tag:
+    1. !
+    2. only once
+    3. 
+11. jsp, just like html
+servlet, have html embebbed, this is drawback, so use jsp.
 
 
 
