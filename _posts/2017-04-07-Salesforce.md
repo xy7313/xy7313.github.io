@@ -5,6 +5,9 @@ categories: Salesforce #post category, seperated by spcace
 tags: Salesforce #post tag, seperated by spcace
 ---
 
+#### Intro of this blog
+When I read and practiced on trail from :https://trailhead.salesforce.com/trails , I found many useful informations, so here are some notes I took from this website.
+
 ## Start
 1. what salesforce is?
     1. CRM
@@ -18,6 +21,7 @@ tags: Salesforce #post tag, seperated by spcace
     <!--8. can not pull data unless-->
     <!--9. can not get lead,  -->
     
+
 ## Trail
 
 #### Trail Plan
