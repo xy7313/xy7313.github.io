@@ -27,13 +27,8 @@ When I read and practiced on trail from :https://trailhead.salesforce.com/trails
 1. Quick start: Create the Trailblazer App -- salesforce classic
 2. Quick start: Create a New Process on the Account Object -- lightening process builder
 4. admin beginner
-5. icm essential
-
-
-1. CRM intro
-2. Data Model
 3. crm essentials
-4. admin beginner
+4. admin intermediate
 
 ##### 1. Quick start: Create the Trailblazer App -- salesforce classic
 1. Intro: build an app, which helps you on your personal journey to your local park — by keeping track of the places you want to go and the things you want to see. When you complete this quick start, you’ll have a working app with its own menu, a tab, and a custom object that tracks the names of places you want to visit.
