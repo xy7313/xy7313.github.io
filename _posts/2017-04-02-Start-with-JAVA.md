@@ -133,3 +133,4 @@ tags: Java #post tag, seperated by spcace
 2. identified from : be identified from within the class
 3. instantiated: when the class is instantiated
 4. semicolon  ['sɛmɪkolən] 
+5. : colon

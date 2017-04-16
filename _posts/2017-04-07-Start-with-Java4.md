@@ -101,7 +101,7 @@ cal.set(2017,0,1);
 
 ## JDBC
 1. Connection
-2. Statement: have some a drawback: `//st.executeUpdate("insert into authors (name, age, zipcode) values(" + newName + "', " + newAge + ", '" + newZip + "')");` this can be too complex.
+2. Statement: have some a drawback: `st.executeUpdate("insert into authors (name, age, zipcode) values(" + newName + "', " + newAge + ", '" + newZip + "')");` this can be too complex.
 3. How to improve: **PreparedStatement:**
     1. PreparedStatement ps = con.prepareStatement("...values(?,?,?)");use Statement, it will be very difficult. so we use preparedStatement, who extends Statement interface
     2. ps.setString(1, aString);...
@@ -111,30 +111,31 @@ cal.set(2017,0,1);
 6. 3 procedure: just execute, have argument, can return
 1. operations in terminal(windows)
     1. connect system/password-->connected
-    2. create or replace procedure helloproc(x IN number, y IN number, z IN number) as begin
-    z:=x+y;
-    end;
-    /
-    exec helloproc(10,20);
+    2. create or replace procedure helloproc(x IN number, y IN number, z IN number) as begin (actually have no idea what this procedure is)
+        ```
+        z:=x+y;
+        end;
+        /
+        exec helloproc(10,20);
 
-    //receive return value
-    set SERVEROUTPUT ON
-    declare x1 number;
-    begin
-    helloproc(100,200,x1);
-    dbms_output.put_line(x1);
-    end;
-    /
-    backslash, recall/re-execute previous ...
+        //receive return value
+        set SERVEROUTPUT ON
+        declare x1 number;
+        begin
+        helloproc(100,200,x1);
+        dbms_output.put_line(x1);
+        end;
+        /
+        backslash, recall/re-execute previous ...
+        ```
 3. maven can only .. open source, so oracle can not use maven. nmp install, get oracle, register local server custom everything
 4. pom.xml add dependency: oracle
-5. : colon??
 6. JDBC drawback: queries, because queries is only for one database. If I change a database, I need to change ...
 7. implement cashing, JDBC api, not able to do that 
 8. class level -- mapping to a table
 
 
-## Hibernate
+## Hibernate ( still have one note to read)
 1.  Java persistent API include:
     1. JPA
     2. JTA
@@ -171,25 +172,25 @@ cal.set(2017,0,1);
     2. then create someclassname.hbm.xml: change field according to your program: the xml files: class author belong to author123 table
     ```
     <hibernate-mapping>
-    //author class belongs to table Auth123 with primary key:id
-        <class name="com.demo.model.Author" table="Auth123">
+    //the class--yourclassname belongs to table--yourTableName with primary key:id
+        <class name="com.demo.model.yourclassname" table="yourTableName">
             <id name="id">
                 <generator class="increment" />
             </id>
-            <property name="name" length="30" />
+            <property name="name" length="60" />
             <property name="age" />
             <property name="zipcode" />    
         </class>
     </hibernate-mapping>
     ```
-6. convert to maven(if is not)
+6. convert to maven(if it is not)
 7. add dependencies of hibernate and mysql to pom.xml
 8. in the test class, configuration, import form ...hibernate...
 9. must t.commit(); or it only saved in JVM.
 10. steps in terminal in sql:
     1. use tables
-    2. (optional)source /Users/xy/Desktop/salesforce/10Apr2017/authors.sql;
-    3. select * from auth123;
+    2. (optional)source /Users/yourpath/yourTableName.sql;
+    3. select * from yourTableName;
     4. others: desc table books
 11. Q & A
     4. ssl :
@@ -197,7 +198,7 @@ cal.set(2017,0,1);
         2. hibernate: jdbc:mysql://localhost:3306/tables?autoReconnect=true&amp;useSSL=false(;)
 12. Another way to connect database, we do not need any xml configuration file (like someclassname.hbm.xml )for book class, but need annotation: @Entity, @Table(name = "book123")( class books belongs to table book123, like the xml configuration above)... before class declaration, and in class, we need id(primary key ) and generator setting to AUTO, all from javax.persistance not from hibernate.
 13. steps in book test class:
-    1. configuration cfg = new AnnotationConfigration();
+    1. configuration cfg = new AnnotationConfiguration();
     2. Session ss
     3. Transition tra
     4. ss.add
@@ -205,7 +206,7 @@ cal.set(2017,0,1);
     0. add mapping class = "com.demo.model.Book" in hibernate.cfg.xml 
 
 
-## Problem occured when setting java
+## Problem occurred when setting java
 1. When you want to check what jdks you have, keep in mind that all jdks you have are located in this directory : cd /Library/Java/JavaVirtualMachines/
 2. what you need to add in ~/.bash_profile
 ```
