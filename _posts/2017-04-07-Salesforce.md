@@ -76,7 +76,8 @@ tags: Salesforce #post tag, seperated by spcace
     2. Process Criteria： 
     3. Process Action: 
 
-##### 3. TRY TRAIL: Admin Beginner
+## 3. TRY TRAIL: Admin Beginner
+##### 1. Salesforce Platform Basics
 1. CRM : a place to store your customer data, processes to nurture and convert prospective customers, and ways to collaborate and engage
 2. Salesforce is CRM, it also includes the platform, where customers and partners can use our suite of technologies to build amazing, connected apps.
 3. Terminology
@@ -109,6 +110,137 @@ tags: Salesforce #post tag, seperated by spcace
     3. Documents shared on local file directories
     4. Time-intensive, manual steps
     5. Impact to a few departments maximum (just as you’re getting started; keeping your number of stakeholders to a minimum will help you make progress)
+7. Architecture
+    1. Trusted Multitenant Cloud:  
+        1. protecting your data
+        2.  Using standard functionality in Salesforce, you get a fine degree of security control over everything from user and client authentication, through administrative permissions to the data access and sharing model.
+        3. advantage of a multitenant cloud: all of our customers, from small businesses to enterprise companies, are on the same code-base and all get the benefits of the same features, functionality, and automatic upgrades 3 times a year. (Salesforce’s upgrades are automatic and seamless)
+        4. The cloud also means we can deliver Software as a Service (SaaS), which is important because it means you don’t have to install a program to use Salesforce. You just need an internet connection to log in.
+    2. Scalable metadata platform: the structure of your Salesforce org
+        1. imagine all of that data has just been exported. The structure is still there, but the data itself is gone. What you’d have left, that underlying structure, that is the metadata. It’s all of your standard and custom functionality, and all of your configuration and code.
+        2. Salesforce’s SaaS model means we make the metadata immediately available for development, configuration
+    3. fast app dev and customization: There is no installation of hardware and software, and there are standard options for defining security and user access, creating reports, and making the app social and mobile.
+    4. largest enterprise ecosystem
+    5. complete CRM
+    6. API (Application Programming Interface): 
+        2. it’s essentially a contract between two pieces of software, allowing them to connect to each other and exchange information (without knowing any of the inner details of how they work.)
+        1. he API name is a unique identifier that the platform uses to determine what data or metadata you are trying to access.
+8. Setup： 
+    1. Setup consists of a tab bar, a navigational sidebar, and a main window. 
+    2. Setup Search uses type-ahead functionality to help you jump quickly to the item you want. advanced search
+    3. If you’re not at your desk and you need to get your admin duties on, you can take Setup on the go with the SalesforceA mobile app.
+        1. Username
+        2. Super secret password
+        3. ?? Correct instance: You can connect to a sandbox environment for testing purposes, or a custom domain if configured for your org
+    4. trust.salesforce : The Recent System Status section shows information from trust.salesforce.com about your instance's system performance over the last 24 hours. 
+9. develop your AppExchange strategy: all from- https://trailhead.salesforce.com/trails/force_com_admin_beginner/modules/starting_force_com/units/starting_developer_console 
+    1. Identify the departments using Salesforce (either now or in the future). These are your primary stakeholders for AppExchange app installations.
+    2. Research AppExchange apps for the business cases provided by your stakeholders. Interview your stakeholders thoroughly to gather the requirements needed to select and evaluate the apps.
+        1. What business problem are you trying to solve?
+        2. What are your main pain points at present?
+        3. How many users?
+        4. What is your budget?
+        5. What is your timeline?
+    1. Download apps into a sandbox or Developer Edition org for preview and testing. An important step is to ensure that the app you’re installing doesn’t interfere with any customizations you’ve done or other apps you’ve already installed.
+        2. Sandboxes are copies of your organization in a separate environment. They are used for development and testing： https://help.salesforce.com/articleView?id=create_test_instance.htm&language=en_US&type=0 4 types: developer sandbox, dev pro sandbox(lager tata sets), partial copy sandbox(includes a sample of your production org’s data as defined by a sandbox template), full sandbox(support performance testing, load testing, and staging,  a replica of your production org, including all data, But the length of the refresh interval makes it difficult to use Full sandboxes for development.) **We recommend that you apply a sandbox template so that your sandbox contains only the records that you need for testing or other tasks.**
+    4. Evaluate your choices. Consider budget, app functionality, and any feature gaps. Consider inviting your stakeholders into the sandbox or Developer Edition org to preview the app functionality, or invite your stakeholders to a demo of the app.
+    5. Execute and document. Prepare your users for the change in user experience (if any), including providing training or documentation as needed
+10. Install from AppExchange:
+    1. In general, an AppExchange best practice is to install first in a sandbox or Developer Edition org. A few considerations:
+        1. Some of the packages come bundled with custom fields, objects, Apex classes, and more.
+        2. All of these customizations have names, which may conflict with existing names in your org.
+    2. give permissions to admins only, all users, or specific profiles
+    3. The AppExchange is a complete marketplace offering cloud-computing applications and consulting services
+
+##### 2. Data Modeling
+1. There are two types of objects.
+    1. Standard Objects—These are objects included with Salesforce, by default, for example the objects used to store data in standard tabs such as accounts, contacts, or opportunities.
+    2. Custom Objects—These are new objects you create to store information unique to your organization. Custom objects extend the functionality that standard objects provide. **For example, if you’re building an app to track product inventory, you can create custom objects called Merchandise and Invoices, as shown in the figure below.**
+2. Objects can have relationship fields that define how records in one object relate to records in another object. These fields play the same role as primary and foreign keys in a database
+3.  All attributes of an object are described with metadata, making it easy to create and modify records either through a visual interface or programmatically.
+6. Fields
+    1. Identity Field：
+        - called ID
+        - manages the identity data in every record
+        - as a result you can view every record (across all objects) by simply using a URL of the above form
+        - eg: https://yourInstance.salesforce.com/0015000000Gv7qJ
+    2. System Fields
+        - All objects have a number of read-only system fields automatically associated with them. eg: CreatedDate, LastModifiedById
+    3. Name Fields:
+        -  required field that has a special place in the life of the object
+        -  It's not required to be a unique identifier, but it is supposed to be the primary way users distinguish one record from another
+        - A name can be one of two types: a text string or an auto-number field.
+            - auto-number field, you must specify the format for the field and the starting number. Auto number fields increment by one each time a record is created.
+    4. Custom Fields: . All fields in an object must be defined as a particular data type. more here: https://www.adminhero.com/a-primer-on-salesforce-fields-and-relationships/
+    5. Relationship Fields: stores the ID of the parent record in a relationship
+        1. Lookup: Lookup relationships can be used to create one-to-one and one-to-many relationships.
+        2. Master-Detail: 
+            - Master-detail relationships can be used whenever there is a tight binding between two objects.
+            - They can also be used to create many-many relationships.
+            - The master object in a master-detail relationship can also contain rollup summary fields : store values aggregated from the child records in the relationship
+    5. Other Features of Objects
+        1. formulas (rich expression ) - set up validation rules,create workflow rule criteria
+        2. validation
+        3. triggers, written in the Apex language
+        4. Labels—Every object and record has a label and can include a description, for help, which is automatically included in the user interface.
+        5. Notes and attachments
+        6. Track Field History
+
+
+##### 04/14 Security
+advantages workflow has compared to process
+single task --  workflow, one object
+
+preview
+1. master-detail, change one object that will impact another: 2examples: 1. master rollup summary field, child amount changes, this field of master changes; 2. delete master, child gone
+2. advantage of having dashboard: give you a very quick glance on what is going on 
+
+main topic:
+1. part all users in specific groups, defined in profile 
+2. profile is a field? some value i can choose is account,case,...??
+3. public r/w, public r/only, private ..
+4. lock down on object level
+5. user profile, standard profile can not be changed, if our demand is similar like standard setting, we make some changes by permission set, if we have totally different demand, we create a new profile
+6. share
+7. record type: ..account, for each record type, we can have a business layout. subject to profile
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## you know
@@ -123,3 +255,21 @@ tags: Salesforce #post tag, seperated by spcace
 8. Assign work to queues and use Chatter to collaborate on requests, and track everything in
 9. at an aggregate level.
 10. versatile
+11.  a user’s Salesforce account may have been compromised
+12. find root cause
+13. Important for both security tracking purposes and adoption
+14. Sandboxes are a vital tool for administrators and developers and a worthwhile investment;
+15. view all future jobs, including Apex jobs, dashboard refreshes, and reporting snapshots.
+16. These are your primary stakeholders for 。。。
+17. What are your main pain points at present?
+18. What is your budget/timeline?
+19. Before you can make your own app or service publicly available to potential customers,
+20. paint yourself in to corner with that strategy
+21. Remember before you roll out a new app get your users ready. To do that you will want to message out the change that is coming to the relevant users and when it will be coming.
+22. Each table comprises a number of columns
+23. square bracket
+24. rollup  summary
+
+
+
+
