@@ -63,13 +63,13 @@ Class notes
 10. Two ways :
     1. jsp: html with java embedded
         1. declaration tag, global variable, eg: 
-        ```
-        <head> 
-            <%! 
-                Connection con; 
-            %> 
-        </head>
-        ``` 
+            ```
+            <head> 
+                <%! 
+                    Connection con; 
+                %> 
+            </head>
+            ``` 
             1. !
             2. only once
             3. must in <head></head>

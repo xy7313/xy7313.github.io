@@ -21,6 +21,29 @@ When I read and practiced on trail from :https://trailhead.salesforce.com/trails
     <!--8. can not pull data unless-->
     <!--9. can not get lead,  -->
     
+## To do list:
+
+1. CRM Intro 
+http://resources.docs.salesforce.com/rel1/doc/en-us/static/pdf/SF_CRM_cheatsheet_web.pdf 
+2. Data Model 
+https://developer.salesforce.com/docs/atlas.en-us.api.meta/api/data_model.htm 
+3. Learn CRM Essentials: 
+https://trailhead.salesforce.com/trail/getting_started_crm_basics
+Skip CPQ basics
+4. Admin Beginner 
+https://trailhead.salesforce.com/trail/force_com_admin_beginner
+5. Admin Intermediate 
+https://trailhead.salesforce.com/trail/force_com_admin_intermediate
+6. Data Model
+https://www.adminhero.com/a-primer-on-salesforce-fields-and-relationships/ 
+7. Approvals
+http://resources.docs.salesforce.com/200/16/en-us/sfdc/pdf/salesforce_useful_approval_processes.pdf
+8. Workflow examples
+http://resources.docs.salesforce.com/200/5/en-us/sfdc/pdf/salesforce_useful_workflow_rules.pdf
+9. https://www.newfangled.com/creating-salesforce-workflow-rules/
+10. Reports and DB badge
+https://trailhead.salesforce.com/en/super_badges/superbadge_reports
+ 
 
 ## Trail
 
