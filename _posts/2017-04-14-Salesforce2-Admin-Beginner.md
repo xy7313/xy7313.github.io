@@ -1,6 +1,6 @@
 ---
 layout: post #post
-title: Salesforce2 Admin Beginner #post title
+title: Salesforce 2 -- Admin Beginner #post title
 categories: Salesforce #post category, seperated by spcace
 tags: Salesforce #post tag, seperated by spcace
 ---
@@ -171,10 +171,6 @@ All content from: https://trailhead.salesforce.com/trails
 
 ?? mobile后两个纯粹瞎写啊，得问问
 
-
-
-
-
 ##### 6. Chatter Basics
 1. Feed tracking in Salesforce highlights changes to records by automatically announcing them in the record’s feed.
 
@@ -194,72 +190,31 @@ All content from: https://trailhead.salesforce.com/trails
 
 
 
-Formula fields do ignore the Field-Level Security.
-
-
-
-
-
-
-
-
-
-
-##### 04/19
-1. assignment
-    1. wt obj used in business scense
-    2. creating an app for sales rep
-    3. opp 
-    4. people: 
-    5. workflow(alert email, more simpler), process builder
-
-
-1. account -- customer(may be a doctor in this case), a company and its employees
-2. activity in account
-3. wt sf do? this company have different database
-1. leads, opportunity standard object
-
-opportunity
-5. opportunity with visit object, master, detail
-6. one opportunity have many visits, master-detail relationship, opportunity can have rollup summary as master object
-
-workflow
-1. compact layout,
-
-in this case, work as manager. use role, user profile, to find the manager, approver setting--manager. (this can be specified in email template)
-expense obj, account obj,
-
-do not need report type, need opp and obj, opp has rollup fields, and 
-
-test: what is mcq
-
-
-
 
 
 
 
 ##### 04/14 Security
-advantages workflow has compared to process
+###### preview
+1. advantages workflow has compared to process
 single task --  workflow, one object
-
-preview
-1. master-detail, change one object that will impact another: 2examples: 1. master rollup summary field, child amount changes, this field of master changes; 2. delete master, child gone
+1. master-detail, change one object that will impact another. 2 examples: 
+    1. master rollup summary field, child amount changes, this field of master changes; 
+    2. delete master, child gone
 2. advantage of having dashboard: give you a very quick glance on what is going on 
 
-main topic:
-1. part all users in specific groups, defined in profile 
-2. profile is a field? some value i can choose is account,case,...??
+###### main topic:
+1. divide all users into specific groups, defined in profile 
+2. profile is a field? some value I can choose is account,case,...??
 3. public r/w, public r/only, private ..
 4. lock down on object level
 5. user profile, standard profile can not be changed, if our demand is similar like standard setting, we make some changes by permission set, if we have totally different demand, we create a new profile
-6. share
+6. share rules??
 7. record type: ..account, for each record type, we can have a business layout. subject to profile
 
 
 ##### 04/17 developer beginner--apex
-
-1. declaratively configuration before
+1. declaratively configuration first
 2. an example declarative then Programmatic:
     1. new object
     2. new custom field, lookup relations, relate to account
@@ -269,6 +224,7 @@ main topic:
     6. model(your database) + view + controller(in the middle): salesforce have some built in functions.
     7. apex class -- controller, can put any objects on the same page. manipulate the logic, how the data display
     8. apex standardController = "Account" + relatedlist + id in url,
+
 
 ## Question list
 1. data model, create object relationships, resulting API name: trail_c, all custom fields API name: fields1_c...(why? I have not set it)：https://trailhead.salesforce.com/trails/force_com_admin_beginner/modules/data_modeling/units/creating_custom_objects_fields

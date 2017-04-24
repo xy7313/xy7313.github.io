@@ -1,6 +1,6 @@
 ---
 layout: post #post
-title: Salesforce Try It First #post title
+title: Salesforce 1 -- Try It First #post title
 categories: Salesforce #post category, seperated by spcace
 tags: Salesforce #post tag, seperated by spcace
 ---

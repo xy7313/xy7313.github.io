@@ -1,6 +1,6 @@
 ---
 layout: post #post
-title: Start from Java 4 #post title
+title: Start from Java 4 -- Collections, Hibernate #post title
 categories: Java #post category, seperated by space
 tags: Java #post tag, seperated by space
 ---
