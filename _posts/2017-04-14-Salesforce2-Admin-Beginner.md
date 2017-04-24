@@ -1,9 +1,13 @@
 ---
 layout: post #post
-title: Salesforce2 Admin Beginner#post title
+title: Salesforce2 Admin Beginner #post title
 categories: Salesforce #post category, seperated by spcace
 tags: Salesforce #post tag, seperated by spcace
 ---
+
+
+Notes from: https://trailhead.salesforce.com/trails 
+All content from: https://trailhead.salesforce.com/trails 
 
 ## 3. TRY TRAIL: Admin Beginner
 ##### 1. Salesforce Platform Basics
@@ -143,6 +147,95 @@ tags: Salesforce #post tag, seperated by spcace
             - One employment website could list many positions.
         - Instead of creating a relationship field on the Position object that directly links to the Website object, we can link them using a **junction object**. A junction object is a custom object with two master-detail relationships, and is the key to making a many-to-many relationship.
 9. Schema Builder
+    1. Click Auto-Layout to sort the layout of the objects in your schema. When you click Auto-Layout, you can’t undo it.
+    2. Objects created outside of Schema Builder, such as through an app or the API, don’t automatically display on the canvas. Select the checkbox for the object created outside Schema Builder to display it on the canvas.
+    3. Any field you add through Schema Builder isn’t automatically added to the page layout. You will need to edit the page layout to specify where the field should be displayed.
+
+##### 3. Data  -- Salesforce Classic.
+1. two tools, data loader & data import wizard(less file)
+2. mapping
+
+##### 4. UI
+1. If a tab style is already in use, a number enclosed in brackets [] appears next to the tab style name. Hover your mouse over the style name to view the tabs that use the style. Click Hide styles which are used on other tabs to filter this list.
+2. Salesforce’s formula editor, and you use it to define the properties of the button or link.
+3. You can override the behavior of standard buttons on record detail pages. You can also override the tab home page that displays when a user clicks a standard, custom, or external object tab.
+4. Button overrides are global
+
+##### 5. mobile salesforce1
+1. You can’t set different menu configurations for different types of users.
+2. if a user is assigned to a profile that has the Groups tab set to Tab Hidden, the user won’t see the Groups menu item in Salesforce1, even though an administrator has included it in the menu.
+3. Salesforce1 Navigation：The first item in the Selected list becomes your users’ Salesforce1 landing page.
+4. Tabs: The navigation menu in a community isn’t controlled via the Navigation Menu settings page. Instead, the tabs that are specified in Tabs & Pages in the community’s administration settings determine the contents of the community’s navigation menu.
+5. using compact layouts to put important fields into object record headers
+6. object record pages have page layouts that can be customized, actions have action layouts that can be customized
+
+?? mobile后两个纯粹瞎写啊，得问问
+
+
+
+
+
+##### 6. Chatter Basics
+1. Feed tracking in Salesforce highlights changes to records by automatically announcing them in the record’s feed.
+
+##### 7. Reports & Dashboards
+1. A report is a list of records that meet the criteria you define. Every report is stored in a folder. You control who has access to the contents of the folder based on roles, permissions, public groups, and license types
+2. A dashboard is a visual display of key metrics and trends for records in your org. The relationship between a dashboard component and report is 1:1; for each dashboard component, there is a single underlying report. 
+    3.  to view the dashboard components, you need access to the underlying reports as well.
+    1. Like reports, dashboards are stored in folders,
+    2. Each dashboard has a running user, whose security settings determine which data to display in a dashboard.
+3. A report type is like a template which makes reporting easier.
+    1. The report type determines which fields and records are available for use when creating a report. This is based on the relationships between a primary object and its related objects. For example, with the ‘Contacts and Accounts’ report type, ‘Contacts’ is the primary object and ‘Accounts’ is the related object.
+    2. Reports display only records that meet the criteria defined in the report type. Out of the box, Salesforce provides a set of predefined standard report types. Don’t see all the fields you want? You might need to create a custom report type.
+
+
+
+
+
+
+
+Formula fields do ignore the Field-Level Security.
+
+
+
+
+
+
+
+
+
+
+##### 04/19
+1. assignment
+    1. wt obj used in business scense
+    2. creating an app for sales rep
+    3. opp 
+    4. people: 
+    5. workflow(alert email, more simpler), process builder
+
+
+1. account -- customer(may be a doctor in this case), a company and its employees
+2. activity in account
+3. wt sf do? this company have different database
+1. leads, opportunity standard object
+
+opportunity
+5. opportunity with visit object, master, detail
+6. one opportunity have many visits, master-detail relationship, opportunity can have rollup summary as master object
+
+workflow
+1. compact layout,
+
+in this case, work as manager. use role, user profile, to find the manager, approver setting--manager. (this can be specified in email template)
+expense obj, account obj,
+
+do not need report type, need opp and obj, opp has rollup fields, and 
+
+test: what is mcq
+
+
+
+
 
 
 

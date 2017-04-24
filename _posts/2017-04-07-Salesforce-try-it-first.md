@@ -6,7 +6,8 @@ tags: Salesforce #post tag, seperated by spcace
 ---
 
 #### Intro of this series on Salesforce 
-When I read and practiced on trail from :https://trailhead.salesforce.com/trails , I found many useful informations, so here are some notes I took from this website.
+Notes from: https://trailhead.salesforce.com/trails 
+All content from: https://trailhead.salesforce.com/trails 
 
 ## Start
 1. what salesforce is?
@@ -103,6 +104,10 @@ When I read and practiced on trail from :https://trailhead.salesforce.com/trails
 22. Each table comprises a number of columns
 23. square bracket
 24. rollup  summary
+25. start a group for a customer visit 
+26. to align everyone.
+1. engage them in helping drive Chatter success.
+2. For Chatter to soar you need great content and a sense of community. You need a Community Manager curating quality content and driving user engagement
 
 
 
