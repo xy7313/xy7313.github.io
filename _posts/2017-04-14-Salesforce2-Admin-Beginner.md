@@ -183,8 +183,55 @@ All content from: https://trailhead.salesforce.com/trails
 3. A report type is like a template which makes reporting easier.
     1. The report type determines which fields and records are available for use when creating a report. This is based on the relationships between a primary object and its related objects. For example, with the ‘Contacts and Accounts’ report type, ‘Contacts’ is the primary object and ‘Accounts’ is the related object.
     2. Reports display only records that meet the criteria defined in the report type. Out of the box, Salesforce provides a set of predefined standard report types. Don’t see all the fields you want? You might need to create a custom report type.
+4. report type: Each report type has a primary object and one or more related objects. 
+    1. For standard report types, you will typically see this represented in the report type name. For example, with the 'Contacts & Accounts' report type, 'Contacts' is the primary object and 'Accounts' is the related object.
+    2. or custom report types, from Setup, enter Report Types in the Quick Find box, then select Report Types to see the primary and related objects. 
+5. Depending on how the report type is set up, the results can include one of the following.
+    5. Primary object with related object—Records returned are only those where the primary object has at least one related object record.
+    2. Primary object with or without related object—Records returned are those where the primary object may or may not have a related object 
+6. When set the criteria, you may need to create a new custom report type, or adjust an existing custom report type to add or hide fields.
+7. Salesforce dashboards allow you to present multiple reports side-by-side using dashboard components on a single dashboard page layout. Dashboard components come in a variety of chart types, and you can customize how data is grouped, summarized, and displayed for each component.
+8. Filters can’t be added to dashboards that contain Visualforce components.
+9. It’s not possible to filter on bucket fields. However, it is possible to use a report filtered on a bucket field on the dashboard page.
+10. You can’t filter data on a joined report in dashboard view or add a filter to a dashboard that only has joined reports.
+11. With dynamic dashboards, each user sees the data they have access to without needing to create separate dashboards for each user.
+12. An example of dynamic dashboard:
+    1. settings:  Say that your opportunity team consists of one vice president, four sales managers, and 40 sales reps—ten reps per manager. You've been asked to create dashboards that display the following metrics, restricted by role and hierarchy. Sales reps should only see their own data; managers should only see data for the reps they manage; and the VP should see data across the entire team
+13. Folder Sharing in Salesforce allows you to restrict access to reports and dashboards by users, roles, roles and their subordinates, and public and private groups.
+14. wt??
+    - If a folder existed before analytics folder sharing was enabled, its properties and sharing settings are rolled back to their previous state.
+    - If a folder was created while enhanced analytics folder sharing was in effect, it is hidden from the folder list and all its sharing settings are removed. Administrative user permissions are still in effect.
 
 
+## 04/24
+1. query:
+//if a duplicate contains the same last name, but not the same id
+```
+trigger CheckDupes on Lead(before insert, before update){
+    List<Lead> allCusts;
+    for(Lead currLead: System.Trigger.New){
+        allCusts = [select id, lastName, firstName from Lead where lastName = : currLead.lastname];
+        if(allCusts.size()>0){
+            System.debug('duplicates found');
+            for(integer i = 0; i<allCusts.size(); i++){
+                Lead tempLead = allCusts.get(i);
+                if(tempLead.id!=currLead.id){
+                    System.debug('duplicate found which is not the same as the newly create lead...but not the newly create');
+                    //tempLead.description = 'A duplicate lead with the same last name is created, please check';
+                    //update contact;
+                }
+            }
+        }
+        
+    }
+}
+```
+2. soql:
+    1. polymhorphic: select id, whoid, whatid from task 
+    2. group by: select count(id) from Lead group by LeadSource
+    3. embedded query: outer query execute first
+    4. field: select account.name, id from...
+    5. custom object: select name, (select id,Count_of_Phones_c from Test_Objects_c) from account... use account API name(select AccountKey_r.name)
 
 
 

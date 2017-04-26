@@ -108,7 +108,10 @@ All content from: https://trailhead.salesforce.com/trails
 26. to align everyone.
 1. engage them in helping drive Chatter success.
 2. For Chatter to soar you need great content and a sense of community. You need a Community Manager curating quality content and driving user engagement
-
-
+1. track data related to all of your interactions.
+1. brush up on their needs and buying history,
+1. are like a forgotten boat adrift at sea
+1. deals usually progress from tentative to firm before they’re finalized
+1. the likelihood that he will buy from you probably increases
 
 
