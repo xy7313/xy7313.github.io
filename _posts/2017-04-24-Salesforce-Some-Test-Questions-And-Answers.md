@@ -61,5 +61,5 @@ All content from the internet.
 2. 
 
 ## Simple Concepts
-1. Bucket Field: Used in reports to categorise and group report values
+1. Bucket Field: Used in reports to categories and group report values
 2. Junction Object: A Many-to-Many relationship created with two lookup master-detail relationship

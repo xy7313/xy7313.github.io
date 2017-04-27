@@ -136,7 +136,7 @@ All content from: https://trailhead.salesforce.com/trails
         - the ownership and sharing of detail records are determined by the master record, and when you delete the master record, all of its detail records are automatically deleted along with it. Master-detail relationship fields are always required on detail records.
         - For example, say your recruiting app has a Review custom object that contains an interviewer's feedback on a job application. If you delete a job application record, you will probably want all of its review records deleted as well. In this case, you would create a master-detail relationship on the Review custom object with the Job Application object as the master object.
         - rollup summary fields. These fields store values aggregated from the child records in the relationship
-    5. differences:
+    5. differences:...
     6. convert: You can convert a master-detail relationship to a lookup relationship as long as no roll-up summary fields exist on the master object. You can convert a lookup relationship to a master-detail relationship, but only if the lookup field in all records contains a value.
     7. User is a standard object that comes with all organizations on the platform. It contains information about everyone who uses the app in your organization.
     8. ou can also create a hierarchical relationship between objects. A hierarchical lookup relationship is available only for the user object.
@@ -166,10 +166,10 @@ All content from: https://trailhead.salesforce.com/trails
 2. if a user is assigned to a profile that has the Groups tab set to Tab Hidden, the user won’t see the Groups menu item in Salesforce1, even though an administrator has included it in the menu.
 3. Salesforce1 Navigation：The first item in the Selected list becomes your users’ Salesforce1 landing page.
 4. Tabs: The navigation menu in a community isn’t controlled via the Navigation Menu settings page. Instead, the tabs that are specified in Tabs & Pages in the community’s administration settings determine the contents of the community’s navigation menu.
-5. using compact layouts to put important fields into object record headers
+5. using compact layouts to put important fields into object record headers. Create a new compact layout and give it a label. Add up to 10 fields.
 6. object record pages have page layouts that can be customized, actions have action layouts that can be customized
 
-?? mobile后两个纯粹瞎写啊，得问问
+?? mobile后两个纯粹瞎写a
 
 ##### 6. Chatter Basics
 1. Feed tracking in Salesforce highlights changes to records by automatically announcing them in the record’s feed.
@@ -198,40 +198,11 @@ All content from: https://trailhead.salesforce.com/trails
 12. An example of dynamic dashboard:
     1. settings:  Say that your opportunity team consists of one vice president, four sales managers, and 40 sales reps—ten reps per manager. You've been asked to create dashboards that display the following metrics, restricted by role and hierarchy. Sales reps should only see their own data; managers should only see data for the reps they manage; and the VP should see data across the entire team
 13. Folder Sharing in Salesforce allows you to restrict access to reports and dashboards by users, roles, roles and their subordinates, and public and private groups.
-14. wt??
+14. wt?? folder sharing
     - If a folder existed before analytics folder sharing was enabled, its properties and sharing settings are rolled back to their previous state.
     - If a folder was created while enhanced analytics folder sharing was in effect, it is hidden from the folder list and all its sharing settings are removed. Administrative user permissions are still in effect.
 
 
-## 04/24
-1. query:
-//if a duplicate contains the same last name, but not the same id
-```
-trigger CheckDupes on Lead(before insert, before update){
-    List<Lead> allCusts;
-    for(Lead currLead: System.Trigger.New){
-        allCusts = [select id, lastName, firstName from Lead where lastName = : currLead.lastname];
-        if(allCusts.size()>0){
-            System.debug('duplicates found');
-            for(integer i = 0; i<allCusts.size(); i++){
-                Lead tempLead = allCusts.get(i);
-                if(tempLead.id!=currLead.id){
-                    System.debug('duplicate found which is not the same as the newly create lead...but not the newly create');
-                    //tempLead.description = 'A duplicate lead with the same last name is created, please check';
-                    //update contact;
-                }
-            }
-        }
-        
-    }
-}
-```
-2. soql:
-    1. polymhorphic: select id, whoid, whatid from task 
-    2. group by: select count(id) from Lead group by LeadSource
-    3. embedded query: outer query execute first
-    4. field: select account.name, id from...
-    5. custom object: select name, (select id,Count_of_Phones_c from Test_Objects_c) from account... use account API name(select AccountKey_r.name)
 
 
 
@@ -240,37 +211,6 @@ trigger CheckDupes on Lead(before insert, before update){
 
 
 
-
-##### 04/14 Security
-###### preview
-1. advantages workflow has compared to process
-single task --  workflow, one object
-1. master-detail, change one object that will impact another. 2 examples: 
-    1. master rollup summary field, child amount changes, this field of master changes; 
-    2. delete master, child gone
-2. advantage of having dashboard: give you a very quick glance on what is going on 
-
-###### main topic:
-1. divide all users into specific groups, defined in profile 
-2. profile is a field? some value I can choose is account,case,...??
-3. public r/w, public r/only, private ..
-4. lock down on object level
-5. user profile, standard profile can not be changed, if our demand is similar like standard setting, we make some changes by permission set, if we have totally different demand, we create a new profile
-6. share rules??
-7. record type: ..account, for each record type, we can have a business layout. subject to profile
-
-
-##### 04/17 developer beginner--apex
-1. declaratively configuration first
-2. an example declarative then Programmatic:
-    1. new object
-    2. new custom field, lookup relations, relate to account
-    3. new a couple of fields there
-    4. create a custom tab
-    5. when want to show information of account on the current page
-    6. model(your database) + view + controller(in the middle): salesforce have some built in functions.
-    7. apex class -- controller, can put any objects on the same page. manipulate the logic, how the data display
-    8. apex standardController = "Account" + relatedlist + id in url,
 
 
 ## Question list

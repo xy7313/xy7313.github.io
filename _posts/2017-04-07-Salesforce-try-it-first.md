@@ -113,5 +113,8 @@ All content from: https://trailhead.salesforce.com/trails
 1. are like a forgotten boat adrift at sea
 1. deals usually progress from tentative to firm before they’re finalized
 1. the likelihood that he will buy from you probably increases
+1. stop by your booth at a conference
+1. you mosey on over to your laptop, crack open a refreshing beverage, generate a few Salesforce reports, and enjoy the shower of praise
+1. She appreciates your keen insight,
 
 
