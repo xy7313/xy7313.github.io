@@ -139,7 +139,7 @@ All content from: https://trailhead.salesforce.com/trails
     5. differences:...
     6. convert: You can convert a master-detail relationship to a lookup relationship as long as no roll-up summary fields exist on the master object. You can convert a lookup relationship to a master-detail relationship, but only if the lookup field in all records contains a value.
     7. User is a standard object that comes with all organizations on the platform. It contains information about everyone who uses the app in your organization.
-    8. ou can also create a hierarchical relationship between objects. A hierarchical lookup relationship is available only for the user object.
+    8. You can also create a hierarchical relationship between objects. A hierarchical lookup relationship is available only for the user object.
         - For example, create a custom hierarchical relationship field to store each user's direct manager.
     9. many-to-many
          - For example, suppose your recruiting app has a custom object called Website that stores information about various employment websites. You want to track which open positions are posted to those sites. Use a many-to-many relationship because:
