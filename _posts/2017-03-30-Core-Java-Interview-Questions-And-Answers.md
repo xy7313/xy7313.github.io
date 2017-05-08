@@ -231,6 +231,9 @@ When and which to use is an important question. In brief, if you need a fast set
     - Reason: LinkedList’s each element maintains two pointers (addresses) which points to the both neighbor elements in the list. Hence removal only requires change in the pointer location in the two neighbor nodes (elements) of the node which is going to be removed. While In ArrayList all the elements need to be shifted to fill out the space created by removed element.
     3. Inserts Performance: LinkedList add method gives O(1) performance while ArrayList gives O(n) in worst case.  Reason is same as explained for remove.
     4. Memory Overhead: ArrayList maintains indexes and element data while LinkedList maintains element data and two pointers for neighbor nodes hence the memory consumption is high in LinkedList comparatively.
+4. When to use LinkedList and when to use ArrayList?
+1) As explained above the insert and remove operations give good performance (O(1)) in LinkedList compared to ArrayList(O(n)). Hence if there is a requirement of frequent addition and deletion in application then LinkedList is a best choice.
+2) Search (get method) operations are fast in Arraylist (O(1)) but not in LinkedList (O(n)) so If there are less add and remove operations and more search operations requirement, ArrayList would be your best bet.
 
 <span id="jump9"></span>
 ###### 3.9 stringbuilder vs string buffer
@@ -323,19 +326,26 @@ Generational garbage collector
 static  heap stack, static和heap都可以，depends on your program
 
 不太重要：
-###### 3.   HashSet vs. TreeSet vs. LinkedHashSet
+###### 3.-   HashSet vs. TreeSet vs. LinkedHashSet
 Set interface: A Set contains no duplicate elements. That is one of the major reasons to use a set.
 When and which to use is an important question. In brief, if you need a fast set, you should use HashSet; if you need a sorted set, then TreeSet should be used; if you need a set that can be store the insertion order, LinkedHashSet should be used.
 HashSet is Implemented using a hash table. Elements are not ordered. The add, remove, and contains methods have constant time complexity O(1).
 TreeSet is implemented using a tree structure(red-black tree in algorithm book). The elements in a set are sorted, but the add, remove, and contains methods has time complexity of O(log (n)). It offers several methods to deal with the ordered set like first(), last(), headSet(), tailSet(), etc.
 LinkedHashSet is between HashSet and TreeSet. It is implemented as a hash table with a linked list running through it, so it provides the order of insertion. The time complexity of basic methods is O(1).
 
-###### 3.  HashMap vs. TreeMap vs. HashTable vs. LinkedHashMap vs. ConcurrentHashMap
+###### 3.-  HashMap vs. TreeMap vs. HashTable vs. LinkedHashMap vs. ConcurrentHashMap
 HashMap is implemented as a hash table, and there is no ordering on keys or values. TreeMap is implemented based on red-black tree structure, and it is ordered by the key. LinkedHashMap preserves the insertion order
+HashMap methods are unsynchornized and it allows null key and null values unlike Hashtable.
 Hashtable is synchronized, in contrast to HashMap. It has an overhead for synchronization. All methods of Hashtable are synchronized which makes them quite slow due to contention if a number of thread increases. ConcurrentHashMap is thread safe without synchronizing the whole map. Reads can happen very fast while write is done with a lock. There is no locking at the object level. Unlike Hashtable and Synchronized Map, it never locks whole Map, instead, it divides the map into segments and locking is done on those. Though it performs better if a number of reader threads are greater than the number of writer threads.
 
-
-
+###### 3.- Vector
+Vector implements List Interface. Like ArrayList it also maintains insertion order but it is rarely used in non-thread environment as it is synchronized and due to which it gives poor performance in searching, adding, delete and update of its elements.
+1. create vector class object
+    - Vector vec = new Vector();
+    - Vector object= new Vector(int initialCapacity) 
+        - Vector vec = new Vector(3); It will create a Vector of initial capacity of 3.
+    - Vector object= new vector(int initialcapacity, capacityIncrement)
+        - Vector vec= new Vector(4, 6); Here we have provided two arguments. The initial capacity is 4 and capacityIncrement is 6. It means upon insertion of 5th element the size would be 10 (4+6) and on 11th insertion it would be 16(10+6).
 
 
 

@@ -116,5 +116,13 @@ All content from: https://trailhead.salesforce.com/trails
 1. stop by your booth at a conference
 1. you mosey on over to your laptop, crack open a refreshing beverage, generate a few Salesforce reports, and enjoy the shower of praise
 1. She appreciates your keen insight,
-
-
+1. each department uses its own source of truth for that contact info
+1.  an intricate system
+1. You try your best to find two departments that use the same process for creating records, but you’d have more luck finding a vegetarian at a pig roast.
+1. it’s no wonder your reports are riddled with duplicates, incomplete records, and stale data.
+1. Knowing how your company uses data to support its objectives is great. But it’s about as useful as a VHS tape in a Roku if you can’t get the data into an accessible and useful format 
+1. Every department was tasked with using Salesforce as the source of truth for data
+0. Yes, that’s really it!
+0. This ensures you can balance security and convenience, minimizing the risk of stolen or misused data while making sure all users can easily access the data they need.
+0. limiting when and from where users can log in
+0. escalated = increased
