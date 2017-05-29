@@ -8,6 +8,7 @@ tags: Java #post tag, seperated by space
 
 ## Collections
 1. from util package, an interface
+2. Array vs. ArrayList: The issue with arrays is that they are of fixed length so if it is full we cannot add any more elements to it, likewise if there are number of elements gets removed from it the memory consumption would be the same as it doesn’t shrink. On the other ArrayList can dynamically grow and shrink as per the need
 2. including:
     - List
     - Set: doesn't in order, no duplicates
@@ -98,6 +99,15 @@ cal.set(2017,0,1);
 <!--11. author reference to book
 12. database driver
 13. -->
+
+
+## Enum
+1. An enum is a special type of data type which is basically a collection (set) of constants. 
+2. While defining Enums, the constants should be declared first, prior to any fields or methods. 
+2. When there are fields and methods declared inside Enum, the list of enum constants must end with a semicolon(;).
+
+
+
 
 ## JDBC
 1. Connection

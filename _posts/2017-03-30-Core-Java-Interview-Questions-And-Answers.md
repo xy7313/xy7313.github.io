@@ -207,14 +207,36 @@ a feature that represents the "is a" relationship between different classes. Inh
     1. is implemented as a hash table, and there is no ordering on keys or values.
     2. what happens when a duplicate key is putting into a hashmap? Overwrite that key if hashmap has the same key. the old value is simply replaced.
 2. HashSet 
-is Implemented using a hash table. Elements are not ordered. The add, remove, and contains methods have constant time complexity O(1).
+is Implemented using a hash table, is backed up by a HashMap. Elements are not ordered. The add, remove, and contains methods have constant time complexity O(1).
     1. set： Set interface: A Set contains no duplicate elements. That is one of the major reasons to use a set.
 When and which to use is an important question. In brief, if you need a fast set, you should use HashSet;
+3. synchronize HashMap，HashSet explicitly：`Set s = Collections.synchronizedSet(new HashSet(...));`,`Map m = Collections.synchronizedMap(new HashMap(...));`
 2. Hashtable vs hashmap
     1. hashtable is synchronized, whereas  HashMap  is not （in contrast to HashMap）. It has an overhead for synchronization. All methods of Hashtable are synchronized which makes them quite slow due to contention if a number of thread increases. This makes  HashMap  better for non-threaded applications, as unsynchronized Objects typically perform better than synchronized ones.
     - Synchronized:  keyword prevents concurrent access to a block of code or object by multiple Threads
-    2. Hashtable  does not allow  null  keys or values.  HashMap  allows one  null  key and any number of  null  values.
+    2. Hashtable does not allow  null keys or values.  HashMap  allows one null key and any number of null values.
+    3. HashMap implementation LinkedHashMap maintains the insertion order and TreeMap sorts the mappings based on the ascending order of keys. Hashtable doesn’t guarantee any kind of order. It doesn’t maintain the mappings in any particular order.
+    4. Initially Hashtable was not the part of collection framework it has been made a collection framework member later after being retrofitted to implement the Map interface. HashMap implements Map interface and is a part of collection framework since the beginning.
+    5. Another difference between these classes is that the Iterator of the HashMap is a fail-fast and it throws ConcurrentModificationException if any other Thread modifies the map structurally by adding or removing any element except iterator’s own remove() method. Fail-fast means: When calling iterator.next(), if any modification has been made between the moment the iterator was created and the moment next() is called, a ConcurrentModificationException is immediately thrown. Enumerator for the Hashtable is not fail-fast.
+        - example:
+            ```
+                //HashMap:
+                HashMap hm= new HashMap(); 
+                ....
+                Set keys = hm.keySet();
+                for (Object key : keys) {
+                // throw the ConcurrentModificationException here           hm.put(object & value pair);
+                } 
+                //Hashtable:
+                Hashtable ht= new Hashtable(); 
+                .....
+                Enumeration keys = ht.keys();
+                for (Enumeration en = ht.elements() ; en.hasMoreElements() ; en.nextElement()) { 
+                    //No exception would be thrown here
+                    ht.put(key & value pair);
+                }
 
+            ```
 <span id="jump8"></span>
 ###### 3.8  Array vs. ArrayList vs. LinkedList
 1. Array
