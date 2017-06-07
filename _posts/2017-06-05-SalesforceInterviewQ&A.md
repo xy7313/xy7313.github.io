@@ -9,7 +9,7 @@ tags: Salesforce #post tag, seperated by space
 All content from: http://www.salesforce-interviewquestions.com/p/interview-questions.html, http://www.salesforcetutorial.com/salesforce-interview-questions-answers-part2/, http://www.jitendrazaa.com/blog/tag/interview-questions/
 
 
-## Salesforce Fundamental questions, what's XX? 
+## Salesforce Fundamental questions
 1. What is Apex ?
 Ans: It is the in-house technology of salesforce.com which is similar to Java programming with object oriented concepts and to write our own custom logic.
 2. What is a Visualforce Page ?
@@ -27,8 +27,16 @@ Governor limits are runtime limits enforced by the Apex runtime engine. Because 
     |Data model | Objects, fields, relationships | Web Service API, metadata API|
     |Business logic |  workflow, validation rules, approval process, assignment rules | Controllers, Apex, Web Service|
     |User Interface | record type, page layout, applications, tabs | Visualforce Page, Force.com Sites|
-10. 
-
+1. Standard controller & custom controller:
+    - Standard controller: by using standard controller you need not have to write apex code. Standard controller can be accessed on one object and referenced by visualforce page. It also  provides some save, cancel, clone for that object. Standard controller provides the same functionality what standard pages provide
+    - custom controller: A custom controller is an Apex class that implements all of the logic for a page without leveraging a standard controller. Use custom controllers when you want your Visualforce page to run entirely in system mode, which does not enforce the permissions and field-level security of the current user.
+    - A controller extension 
+        - is an Apex class that extends the functionality of a standard or custom controller. Use controller extensions when:
+        - You want to leverage the built-in functionality of a standard controller but override one or more actions, such as edit, view, save, or delete.
+        - You want to add new actions.
+        - You want to build a Visualforce page that respects user permissions. Although a controller extension class executes in system mode, if a controller extension extends a standard controller, the logic from the standard controller does not execute in system mode. Instead, it executes in user mode, in which permissions, field-level security, and sharing rules of the current user apply.
+  
+  
 ## Export
 7. How to schedule export backup of salesforce data
     - Salesforce allows you to obtain a copy of all your data using the data export feature. 
@@ -69,16 +77,7 @@ Governor limits are runtime limits enforced by the Apex runtime engine. Because 
 
 
 
-## Apex basic
-1. Standard controller & custom controller:
-    - Standard controller: by using standard controller you need not have to write apex code. Standard controller can be accessed on one object and referenced by visualforce page. It also  provides some save, cancel, clone for that object. Standard controller provides the same functionality what standard pages provide
-    - custom controller: A custom controller is an Apex class that implements all of the logic for a page without leveraging a standard controller. Use custom controllers when you want your Visualforce page to run entirely in system mode, which does not enforce the permissions and field-level security of the current user.
-    - A controller extension 
-        - is an Apex class that extends the functionality of a standard or custom controller. Use controller extensions when:
-        - You want to leverage the built-in functionality of a standard controller but override one or more actions, such as edit, view, save, or delete.
-        - You want to add new actions.
-        - You want to build a Visualforce page that respects user permissions. Although a controller extension class executes in system mode, if a controller extension extends a standard controller, the logic from the standard controller does not execute in system mode. Instead, it executes in user mode, in which permissions, field-level security, and sharing rules of the current user apply.
-        
+      
 ## Web Service
 2. How external app access salesforce?
     - apex rest api: when we want to expose apex classes and methods we use this so that external app can access you code through rest architecture. it supports both oauth and session id for authorization.
@@ -147,15 +146,4 @@ Visual Workflow enables you to create flows, which are triggered by users rather
 
 
 
-self intro
-1. 2 y exp of sf, 4 y of java,
-2. tech: SalesForce: Sales Cloud, Service Cloud, Apex, Visual Force and Apex Data Loader. 
-SOAP and REST API Web Services. 
-2. good one tech
-4. prj summary
-5. diff rest/soap
-6. org-default/sharing rules
-7. profile/permission set:
-8. workflow/trigger
-9. migrate sandbox--production
-10. 
+
