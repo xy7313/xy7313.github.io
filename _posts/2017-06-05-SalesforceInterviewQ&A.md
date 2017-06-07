@@ -1,6 +1,6 @@
 ---
 layout: post #post
-title: Salesforce Interview questions and answers #post title
+title: Salesforce Review #post title
 categories: Salesforce #post category, seperated by space
 tags: Salesforce #post tag, seperated by space
 ---
