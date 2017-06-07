@@ -1,8 +1,8 @@
 ---
 layout: post #post
 title: Salesforce Some Test Questions And Answers #post title
-categories: Salesforce #post category, seperated by spcace
-tags: Salesforce #post tag, seperated by spcace
+categories: Salesforce #post category, seperated by space
+tags: Salesforce #post tag, seperated by space
 ---
 
 
