@@ -1,6 +1,6 @@
 ---
 layout: post #post
-title: Funny principle English #post title
+title: Funny number roots in English #post title
 categories: Funny  #post category, seperated by space
 tags: English Funny #post tag, seperated by space
 ---
