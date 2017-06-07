@@ -9,7 +9,7 @@ tags: Salesforce #post tag, seperated by space
 All content from: http://www.salesforce-interviewquestions.com/p/interview-questions.html, http://www.salesforcetutorial.com/salesforce-interview-questions-answers-part2/, http://www.jitendrazaa.com/blog/tag/interview-questions/
 
 
-
+## Salesforce Fundamental questions, what's XX? 
 1. What is Apex ?
 Ans: It is the in-house technology of salesforce.com which is similar to Java programming with object oriented concepts and to write our own custom logic.
 2. What is a Visualforce Page ?
@@ -18,6 +18,18 @@ Ans: Visualforce is the new markup language from salesforce, by using which, We 
 Visualforce Pages support embedded merge fields, like the {!$User.FirstName} used in the example.
 6. What are Apex Governor Limits?
 Governor limits are runtime limits enforced by the Apex runtime engine. Because Apex runs in a shared, multi-tenant environment, the Apex runtime engine strictly enforces a number of limits to ensure that code does not monopolize shared resources. Types of limits that Apex enforces are resources like memory, database resources, number of script statements to avoid infinite loops, and number of records being processed. If code exceeds a limit, the associated governor issues a runtime exception.
+8. Cloud Computing is an approach to provide the following services -
+    - SAAS (Software As A Service)
+    - PAAS (Platform As A Service)
+    - IAAS (Infrastructure As A Service)
+9. Application build block:
+    ||Declarative(simplicity+speed)|Programmatic(control+flexibility)|
+    |Data model | Objects, fields, relationships | Web Service API, metadata API|
+    |Business logic |  workflow, validation rules, approval process, assignment rules | Controllers, Apex, Web Service|
+    |User Interface | record type, page layout, applications, tabs | Visualforce Page, Force.com Sites|
+10. 
+
+## Export
 7. How to schedule export backup of salesforce data
     - Salesforce allows you to obtain a copy of all your data using the data export feature. 
     - You can generate backup files manually once every six days or schedule them to generate automatically at weekly or monthly intervals.
@@ -37,6 +49,8 @@ Governor limits are runtime limits enforced by the Apex runtime engine. Because 
         - Scheduled backup exports of your data is limited to weekly exports.
         - You have 48 hours from the time you are notifiedthe backup is available to download the backup file.
         - The export notification email is only sent to the email address on file for the user who created the scheduled export. The email notification for backups goes to the email address in Salesforce of the person logged in who schedules the backup
+        
+## Deployment and test
 7. Difference between Sandbox and developer edition in Salesforce
     - Sandbox: 
         - The salesforce.com Sandbox environment is an exact copy of your salesforce.com instance. 
@@ -50,21 +64,12 @@ Governor limits are runtime limits enforced by the Apex runtime engine. Because 
         - Free
         -  It is a standard Enterprise Edition with very limited storage space. 
         - You cannot copy your configuration or data onto the Developer Edition, but you can customize it to match your instance’s look and feel. Once it is customized, you can use it for training, testing or anything else you want.
-8. Cloud Computing is an approach to provide the following services -
-    - SAAS (Software As A Service)
-    - PAAS (Platform As A Service)
-    - IAAS (Infrastructure As A Service)
-9. Application build block:
-    ||Declarative(simplicity+speed)|Programmatic(control+flexibility)|
-    |Data model | Objects, fields, relationships | Web Service API, metadata API|
-    |Business logic |  workflow, validation rules, approval process, assignment rules | Controllers, Apex, Web Service|
-    |User Interface | record type, page layout, applications, tabs | Visualforce Page, Force.com Sites|
-10. 
 
 
 
 
 
+## Apex basic
 1. Standard controller & custom controller:
     - Standard controller: by using standard controller you need not have to write apex code. Standard controller can be accessed on one object and referenced by visualforce page. It also  provides some save, cancel, clone for that object. Standard controller provides the same functionality what standard pages provide
     - custom controller: A custom controller is an Apex class that implements all of the logic for a page without leveraging a standard controller. Use custom controllers when you want your Visualforce page to run entirely in system mode, which does not enforce the permissions and field-level security of the current user.
@@ -88,14 +93,12 @@ Governor limits are runtime limits enforced by the Apex runtime engine. Because 
 
 
 
-## Who sees what:
+## Security -- Who sees what:
 3. what are sharing rules in salesforce?
     - Sharing rules are used by administrators to automatically grant users within a given group or role access to records owned by a specific group of users. Sharing rules cannot be added to a package and cannot be used to support sharing logic for apps installed from Force.com AppExchange.
     - Sharing rules can be based on record ownership or other criteria. You can’t use Apex to create criteria-based sharing rules. Also, criteria-based sharing cannot be tested using Apex.
     - All implicit sharing added by Force.com managed sharing cannot be altered directly using the Salesforce user interface, SOAP API, or Apex.
     - For example, use sharing rules to extend sharing access to users in public groups, roles, or territories. Sharing rules can never be stricter than your organization-wide default settings. They simply allow greater access for particular users.
-
-
 3. Organization access:
     - IP Ranges(company level): Users outside the range are sent an activation code
     - IP Ranges(profile level): Users outside this range are denied access
