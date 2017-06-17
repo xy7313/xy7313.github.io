@@ -1,6 +1,6 @@
 ---
 layout: post #post
-title: Web Technologies summary #post title
+title: Web Technologies + DB/SQL + Linux/unix #post title
 categories: Web #post category, seperated by space
 tags: Web interview #post tag, seperated by space
 ---
@@ -178,6 +178,7 @@ The set of all decision problem such that if the answer is NO then there is a ce
         - Knapsack problem
         - Hamiltonian path problem
     - np-hard: Sodoku -- Does a given Sodoku puzzle have a solution?
+        - Partition： partition problem is the task of deciding whether a given multiset S of positive integers can be partitioned into two subsets S1 and S2 such that the sum of the numbers in S1 equals the sum of the numbers in S2.
     - p
         - 2SAT, HORN SAT
         - MINIMUM SPANNING TREE
