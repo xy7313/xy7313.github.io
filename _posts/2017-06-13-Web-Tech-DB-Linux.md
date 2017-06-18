@@ -189,7 +189,7 @@ The set of all decision problem such that if the answer is NO then there is a ce
 ## Databases/SQL
 Data modeling fundamentals, database architecture/efficiency, SQL commands/syntax, complex query design, etc 
 
-##  Linux/Unix
+## Linux/Unix
 Must be comfortable working in a Linux environment (as a user, not an admin) and will be expected to have a good working knowledge of user­-level Linux commands, shell scripting, regular expressions, etc.
 
 ## OS
@@ -204,7 +204,7 @@ You will be asked to write some code in at least one of the interviews (in your 
 ## Example questions and answers
 1. how to take down a server
 2. coding 题
-input是很多很多domain name: 比如说 google.com, godadday.com, Amazon.com......
+input 是很多很多 domain name: 比如说 google.com, godadday.com, Amazon.com......
 然后让你找出出现次数top 10的domain有哪些。
 我用了hashmap 记录<domianName, frequency> 然后经过提示 排序fre的时候  再用一个hashmap 存<fre, linkedlist<domainName>>。
 3. palindrome    
@@ -213,7 +213,7 @@ input是很多很多domain name: 比如说 google.com, godadday.com, Amazon.com.
 
 
 
-## google 
+## google ads/doubleclick
 
 
 
