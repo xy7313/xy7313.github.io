@@ -224,7 +224,17 @@ Once you have a preliminary design for your database, you can apply normalizatio
 - index `make index on`
     - Although indexes speed up data retrieval, they can slow down inserting, updating, and deleting, since the index has to be rebuilt whenever a record is changed.
     - postgresql: index-default, index-gin(index inside json)read more, update less: index,
+- complex query :
+    - break up the query into managable parts, Complex queries can sometimes just be a collection of simple queries.
+    - Beware of mixed levels of aggregation: If you have to put monthly, quarterly and year-to-date values in the same result set, you'll need to calculate them separately in queries grouped on different values.
+    - when to UNION: Having to include items from different tables in different rows is an obvious use.
+    - Enforcing the same style over tables, columns, etc. helps the readability a lot too.
+    - Enforcing the same style over queries
 
+[Conclusion](https://www.simple-talk.com/sql/performance/designing-efficient-sql-a-visual-approach/)
+To write an efficient query, you need to know how much data you have to acquire and where it’s going to be. You also need to know what options you have for acquiring the data and how much effort you are going to waste visiting data that you don’t need so that you can decide the best order for visiting tables.
+
+For complex queries the best way to design the query is to start by drawing a diagram of all the tables involved, showing the joins between the tables, indicating the volume of data involved, and describing the indexes that allow you to get from one table to the next. A diagram of this sort will make it much easier to understand the efficiency of the possible paths that your query could take through the tables.
 
 
 
