@@ -77,7 +77,7 @@ The standard then defines a few of these bits as flags: if they're set, then the
 6. Host B receives ACK. 
 7. **TCP socket connection is ESTABLISHED.**
 
-[graph](http://www.tcpipguide.com/free/t_TCPConnectionEstablishmentProcessTheThreeWayHandsh-3.htm)
+[graph here](http://www.tcpipguide.com/free/t_TCPConnectionEstablishmentProcessTheThreeWayHandsh-3.htm)
 
 three frames.
 
@@ -119,13 +119,9 @@ ref: [pipelining](https://brianbondy.com/blog/119/what-you-should-know-about-htt
 
 - **HTTP persistent connection**, also called HTTP keep-alive, or HTTP connection reuse, is the idea of using a single TCP connection to send and receive multiple HTTP requests/responses
 
-- why http pipelining:
+- **why http pipelining**:
 TCP/IP packets can be reduced. several HTTP requests could fit into a single packet. 
 What this means is that you can get much faster page loads by using HTTP pipelining.
-
-
-
-
 
 
 ## Algorithm
@@ -188,23 +184,90 @@ The set of all decision problem such that if the answer is NO then there is a ce
 
 ## Databases/SQL
 Data modeling fundamentals, database architecture/efficiency, SQL commands/syntax, complex query design, etc 
+- A well-structured database:
+    - Maintains data accuracy and integrity.
+    - Provides access to the data in useful ways.
+    - Saves disk space by eliminating redundant data.
+- steps:
+    - Understanding the purpose of your database, not only at beginning of design process, but keep this in mind throughout the process.
+    - talk to the people who will use it, find out what data they need to use
+    - Analyze business forms, such as invoices, timesheets, surveys
+    - to check that if we need to Comb through any existing data systems (including physical and digital files)
+- sql: Structured Query Language is the basic way of asking a database server to talk to you. 
+    - **nion**: merges the contents of two structurally-compatible tables into a single combined table. omit duplicate records
+    - **UNION ALL**: same...include duplicate records. performance of UNION ALL will typically be better than UNION.
+    - A **primary key** is usually used as the index for a particular table — a value that the table can depend upon to be a reliable unique value in every row.
+    - **join**need to search across multiple tables simultaneously, a join can help make that happen 
+    - **difference between ‘=’ and ‘LIKE’?** LIKE allows partial matching / use of wildcards, while = checks for exact matches.
+    - **COUNT()** get the quantity of results from a query. ex `SELECT COUNT(*) AS NumberOfOrders FROM Orders`
+    - **INSERT** submits data into a database as a new row,
+    - **DROP** removes a table from a database or a database from a server. 
+    - **UPDATE** allows values to be modified where they meet specific criteria
+    - example: `select case when null is null then 'Yup' else 'Nope' end as Result;`
+    - **neseted query** a nested query can be replaced with a JOIN, allowing for much more efficient use of resources. difficult to troubleshoot and even harder to manage
+    - **sql injection** `SELECT UserId, Name, Password FROM Users WHERE UserId = 105 or 1=1;` or `SELECT * FROM Users WHERE Name ="" or ""="" AND Pass ="" or ""=""` when we type "" or ""="" as username and password.
+    - **answer to sql injection** input sterilization. One of the main answers to SQL Injection, input sterilization allows the database to selectively ignore data coming in from an input field and strip out non-required data. 
+    - **Flat File** A flatfile is a catch-all term used for concepts like Comma Separated Values (.csv). 
+- noSQL VS. Relational DB
+    - Does not follow any order	vs. organized and structured
+    - Very Good	scalability vs. average
+    - Limited as no join clause when query vs. SQL
+    - K-V pairs, in json vs. data and relationship stored in different tables
+- DB schema: 
+A database schema is a way to logically group objects such as tables, views, stored procedures etc. Think of a schema as a container of objects.
+- What is Replication?
+Database replication allows for real-time automated backups between multiple database servers. This allows for the creation of either a fall-over server, or warm backup for use in case the main server goes down.
+-  XML?
+Extensible Markup Language (XML) is a fast way to display data that not only conforms to a structure that can be read by machines, but is also easily understandable by humans. 
+- DB normalization
+Once you have a preliminary design for your database, you can apply normalization rules to make sure the tables are structured correctly. Think of these rules as the industry standards.
+- index `make index on`
+    - Although indexes speed up data retrieval, they can slow down inserting, updating, and deleting, since the index has to be rebuilt whenever a record is changed.
+    - postgresql: index-default, index-gin(index inside json)read more, update less: index,
 
+
+
+
+**
 ## Linux/Unix
 Must be comfortable working in a Linux environment (as a user, not an admin) and will be expected to have a good working knowledge of user­-level Linux commands, shell scripting, regular expressions, etc.
 
 ## OS
-
-OS(semophores, newtexts, lock,process, thread, resource allocation, context switching, proccess, thread, corcurrency)
+OS(semophores, newtexts, lock, process, thread, resource allocation, context switching, corcurrency)
 
 
 ## Programming/OO
-You will be asked to write some code in at least one of the interviews (in your preferred language). Syntax is not as important as structured thinking, but proper syntax never hurts. Object oriented theory and concepts may also be covered 
+You will be asked to write some code in at least one of the interviews (in your preferred language). Syntax is not as important as structured thinking, but proper syntax never hurts. Object oriented theory and concepts may also be covered
+1. Abstraction: 
+The process of picking out (abstracting) common features of objects and procedures.
+
+2. Class:
+    1. A category of objects. The class defines all the common properties of the different objects that belong to it.
+    2. A class, in the context of Java, are templates that are used to create objects, and to define object data types and methods.
+
+3. Encapsulation: //   [ɪn,kæpsə'leʃən]
+    1. Encapsulation enable programmers to hide the data of one class from another class. This is needed to protect the normal behavior of one class. We implemented it  using key words including public, private, and protect
+    2. Encapsulation in Java is a mechanism of wrapping the data (variables) and code acting on the data (methods) together as a single unit. 
+    3. In encapsulation, the variables of a class will be hidden from other classes, and can be accessed only through the methods of their current class
+
+4. Inheritance: // [in'heritəns]
+a feature that represents the "is a" relationship between different classes. Inheritance in OOP enable a programmer to extend the capabilities of class without changing the class. 
+
+5. Interface: the languages and codes that the applications use to communicate with each other and with the hardware.
+
+5. Object: a self-contained entity that consists of both data and procedures to manipulate the data.
+
+6. Polymorphism: // [,pɔli'mɔ:fizm] 
+    1. Subclasses of a class can define their own unique behaviors and yet share some of the same functionality of the parent class. 
+    2. Polymorphism enables programmers to use a different object in place of another provided that object can do the task (implements the same interface).
+
 
 
 ## Example questions and answers
 1. how to take down a server
 2. coding 题
 input 是很多很多 domain name: 比如说 google.com, godadday.com, Amazon.com......
+
 然后让你找出出现次数top 10的domain有哪些。
 我用了hashmap 记录<domianName, frequency> 然后经过提示 排序fre的时候  再用一个hashmap 存<fre, linkedlist<domainName>>。
 3. palindrome    
