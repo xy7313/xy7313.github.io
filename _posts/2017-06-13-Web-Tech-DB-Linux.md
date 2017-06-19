@@ -174,7 +174,7 @@ The set of all decision problem such that if the answer is NO then there is a ce
         - 3set
         - 3SAT
         - TSP: Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city?
-        - RUDRATA cycle
+        - RUDRATA cycle： Given a graph, find a path that contains each vertex exactly once. 
         - independent set/clique: G=(V,E), S belongs to V, S is independent set if there are no edges between vertices in S.
         - knapsack: Given a set of items, each with a weight and a value, determine the number of each item to include in a collection so that the total weight is less than or equal to a given limit and the total value is as large as possible
     - np
@@ -183,14 +183,14 @@ The set of all decision problem such that if the answer is NO then there is a ce
         - Boolean satisfiability problem (SAT)
         - Vertex cover problem
         - Knapsack problem
-        - Hamiltonian path problem
+        - Hamiltonian path problem： a path in an undirected or directed graph that visits each vertex exactly once.
     - np-hard: Sodoku -- Does a given Sodoku puzzle have a solution?
         - Partition： partition problem is the task of deciding whether a given multiset S of positive integers can be partitioned into two subsets S1 and S2 such that the sum of the numbers in S1 equals the sum of the numbers in S2.
     - p
         - 2SAT, HORN SAT
         - MINIMUM SPANNING TREE
         - INDEPENDENT SET on trees
-        - EULER PATH
+        - EULER PATH： Given a graph, find a path that contains each edge exactly once. 
 
 <span id="jump3"></span>
 ## Databases/SQL
