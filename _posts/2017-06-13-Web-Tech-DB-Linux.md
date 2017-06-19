@@ -153,7 +153,12 @@ What this means is that you can get much faster page loads by using HTTP pipelin
 #### 2. Algorithm
 1. think out loud, say your thought
 2. data structure
-
+3. hashmap
+    - hash function,
+    - load factor: 1-0 resizing to 2*capacity when the number of element inserted in array > capacity * load factor 
+    - collision:
+        - linear probing, move to the next item one by one
+        - seperate chaining, linkedlist, worst case O(n)
 #### 3. test your solution
 (corner case, edge case)
 
@@ -299,15 +304,31 @@ Must be comfortable working in a Linux environment (as a user, not an admin) and
 <span id="jump5"></span>
 ## OS
 OS(semophores, newtexts, lock, process, thread, resource allocation, context switching, corcurrency)
-- process
-- thread
-- semophores：  a semaphore is a variable or abstract data type that is used for controlling access, by multiple processes, to a common resource in a parallel programming or a multi user environment
+- process vs. thread:  threads are a part of a process, i.e. a process may contain one or more threads, but a thread cannot contain a process.
+- Starvation: one or more threads denied resources
+- semophores： Synchronized counting variable a semaphore is a variable or abstract data type that is used for controlling access, by multiple processes, to a common resource in a parallel programming or a multi user environment
+    - Two operations: P() and V()/p: while value = 0, sleep; decreame value/v:Increment value; If there are any threads sleeping waiting for value to become non-zero, wakeup at least 1 thread
 - lock
 - resource allocation
 - context switching: In computing, a context switch is the process of storing and restoring the state of a process or thread so that execution can be resumed from the same point at a later time.
  CS saves this return address to the TCB(thread control block)
+- synchronization mechanism to avoid race conditions by ensuring exclusive execution of critical sections
 - corcurrency
 - fork(): After a new child process created, both processes will execute the next instruction following the fork() system call.
+- What is deadlock?
+    - permanent blocking of threads
+    - Deadlock is a situation when two or more processes wait for each other to finish and none of them ever finish.
+    - One real Life example would be: "a person says he always lies".
+    - If he's a liar, he's telling the truth. Here truth and lie can be considered two processes that don't let each other finish
+    - Another example to which you all can relate. "You need experience to get a job and a job to get experience"
+- What are the necessary conditions for deadlock?
+    - Mutual Exclusion: There is s resource that cannot be shared.
+    - Hold and Wait: A process is holding at least one resource and waiting for another resource which is with some other process.
+    - No Preemption: The operating system is not allowed to take a resource back from a process until process gives it back.
+    - Circular Wait: A set of processes are waiting for each other in circular form.
+- How to break the deadlock?
+    - The above are necessary but not sufficient conditions, even if all the conditions exist the system may or may not be in a deadlock, but if it's missing then deadlock won't happen.
+
 
 
 
