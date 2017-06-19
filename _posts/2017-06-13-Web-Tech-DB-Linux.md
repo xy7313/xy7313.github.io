@@ -5,6 +5,17 @@ categories: Web #post category, seperated by space
 tags: Web interview #post tag, seperated by space
 ---
 
+
+index:
+###### [1. web](#jump1)
+###### [2.algorithm](#jump2)
+###### [2.3 DB/SQLy](#jump3)
+###### [2.4 Linux/unix](#jump4)
+###### [2.5 OS](#jump5)
+###### [2.6 OOD](#jump6)
+###### [2.6 Exmple](#jump6)
+
+<span id="jump1"></span>
 ## web tech
 
 - The communication protocols, 
@@ -123,7 +134,7 @@ ref: [pipelining](https://brianbondy.com/blog/119/what-you-should-know-about-htt
 TCP/IP packets can be reduced. several HTTP requests could fit into a single packet. 
 What this means is that you can get much faster page loads by using HTTP pipelining.
 
-
+<span id="jump2"></span>
 ## Algorithm
 
 #### 1. clarify
@@ -181,7 +192,7 @@ The set of all decision problem such that if the answer is NO then there is a ce
         - INDEPENDENT SET on trees
         - EULER PATH
 
-
+<span id="jump3"></span>
 ## Databases/SQL
 Data modeling fundamentals, database architecture/efficiency, SQL commands/syntax, complex query design, etc 
 - A well-structured database:
@@ -194,16 +205,27 @@ Data modeling fundamentals, database architecture/efficiency, SQL commands/synta
     - Analyze business forms, such as invoices, timesheets, surveys
     - to check that if we need to Comb through any existing data systems (including physical and digital files)
 - sql: Structured Query Language is the basic way of asking a database server to talk to you. 
-    - **nion**: merges the contents of two structurally-compatible tables into a single combined table. omit duplicate records
+    - **foreign key** 
+        - A FOREIGN KEY is a key used to link two tables together. 
+        - A FOREIGN KEY is a field (or collection of fields) in one table that refers to the PRIMARY KEY in another table.
+    - **union**: merges the contents of two structurally-compatible tables into a single combined table. omit duplicate records
     - **UNION ALL**: same...include duplicate records. performance of UNION ALL will typically be better than UNION.
     - A **primary key** is usually used as the index for a particular table — a value that the table can depend upon to be a reliable unique value in every row.
     - **join**need to search across multiple tables simultaneously, a join can help make that happen 
+        - Equijoins are easy to specify and easy to validate
     - **difference between ‘=’ and ‘LIKE’?** LIKE allows partial matching / use of wildcards, while = checks for exact matches.
     - **COUNT()** get the quantity of results from a query. ex `SELECT COUNT(*) AS NumberOfOrders FROM Orders`
     - **INSERT** submits data into a database as a new row,
     - **DROP** removes a table from a database or a database from a server. 
     - **UPDATE** allows values to be modified where they meet specific criteria
     - example: `select case when null is null then 'Yup' else 'Nope' end as Result;`
+    - **Group by** summarizing
+    - **Order by** specify the sort criteria.
+    - **Join** 
+        - (INNER) JOIN: Returns records that have matching values in both tables
+        - LEFT (OUTER) JOIN: Return all records from the left table, and the matched records from the right table
+        - RIGHT (OUTER) JOIN: Return all records from the right table, and the matched records from the left table
+        - FULL (OUTER) JOIN: Return all records when there is a match in either left or right table
     - **neseted query** a nested query can be replaced with a JOIN, allowing for much more efficient use of resources. difficult to troubleshoot and even harder to manage
     - **sql injection** `SELECT UserId, Name, Password FROM Users WHERE UserId = 105 or 1=1;` or `SELECT * FROM Users WHERE Name ="" or ""="" AND Pass ="" or ""=""` when we type "" or ""="" as username and password.
     - **answer to sql injection** input sterilization. One of the main answers to SQL Injection, input sterilization allows the database to selectively ignore data coming in from an input field and strip out non-required data. 
@@ -230,22 +252,27 @@ Once you have a preliminary design for your database, you can apply normalizatio
     - when to UNION: Having to include items from different tables in different rows is an obvious use.
     - Enforcing the same style over tables, columns, etc. helps the readability a lot too.
     - Enforcing the same style over queries
+    - **Where possible, I generate test data to verify that boundary conditions and other exceptional cases don't cause my query to fail.**
+        - Test each of the queries in a union query separately.
+        - Test subqueries separately.
+        - Test complex expressions separately.
+        - Look at raw data before I apply built-in functions to it.
 
 [Conclusion](https://www.simple-talk.com/sql/performance/designing-efficient-sql-a-visual-approach/)
 To write an efficient query, you need to know how much data you have to acquire and where it’s going to be. You also need to know what options you have for acquiring the data and how much effort you are going to waste visiting data that you don’t need so that you can decide the best order for visiting tables.
 
 For complex queries the best way to design the query is to start by drawing a diagram of all the tables involved, showing the joins between the tables, indicating the volume of data involved, and describing the indexes that allow you to get from one table to the next. A diagram of this sort will make it much easier to understand the efficiency of the possible paths that your query could take through the tables.
 
-
-
-**
+<span id="jump4"></span>
 ## Linux/Unix
 Must be comfortable working in a Linux environment (as a user, not an admin) and will be expected to have a good working knowledge of user­-level Linux commands, shell scripting, regular expressions, etc.
 
+
+<span id="jump5"></span>
 ## OS
 OS(semophores, newtexts, lock, process, thread, resource allocation, context switching, corcurrency)
 
-
+<span id="jump6"></span>
 ## Programming/OO
 You will be asked to write some code in at least one of the interviews (in your preferred language). Syntax is not as important as structured thinking, but proper syntax never hurts. Object oriented theory and concepts may also be covered
 1. Abstraction: 
@@ -272,12 +299,11 @@ a feature that represents the "is a" relationship between different classes. Inh
     2. Polymorphism enables programmers to use a different object in place of another provided that object can do the task (implements the same interface).
 
 
-
+<span id="jump7"></span>
 ## Example questions and answers
 1. how to take down a server
 2. coding 题
 input 是很多很多 domain name: 比如说 google.com, godadday.com, Amazon.com......
-
 然后让你找出出现次数top 10的domain有哪些。
 我用了hashmap 记录<domianName, frequency> 然后经过提示 排序fre的时候  再用一个hashmap 存<fre, linkedlist<domainName>>。
 3. palindrome    
