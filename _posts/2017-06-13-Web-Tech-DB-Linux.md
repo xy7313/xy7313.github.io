@@ -270,11 +270,46 @@ For complex queries the best way to design the query is to start by drawing a di
 <span id="jump4"></span>
 ## Linux/Unix
 Must be comfortable working in a Linux environment (as a user, not an admin) and will be expected to have a good working knowledge of user­-level Linux commands, shell scripting, regular expressions, etc.
+- grep pipeline regard the input 
+- auex
+- cat `cat file1 file2` prints the content of file1 followed by file2 to stdout.
+- tee/>
+- top
+- history
+- touch 
+- tar cvf archive_name.tar dirname/
+- `grep -i "the" demo_file` Search for a given string in a file(-r recursively)/`$ grep -A 3 -i "example" demo_text` Print the matched line, along with the 3 lines after it.
+- `find -iname "MyCProgram.c"` find file
+- `ssh -l jsmith remotehost.example.com` login to remote host
+- Remove duplicate lines using awk
+- su do /su -username:  Switch to a different user account using su command.
+- gzip / gzip -d
+- ps `ps -aux|grep 11338(pid)`
+- src `scp root@10.134.49.138:/root/yangxiaolu/vr_validation.jar .`scp root@对 地址:/ 件路径+名字 【.(放当前 录) /search(放某  录)】
+- mkdir
+- vim
+- chmod
+- ifconfig
+- man crontab / manue, Display the man page of a specific command.
+- `tail filename.txt` Print the last 10 lines of a file by default.
+- wget uri : download uri file
+- netstat -nap|grep (searchhub端 号)【显 进程的所有信息】 
 
 
 <span id="jump5"></span>
 ## OS
 OS(semophores, newtexts, lock, process, thread, resource allocation, context switching, corcurrency)
+- process
+- thread
+- semophores：  a semaphore is a variable or abstract data type that is used for controlling access, by multiple processes, to a common resource in a parallel programming or a multi user environment
+- lock
+- resource allocation
+- context switching: In computing, a context switch is the process of storing and restoring the state of a process or thread so that execution can be resumed from the same point at a later time.
+ CS saves this return address to the TCB(thread control block)
+- corcurrency
+- fork(): After a new child process created, both processes will execute the next instruction following the fork() system call.
+
+
 
 <span id="jump6"></span>
 ## Programming/OO
