@@ -303,9 +303,7 @@ a feature that represents the "is a" relationship between different classes. Inh
 ## Example questions and answers
 1. how to take down a server
 2. coding 题
-input 是很多很多 domain name: 比如说 google.com, godadday.com, Amazon.com......
-然后让你找出出现次数top 10的domain有哪些。
-我用了hashmap 记录<domianName, frequency> 然后经过提示 排序fre的时候  再用一个hashmap 存<fre, linkedlist<domainName>>。
+
 3. palindrome    
 4. (b) troubleshoot something (the interviewer gives you a scenario and sees the steps you take to solve the problem) or to 
 5. (c) explain some technology you know to the interviewer like he's a non-technical 8-year-old. 
