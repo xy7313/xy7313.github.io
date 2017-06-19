@@ -50,6 +50,10 @@ index:
     - usually takes place over TCP/IP
     - port:80. https port:443
     - 1.1 new features: persistent connections, chunked transfer-coding and fine-grained caching headers
+    - HTTP allows servers to **redirec**t a client request to a different location. 
+        - If content has moved to a different URL or domain name, redirection can be used to avoid breaking old URLs or bookmarks.
+        - It is possible to convert a POST request to a GET request using redirection.
+
     - communication between a host and a client occurs, via a request/response pair
         - client initiates an HTTP request message and get a http response in return
     - [http1, url, status code, verbs, ajax,Request and response headers](https://code.tutsplus.com/tutorials/http-the-protocol-every-web-developer-must-know-part-1--net-31177)
@@ -177,7 +181,7 @@ The set of all decision problem such that if the answer is NO then there is a ce
         - RUDRATA cycle： Given a graph, find a path that contains each vertex exactly once. 
         - independent set/clique: G=(V,E), S belongs to V, S is independent set if there are no edges between vertices in S.
         - knapsack: Given a set of items, each with a weight and a value, determine the number of each item to include in a collection so that the total weight is less than or equal to a given limit and the total value is as large as possible
-    - np
+    - np[all np](http://cs.lmu.edu/~ray/notes/npc/)
         - Travelling salesman problem (decision version)
         - Independent set problem
         - Boolean satisfiability problem (SAT)
