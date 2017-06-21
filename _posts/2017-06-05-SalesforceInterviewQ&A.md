@@ -101,7 +101,7 @@ You have to use full sandbox to deploy the data from sandbox to production. You 
 ## Web Service
 2. How external app access salesforce?
     - Simple Object Access Protocol (SOAP) and Representational State Transfer (REST)
-        - REST
+        - REST(architecture)
             - apex rest api: when we want to expose apex classes and methods we use this so that external app can access you code through rest architecture. 
             it supports both oauth and session id for authorization.
             - rest is client based protocol, do CRUD operations, can work with any database, any data structure. SOAP message, define logic in soap message. SF support both. 
