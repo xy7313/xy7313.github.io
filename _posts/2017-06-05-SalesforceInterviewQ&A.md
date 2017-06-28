@@ -42,11 +42,13 @@ Governor limits are runtime limits enforced by the Apex runtime engine. Because 
 
 
 1. web-to-case
-2. community more
 3. trigger/workflow in prj send email or notification using trigger
 4. load data
 5. 
 
+## community more
+1.  Salesforce Tabs + Visualforce template.
+protal
 
 All content from the internet.
 ## Dashboard and Reports
@@ -234,12 +236,12 @@ In Salesforce, permissions and access settings specify
 2. role hierarchy: a way to extend access to record, when org-wide default have been set to anything more restrictive than public read/write
 3. implement sharing rules: we can implement sharing rules to open record access up to users when the org-wide defaults have been set to less than public public read/write
 
-####### Field Level Security
+###### Field Level Security
 1. restrict a profiles view to a certain field
 2. Field Level Security or Page Layout can not be used to make a field required
 3. Formulas ignore Field Level Security settings
 
-#####summary:
+##### summary:
 sharing ruls: 
 data security: 
 record level permission set. 4 record access level: 
@@ -296,3 +298,33 @@ Visual Workflow enables you to create flows, which are triggered by users rather
 
 
 
+
+test & size
+DEV
+- back-end
+- front-end UI
+UX
+QA
+- manual testing
+- automation testing
+BA
+Architect 
+Scrum Master
+- Team Leads
+Project Manager
+DBA
+Delivery Manager
+
+test(order)
+- unit testing
+- system testing
+- smoke
+- regression
+- load/performance
+- UAT user acceptance testing, client QA worked on this part
+- production
+
+MOM minutes of meeting
+RCA root cause analysis
+database? some condition losing in business logic? UI?
+IA impact analysis

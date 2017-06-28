@@ -65,5 +65,3 @@ All content from: https://trailhead.salesforce.com/trails
 
 
 
-
-
