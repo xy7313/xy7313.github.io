@@ -104,7 +104,7 @@ All content from: https://trailhead.salesforce.com/trails
 7. BULK - Performing a DML operation on a list of sObjects counts as one DML statement for all sObjects in the list, as opposed to one statement for each sObject.
 8. **upsert** `upsert sObjectList Account.Fields.MyExternalId;` Upsert uses the sObject record's primary key (the ID), an idLookup field, or an external ID field to determine whether it should create a new record or update an existing one:
 9. upsert example
-```
+    ```
     Contact jane = new Contact(FirstName='Jane',
                             LastName='Smith',
                             Email='jane.smith@example.com',
@@ -124,7 +124,7 @@ All content from: https://trailhead.salesforce.com/trails
     // Verify that the contact has been updated
     System.assertEquals('Prefers to be contacted by email.',
                     [SELECT Description FROM Contact WHERE Id=:jane.Id].Description);
-```
+    ```
 10. **Deleted** records aren’t deleted permanently from Force.com, but they’re placed in the Recycle Bin for 15 days from where they can be restored.
 11. DML Statement Exceptions `DmlException e;     e.getMessage();`
 12. These Database methods are static and are called on the class name. eg: `Database.insert(recordList, false);`
