@@ -291,23 +291,23 @@ Visual Workflow enables you to create flows, which are triggered by users rather
 
 
 
-test & size
-DEV
-- back-end
-- front-end UI
-UX
-QA
-- manual testing
-- automation testing
-BA
-Architect 
-Scrum Master
-- Team Leads
-Project Manager
-DBA
-Delivery Manager
+## test & size
+##### Roles:
+1. DEV
+    - back-end
+    - front-end UI
+2. UX
+3. QA
+    - manual testing
+    - automation testing
+4. BA
+5. Architect 
+6. Scrum Master - Team Leads
+7. Project Manager
+8. DBA
+9. Delivery Manager
 
-test(order)
+##### test(order)
 - unit testing
 - system testing
 - smoke
@@ -316,7 +316,7 @@ test(order)
 - UAT user acceptance testing, client QA worked on this part
 - production
 
-MOM minutes of meeting
-RCA root cause analysis
-database? some condition losing in business logic? UI?
-IA impact analysis
+##### Terms
+- MOM minutes of meeting
+- RCA root cause analysis
+- IA impact analysis
