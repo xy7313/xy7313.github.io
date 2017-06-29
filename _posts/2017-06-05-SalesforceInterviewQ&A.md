@@ -57,7 +57,7 @@ All content from the internet.
     - There can be at most 5 custom summary formula fields are allowed on a single report.
 2. report formats:
     - tabular reports: 
-        1. tabular reports are the simplest form reports in salesforce. These are similar to spread sheet. 
+        1. tabular reports are the simplest and fastest form reports in salesforce. These are similar to spread sheet. 
         2. They consist of  ordered set of fields in columns and match record listed in a row. 
         3. These reports can not be used to group data or graphs.
     - summary reports: 

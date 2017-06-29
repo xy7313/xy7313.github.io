@@ -11,21 +11,21 @@ All content from: https://trailhead.salesforce.com/trails
 
 ## 5. Developer Beginner
 ###### 1. Formula Fields
-    - Let’s take a single field from an Account and show it on a Contact using what’s called a **cross-object formula**.
-    - Say, for example, you have a hundred opportunities listed in a report, but only a handful of users own all these opportunities. How do you find the number of distinct users? This task sounds difficult, but it’s one of the easiest formulas you can write. It’s called the **Power of One**.
-    - You can use the **Power of One** on any object. For example, if you had a report with 10 accounts, each with three opportunities, your Opportunities report returns 30 records. Adding the Power of One formula field to Account allows you to see the number of distinct accounts represented in the records.
-    - VALIDATION:(formula = true, not valid)
-        1. Validates that the Account Number is numeric if not blank. Error Message: Account Number is not numeric.
-        ```
-        	    AND(
-            NOT(ISBLANK(AccountNumber)),
-            NOT(ISNUMBER(AccountNumber))
-        )
-        ```
-        2. Validates that a custom date field contains a date within the current year.
-        `YEAR( My_Date__c ) <> YEAR ( TODAY() )`
-        3. Validates that the range between two custom fields, Salary Min and Salary Max, is no greater than $20,000. Error Message:	Salary range must be within $20,000. Adjust the Salary Max or Salary Min values.
-        `(Salary_Max__c - Salary_Min__c) > 20000`
+- Let’s take a single field from an Account and show it on a Contact using what’s called a **cross-object formula**.
+- Say, for example, you have a hundred opportunities listed in a report, but only a handful of users own all these opportunities. How do you find the number of distinct users? This task sounds difficult, but it’s one of the easiest formulas you can write. It’s called the **Power of One**.
+- You can use the **Power of One** on any object. For example, if you had a report with 10 accounts, each with three opportunities, your Opportunities report returns 30 records. Adding the Power of One formula field to Account allows you to see the number of distinct accounts represented in the records.
+- VALIDATION:(formula = true, not valid)
+    1. Validates that the Account Number is numeric if not blank. Error Message: Account Number is not numeric.
+    ```
+            AND(
+        NOT(ISBLANK(AccountNumber)),
+        NOT(ISNUMBER(AccountNumber))
+    )
+    ```
+    2. Validates that a custom date field contains a date within the current year.
+    `YEAR( My_Date__c ) <> YEAR ( TODAY() )`
+    3. Validates that the range between two custom fields, Salary Min and Salary Max, is no greater than $20,000. Error Message:	Salary range must be within $20,000. Adjust the Salary Max or Salary Min values.
+    `(Salary_Max__c - Salary_Min__c) > 20000`
 ###### 2. Data Security
     -  you can provide just the right level of data access to thousands of users without having to specify permissions for each user individually.
     - Although you can configure the security and sharing model entirely using the user interface, it is implemented at the API level. That means any permissions you specify for objects, records, and fields apply even if you query or update the data via API calls. 

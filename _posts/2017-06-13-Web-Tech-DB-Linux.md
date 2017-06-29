@@ -300,7 +300,7 @@ Must be comfortable working in a Linux environment (as a user, not an admin) and
 - `tail filename.txt` Print the last 10 lines of a file by default.
 - wget uri : download uri file
 - netstat -nap|grep (searchhub端 号)【显 进程的所有信息】 
-
+- curl localhost：8080 显示页面内容，一般不显示头, `curl --heat url` 显示头, `curl -i url` 显示所有内容
 
 <span id="jump5"></span>
 ## OS
@@ -363,15 +363,12 @@ a feature that represents the "is a" relationship between different classes. Inh
 <span id="jump7"></span>
 ## Example questions and answers
 1. how to take down a server
-2. coding 题
-
 3. palindrome    
 4. (b) troubleshoot something (the interviewer gives you a scenario and sees the steps you take to solve the problem) or to 
 5. (c) explain some technology you know to the interviewer like he's a non-technical 8-year-old. 
 
 
 
-## google ads/doubleclick
 
 
 
@@ -410,4 +407,3 @@ PUT and DELETE are sometimes considered specialized versions of the POST verb, a
 
 
 
-#### Caching, connection handling and authentication.
