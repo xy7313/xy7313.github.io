@@ -42,15 +42,10 @@ Governor limits are runtime limits enforced by the Apex runtime engine. Because 
 
 
 1. web-to-case
-3. trigger/workflow in prj send email or notification using trigger
+3. trigger/workflow 
 4. load data
-5. 
 
-## community more
-1.  Salesforce Tabs + Visualforce template.
-protal
 
-All content from the internet.
 ## Dashboard and Reports
 1. reports:
     - summary of data that's stored in the application
@@ -236,23 +231,20 @@ In Salesforce, permissions and access settings specify
 2. role hierarchy: a way to extend access to record, when org-wide default have been set to anything more restrictive than public read/write
 3. implement sharing rules: we can implement sharing rules to open record access up to users when the org-wide defaults have been set to less than public public read/write
 
-###### Field Level Security
+
+##### Field Level Security
 1. restrict a profiles view to a certain field
 2. Field Level Security or Page Layout can not be used to make a field required
 3. Formulas ignore Field Level Security settings
 
-##### summary:
-sharing ruls: 
-data security: 
-record level permission set. 4 record access level: 
+##### summary: 
+1. record level permission set. 4 record access level: 
 org-wide default: user can see other users' record when other users' record are set as org-wide default
-role: 
+2. role: 
 sharing: horizontal sharing with different department
-manually sharing: sharing to anyone you want
-access greater.
-profile/permission set: object/field level
-profile-baseline,
-permission set-additional
+manually sharing: sharing to anyone you want access greater.
+3. profile/permission set: object/field level
+profile-baseline /permission set-additional
 
 
 
