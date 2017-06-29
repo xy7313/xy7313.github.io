@@ -10,6 +10,7 @@ Notes from: https://trailhead.salesforce.com/trails
 All content from: https://trailhead.salesforce.com/trails 
 
 ## 5. Developer Beginner
+
 ###### 1. Formula Fields
 - Let’s take a single field from an Account and show it on a Contact using what’s called a **cross-object formula**.
 - Say, for example, you have a hundred opportunities listed in a report, but only a handful of users own all these opportunities. How do you find the number of distinct users? This task sounds difficult, but it’s one of the easiest formulas you can write. It’s called the **Power of One**.
@@ -26,6 +27,7 @@ All content from: https://trailhead.salesforce.com/trails
     `YEAR( My_Date__c ) <> YEAR ( TODAY() )`
     3. Validates that the range between two custom fields, Salary Min and Salary Max, is no greater than $20,000. Error Message:	Salary range must be within $20,000. Adjust the Salary Max or Salary Min values.
     `(Salary_Max__c - Salary_Min__c) > 20000`
+
 ###### 2. Data Security
     -  you can provide just the right level of data access to thousands of users without having to specify permissions for each user individually.
     - Although you can configure the security and sharing model entirely using the user interface, it is implemented at the API level. That means any permissions you specify for objects, records, and fields apply even if you query or update the data via API calls. 
@@ -50,18 +52,20 @@ All content from: https://trailhead.salesforce.com/trails
     - A permission set is a collection of settings and permissions that give users access to various tools and functions. permission sets extend users’ functional access without changing their profiles.  
         - For example, to give users access to a custom object, create a permission set, enable the required permissions for the object, and assign the permission set to the users.
         - two common scenarios in which permission sets are useful.To grant access to custom objects or entire apps. To grant permissions—temporarily or long term—to specific fields.
+
 ###### 3. Process Automation
-    - Salesforce provides multiple tools to automate your org’s repetitive business processes: **Lightning Process Builder, Visual Workflow, Workflow, and Approvals**. 
-    - Process and workflow: In fact, a single process can do what it would normally take multiple workflow rules to do. The only thing you can do with workflow that you can’t do with processes is send outbound messages without code.
-    - If the process is too complicated for the Process Builder or requires more advanced functionality, create a flow by using the Cloud Flow Designer.
-    - If you need to build a wizard to collect information, Visual Workflow is the tool for you.  Create a flow that displays information to and requests information from a user. Then take the information that they enter and perform actions in Salesforce with it.
-    - a useful table(https://trailhead.salesforce.com/trails/force_com_dev_beginner/modules/business_process_automation/units/process_whichtool)
-    - Do I need to get information from a user? -if yes, use visual workflow, if no, use process builder
-    - Whenever possible, automate your if/then statements with Process Builder instead of workflow rules.
-    - When a user first requests approval for a new position, initial submission actions occur. The default initial submission action locks the record. This action ensures that other users (except for approvers and administrators) can’t change the record while the record is pending approval.
-    - tasks: 
-        - In some instances, a case must automatically escalate. Create a workflow rule that will set the escalated flag and send a task to the case owner if a case is not closed and its priority is set to High.
-        - You've been given a requirement to keep Contact addresses in sync with the Account they belong to. Use Process Builder to create a new process that updates all child Contact addresses when the address of the Account record is updated. 
+- Salesforce provides multiple tools to automate your org’s repetitive business processes: **Lightning Process Builder, Visual Workflow, Workflow, and Approvals**. 
+- Process and workflow: In fact, a single process can do what it would normally take multiple workflow rules to do. The only thing you can do with workflow that you can’t do with processes is send outbound messages without code.
+- If the process is too complicated for the Process Builder or requires more advanced functionality, create a flow by using the Cloud Flow Designer.
+- If you need to build a wizard to collect information, Visual Workflow is the tool for you.  Create a flow that displays information to and requests information from a user. Then take the information that they enter and perform actions in Salesforce with it.
+- a useful table(https://trailhead.salesforce.com/trails/force_com_dev_beginner/modules/business_process_automation/units/process_whichtool)
+- Do I need to get information from a user? -if yes, use visual workflow, if no, use process builder
+- Whenever possible, automate your if/then statements with Process Builder instead of workflow rules.
+- When a user first requests approval for a new position, initial submission actions occur. The default initial submission action locks the record. This action ensures that other users (except for approvers and administrators) can’t change the record while the record is pending approval.
+- tasks: 
+    - In some instances, a case must automatically escalate. Create a workflow rule that will set the escalated flag and send a task to the case owner if a case is not closed and its priority is set to High.
+    - You've been given a requirement to keep Contact addresses in sync with the Account they belong to. Use Process Builder to create a new process that updates all child Contact addresses when the address of the Account record is updated. 
+
 ###### 4. Apex Basics：
 1. Apex supports:
     - classes, interfaces, properties, collections
