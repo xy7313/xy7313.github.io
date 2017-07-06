@@ -41,6 +41,29 @@ Governor limits are runtime limits enforced by the Apex runtime engine. Because 
 2. Junction Object: A Many-to-Many relationship created with two lookup master-detail relationship
 
 
+## email to case:
+1. Salesforce can automatically create a case when an email is sent to one of your company's email addresses, such as support@company.com. 
+2. This Email-to-Case functionality auto-populates case fields from the content of each email. For example, an email subject heading becomes a case subject.
+3. Email-to-Case requires downloading and installing the agent. Use Email-to-Case if you have a requirement to keep all email traffic within your firewall, and you want to accept email attachments larger than 25 MB from customers.
+4. On-Demand Email-to-Case uses Apex email services to convert email to cases, without you having to download and install an agent behind your network's firewall. Use On-Demand Email-to-Case if you are not concerned about keeping email traffic within your firewall and you do not need to accept attachments larger than 25 MB from customers.
+5. Configuration of the Email-to-Case Agent code process consists of the following:
+    - Configuring the sfdcconfig.txt file - what username and password does the agent use to connect to Salesforce?
+    -  Configuring the email2case.txt file - which mailboxes does the agent poll through IMAP?
+    - Setting up and test routing addresses - what are the record type, origin, and priority of cases per mailbox being polled?
+6. how to set up On-Demand Email-to-Case:
+    - Determine the email routing addresses that your customers can use to submit cases to your support team.
+    - Set up assignment rules, escalation rules, and auto-response rules.
+    - In Salesforce enable Email-to-Case and configure your email routing addresses.（add a new email routing address, verify the new email routing address, then enable Email-to-Case:）
+    - Add email related list to Case page layouts.
+    - Configure your email system to forward case submissions to the email services address provided to you by Salesforce.
+    - test:
+        1. Manually send emails to the routing addresses.
+        2. Verify that the emails convert to cases based on their routing address settings.
+7. sample settings/configuration： https://success.salesforce.com/ideaView?id=087300000006tre
+8. Thread Id
+    - unique id generated for each case generated via email
+    - ensure that the email body and subject both are different, otherwise email-to-case creates an infinite loop of emails related to each case
+
 1. web-to-case
 3. trigger/workflow 
 4. load data

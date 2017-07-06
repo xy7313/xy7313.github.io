@@ -177,7 +177,7 @@ The process of picking out (abstracting) common features of objects and procedur
     1. A category of objects. The class defines all the common properties of the different objects that belong to it.
     2. A class, in the context of Java, are templates that are used to create objects, and to define object data types and methods.
 
-3. Encapsulation: //   [ɪn,kæpsə'leʃən]
+3. Encapsulation: // [ɪn,kæpsə'leʃən]
     1. Encapsulation enable programmers to hide the data of one class from another class. This is needed to protect the normal behavior of one class. We implemented it  using key words including public, private, and protect
     2. Encapsulation in Java is a mechanism of wrapping the data (variables) and code acting on the data (methods) together as a single unit. 
     3. In encapsulation, the variables of a class will be hidden from other classes, and can be accessed only through the methods of their current class
@@ -237,6 +237,7 @@ When and which to use is an important question. In brief, if you need a fast set
                 }
 
             ```
+
 <span id="jump8"></span>
 ###### 3.8  Array vs. ArrayList vs. LinkedList
 1. Array

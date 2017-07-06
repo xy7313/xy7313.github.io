@@ -8,12 +8,12 @@ tags: Web interview #post tag, seperated by space
 
 index:
 ###### [1. web](#jump1)
-###### [2.algorithm](#jump2)
-###### [2.3 DB/SQLy](#jump3)
-###### [2.4 Linux/unix](#jump4)
-###### [2.5 OS](#jump5)
-###### [2.6 OOD](#jump6)
-###### [2.6 Exmple](#jump6)
+###### [2. algorithm](#jump2)
+###### [3. DB/SQLy](#jump3)
+###### [4. Linux/unix](#jump4)
+###### [5. OS](#jump5)
+###### [6. OOD](#jump6)
+###### [7. VCS - Git](#jump7)
 
 <span id="jump1"></span>
 
@@ -361,18 +361,32 @@ a feature that represents the "is a" relationship between different classes. Inh
 
 
 <span id="jump7"></span>
-## Example questions and answers
-1. how to take down a server
-3. palindrome    
-4. (b) troubleshoot something (the interviewer gives you a scenario and sees the steps you take to solve the problem) or to 
-5. (c) explain some technology you know to the interviewer like he's a non-technical 8-year-old. 
-
-
-
-
-
-
-
+## VCS - Git
+1. all VCS can be categorized into two types: **central** or **distributed**.
+    - Git is the application that keeps track of everything related to the changes on your project over time
+    - GitHub is a host for Git repositories with collaboration features that let you apply and test changes to your code. (Code, Issues, Pull Requests, and Projects.)
+    - **Git vs. Github** Git Is a Version Control Application, GitHub Is a Collaboration Platform. Together, Git and GitHub form the heart of the modern developer’s toolkit.
+2. a few key terms
+    - Repositories: A collection of source files used to compile your project. It’s easiest to imagine it as a project folder. 
+    - Commits: A snapshot of your project as it existed at a specific point in time. You create commits as you work on your project to indicate points when you added and removed discrete units of work.
+    - Branch: A series of commits that represent the changes in your project over time. Every repository has a default branch, which contains the production-ready version of your code. Create additional branches when you’re working on new features, fixing bugs, or making other changes to your project. These branches keep your experimental code separate from your tested production code.
+    - Merge: The combined history of two or more branches. Most of the time, you’ll merge your feature branch into the default or deployed branch of the repository in order to move the features into production.
+    - Tag: A pointer to a specific commit, which provides a persistent reference to an event. Typically, tags are used with semantic versioning to represent points when your application was released.
+3. git command
+    - The local and remote repositories only interact when you run one of the four network commands in Git: `git clone`, `git fetch`, `git pull`, and `git push`.
+    - Git uses the config settings for your user name and email address to generate a unique fingerprint for each of the commits you create. 
+    ```
+    $ git config --global user.name "First Last"  
+    $ git config --global user.email "you@email.com"    
+    ```    
+    - `git branch branchname` + `git checkout branchname` or `git checkout -b branchname` With Git, checkout moves an important pointer called HEAD, and in this case, moves us to a different branch. HEAD points to the tip of your branch.
+    - `git log --oneline --graph --decorate` displays the same ASCII graph that is displayed using the --graph modifier, but also includes the branch name(s) for the different commits being displayed.
+    - By default, the `git diff` command helps you review the changes between the last commit of your project and the various states of your files
+    - use `git revert` if the commit has been pushed to the remote, you want to change or **undo a previous change**.
+    - use `git commit --amend` to make a modification to the last commit you made. don't use git commit --amend if you have already pushed your commits to the remote.
+    - `git reset` rewind the history of our project, but, it alters the commit history, only use reset when you have not pushed your commits to your remote
+        - `git reset --soft` takes the identified commit(s) and places all of the changes in the staging area. This is helpful if you want to take a group of commits and squash them into a single larger commit.
+4. two stage commit
 
 
 
