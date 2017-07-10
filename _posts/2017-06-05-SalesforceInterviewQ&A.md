@@ -63,6 +63,9 @@ Governor limits are runtime limits enforced by the Apex runtime engine. Because 
 8. Thread Id
     - unique id generated for each case generated via email
     - ensure that the email body and subject both are different, otherwise email-to-case creates an infinite loop of emails related to each case
+9. example： http://focusonforce.com/configuration/salesforce-email-to-case-example/
+
+
 
 1. web-to-case
 3. trigger/workflow 
@@ -124,6 +127,14 @@ Governor limits are runtime limits enforced by the Apex runtime engine. Because 
     - You want to leverage the built-in functionality of a standard controller but override one or more actions, such as edit, view, save, or delete.
     - You want to add new actions.
     - You want to build a Visualforce page that respects user permissions. Although a controller extension class executes in system mode, if a controller extension extends a standard controller, the logic from the standard controller does not execute in system mode. Instead, it executes in user mode, in which permissions, field-level security, and sharing rules of the current user apply.
+
+
+
+
+
+
+
+
 
 
 ## Export
@@ -203,7 +214,6 @@ You have to use full sandbox to deploy the data from sandbox to production. You 
 
 
 ## Security -- Who sees what:
-
 4. OWD -> role hierarchy -> sharing rules -> manual sharing.
 1. **org-wide defaults** (also known as sharing settings)
     - OWD is the default access level on records for any object in sales force.
