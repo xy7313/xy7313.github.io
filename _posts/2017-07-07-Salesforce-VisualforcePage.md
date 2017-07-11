@@ -19,47 +19,45 @@ tags: Salesforce Note #post tag, seperated by space
     - always be a child component of the < apex:form > tag. 
 - `<apex:pageBlockButtons>`
 - `<apex:inputField>` display fields
-
-```
-<apex:form id="changeStatusForm">
+    ```
+    <apex:form id="changeStatusForm">
         <apex:pageBlock >
-          <apex:pageblocksection title="Account Information">
-               <apex:inputfield value="{!account.name}"/>
-        </apex:pageblocksection>
-        <apex:pageblocksection title="Category Information">
-             <apex:inputfield value="{!account.type}"/>
-        </apex:pageblocksection>
-        <apex:pageBlockButtons >
-             <apex:commandButton value="Save" action="{!save}"/>
-        </apex:pageBlockButtons>
-       </apex:pageBlock>
+            <apex:pageblocksection title="Account Information">
+                <apex:inputfield value="{!account.name}"/>
+            </apex:pageblocksection>
+            <apex:pageblocksection title="Category Information">
+                <apex:inputfield value="{!account.type}"/>
+            </apex:pageblocksection>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
     </apex:form>
-```
+    ```
 - `<apex:commandlink action="{!save}" value="Save"/>` This tag creates a link that helps to execute an action defined in a controller. 
 - `<apex:outputLink>`  creates a link to a URL, the body of it can be text or an image.
  `<apex:outputLink value="https://www.salesforce.com" id="theLink"> www.salesforce.com </apex:outputLink>`
 - `<apex:inputFile> ` ？？  A component that creates an input field to upload a file. maximum file size that can be uploaded via Visualforce is 10 MB.
-```
-<apex:page standardController="Document" extensions="documentExt">
-    <apex:messages />
-    <apex:form id="theForm">
-      <apex:pageBlock >
-          <apex:pageBlockSection >
-            <apex:inputFile value="{!document.body}"  filename="{!document.name}"/>
-            <apex:commandButton value="Save" action="{!save}"/>
-          </apex:pageBlockSection>
-       </apex:pageBlock>
-    </apex:form>
-</apex:page>
-
-//Controller Class:
-public class documentExt {
-    public documentExt(ApexPages.StandardController controller) {
-        Document d = (Document) controller.getRecord();
-        d.folderid = UserInfo.getUserId(); //this puts it in My Personal Documents
-    }                 
-}
-```
+    ```
+    <apex:page standardController="Document" extensions="documentExt">
+        <apex:messages />
+        <apex:form id="theForm">
+        <apex:pageBlock >
+            <apex:pageBlockSection >
+                <apex:inputFile value="{!document.body}"  filename="{!document.name}"/>
+                <apex:commandButton value="Save" action="{!save}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+        </apex:form>
+    </apex:page>
+    //Controller Class:
+    public class documentExt {
+        public documentExt(ApexPages.StandardController controller) {
+            Document d = (Document) controller.getRecord();
+            d.folderid = UserInfo.getUserId(); //this puts it in My Personal Documents
+        }                 
+    }
+    ```
 - `<apex:inputHidden value="{!inputValue}" id="theHiddenInput"/>` an input element that is invisible to the user. Use this component to pass variables from page to page. eg:`<apex:inputhidden value="{!account.accountNumber}"/>` there is no account number displayed
 - `<apex:inputSecret value="{!inputValue}" id="theSecretInput"/>` An HTML input element of type password. eg:`<apex:inputsecret value="{!account.accountNumber}"/>` 
 - `<apex:inputText>` ？？ An HTML input element of type text. This component does not use Salesforce styling. Also, since it does not correspond to a field, or any other data on an object, custom code is required to use the value the user inputs.
@@ -67,19 +65,19 @@ public class documentExt {
 - `<apex:inputCheckbox value="{!op.isprivate}"/>`
 - `<apex:outputField value="{!opportunity.name}"/>` A read-only display of a label and value for a field
 - `<apex:outputLabel>` A label for an input or output field. (similar to inputfield)eg:
-```
-<apex:outputLabel value="Checkbox" for="theCheckbox"/>
-<apex:inputCheckbox value="{!inputValue}" id="theCheckbox"/> 
-```
+    ```
+    <apex:outputLabel value="Checkbox" for="theCheckbox"/>
+    <apex:inputCheckbox value="{!inputValue}" id="theCheckbox"/> 
+    ```
 - `<apex:outputText>` Displays text. Displays. You can customize the appearance using CSS styles, in which case the generated text is wrapped in an HTML < span > tag. You can also escape the rendered text if it contains sensitive HTML and XML characters. This component does take localization into account.  ??
-```
-<apex:page >
-    <apex:outputText style="font-style:italic" value="This is {0} text with {1}."> 
-        <apex:param value="my"/> 
-        <apex:param value="arguments"/>
-    </apex:outputText>
-</apex:page>
-```
+    ```
+    <apex:page >
+        <apex:outputText style="font-style:italic" value="This is {0} text with {1}."> 
+            <apex:param value="my"/> 
+            <apex:param value="arguments"/>
+        </apex:outputText>
+    </apex:page>
+    ```
 - `<apex:pageBlockSectionItem>` 
     - A single piece of data in an < apex:pageBlockSection > that takes up one column in one row. 
     - An < apex:pageBlockSectionItem > component can include up to two child components. 
