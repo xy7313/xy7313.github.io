@@ -27,11 +27,11 @@ index:
 - DNS, 
 - HTML/XML, 
 - AJAX, etc
-- [routers,](https://www.lifewire.com/how-routers-work-816456) 
+- [routers](https://www.lifewire.com/how-routers-work-816456) 
     - Routers are small electronic devices that join multiple computer networks together via either wired or wireless connections.
     - By maintaining configuration information in a part of memory called the routing table, routers also can filter both incoming or outgoing traffic based on the addresses of senders and receivers.
 - Cookies
-- DNS:domain name servers, 
+- DNS: domain name servers, 
 - Load balancers, 
 - firewalls, 
 - Knowledge of Front End programming languages (HTML, CSS, JavaScript), 
