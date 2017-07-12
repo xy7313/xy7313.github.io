@@ -41,9 +41,12 @@ tags: Salesforce Note #post tag, seperated by space
         </apex:pageBlock>
     </apex:form>
     ```
+
 - `<apex:commandlink action="{!save}" value="Save"/>` This tag creates a link that helps to execute an action defined in a controller. 
+
 - `<apex:outputLink>`  creates a link to a URL, the body of it can be text or an image.
  `<apex:outputLink value="https://www.salesforce.com" id="theLink"> www.salesforce.com </apex:outputLink>`
+
 - `<apex:inputFile> ` ？？  A component that creates an input field to upload a file. maximum file size that can be uploaded via Visualforce is 10 MB.
     ```
     <apex:page standardController="Document" extensions="documentExt">
@@ -65,20 +68,29 @@ tags: Salesforce Note #post tag, seperated by space
         }                 
     }
     ```
+
 - `<apex:inputHidden value="{!inputValue}" id="theHiddenInput"/>` an input element that is invisible to the user. Use this component to pass variables from page to page. 
     - eg:`<apex:inputhidden value="{!account.accountNumber}"/>` there is no account number displayed
-- `<apex:inputSecret value="{!inputValue}" id="theSecretInput"/>` An HTML input element of type password.
+
+- `<apex:inputSecret value="{!inputValue}" id="theSecretInput"/>` An HTML input element of type password. masked input as user typed
     - eg:`<apex:inputsecret value="{!account.accountNumber}"/>` 
+
 - `<apex:inputText>` ？？ An HTML input element of type text. This component does not use Salesforce styling. Also, since it does not correspond to a field, or any other data on an object, custom code is required to use the value the user inputs.
+
 - `<apex:inputTextarea>` for a value that requires a text area.     - eg:`<apex:inputTextarea id="newDesc" value="{!contract.description}"/><p/>  `
-- `<apex:inputCheckbox value="{!op.isprivate}"/>`
+
+- `<apex:inputCheckbox value="{!op.isprivate}"/>` get user input
+
 - `<apex:outputField value="{!opportunity.name}"/>` A read-only display of a label and value for a field
+
 - `<apex:outputLabel>` A label for an input or output field. (similar to inputfield)eg:
     ```
     <apex:outputLabel value="Checkbox" for="theCheckbox"/>
     <apex:inputCheckbox value="{!inputValue}" id="theCheckbox"/> 
     ```
-- `<apex:outputText>` Displays text. Displays. You can customize the appearance using CSS styles, in which case the generated text is wrapped in an HTML < span > tag. You can also escape the rendered text if it contains sensitive HTML and XML characters. This component does take localization into account.  ??
+
+- `<apex:outputText>` Displays text. Displays. You can customize the appearance using CSS styles, in which case the generated text is wrapped in an HTML < span > tag. You can also escape the rendered text if it contains sensitive HTML and XML characters. This component does take localization into account. There are some example with `param`, `toolbar`, `panalGrid`...
+
 - `<apex:param>` A parameter for the parent component. Within < apex:outputText >, there is support for the < apex:param > tag to match the syntax of the MessageFormat class in Java. Parent components can be:
     - < apex:actionFunction >
     - < apex:actionSupport >
@@ -100,6 +112,7 @@ tags: Salesforce Note #post tag, seperated by space
         //when we click the link, we search account name in google
     </apex:page>
     ```
+
 - `<apex:pageBlockSectionItem>` 
     - A single piece of data in an < apex:pageBlockSection > that takes up one column in one row. 
     - An < apex:pageBlockSectionItem > component can include up to two child components. 
@@ -123,6 +136,7 @@ tags: Salesforce Note #post tag, seperated by space
         </apex:pageBlock> 
     </apex:page>
     ```
+
 - `<apex:pageBlockTable>` 
     - A list of data displayed as a table
     - within either an < apex:pageBlock > or < apex:pageBlockSection > component
@@ -140,6 +154,7 @@ tags: Salesforce Note #post tag, seperated by space
         </apex:page>
         //this example shows all leads in a table with name, phone and company fields
         ```
+
 - `<apex:column>` must always be a child of an < apex:dataTable > or < apex:pageBlockTable > component.
 
 - `<apex:facet>` A placeholder for content that is rendered in a specific part of the parent component, such as the header or footer of an < apex:dataTable >.(it's like the column name). An < apex:facet > component can only exist in the body of a parent component if the parent supports facets.
