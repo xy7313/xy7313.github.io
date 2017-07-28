@@ -353,3 +353,33 @@ Visual Workflow enables you to create flows, which are triggered by users rather
 - MOM minutes of meeting
 - RCA root cause analysis
 - IA impact analysis
+
+
+kevin zhang
+finacial industry
+
+- What you think salesforce is, it's CRM, get requirement and 
+- why people pay for it?
+- what sf can apply for supervisor, developer, administor, anyone
+
+they can make more money
+
+intergration tool: etl, albow messageing, informatic --a data loader,
+
+schchronization 
+
+lightning make vf look like lightning, customize the visual force page, using javascript
+
+how to implement data immegration
+how to control data volumn
+
+difference between process builder and workflow
+
+deployment
+multiple sandbox, develop whatever they are working on and develop it on my own sandbox, the qa sandbox, which has testing data,
+using chain set for deployment
+then come to production, every test class will wrong.
+
+challenging thing of deployment: 
+1. test classed, deploy workflow, fine, but apex trigger, test classes failed, 
+2. manually thing, 
