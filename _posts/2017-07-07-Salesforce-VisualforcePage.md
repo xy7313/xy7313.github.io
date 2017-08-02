@@ -45,6 +45,7 @@ tags: Salesforce Note #post tag, seperated by space
 - `<apex:commandlink action="{!save}" value="Save"/>` This tag creates a link that helps to execute an action defined in a controller. 
 
 - `<apex:outputLink>`  creates a link to a URL, the body of it can be text or an image.
+
  `<apex:outputLink value="https://www.salesforce.com" id="theLink"> www.salesforce.com </apex:outputLink>`
 
 - `<apex:inputFile> ` ？？  A component that creates an input field to upload a file. maximum file size that can be uploaded via Visualforce is 10 MB.
@@ -77,13 +78,15 @@ tags: Salesforce Note #post tag, seperated by space
 
 - `<apex:inputText>` ？？ An HTML input element of type text. This component does not use Salesforce styling. Also, since it does not correspond to a field, or any other data on an object, custom code is required to use the value the user inputs.
 
-- `<apex:inputTextarea>` for a value that requires a text area.     - eg:`<apex:inputTextarea id="newDesc" value="{!contract.description}"/><p/>  `
+- `<apex:inputTextarea>` for a value that requires a text area.     
+- eg:`<apex:inputTextarea id="newDesc" value="{!contract.description}"/><p/>  `
 
 - `<apex:inputCheckbox value="{!op.isprivate}"/>` get user input
 
 - `<apex:outputField value="{!opportunity.name}"/>` A read-only display of a label and value for a field
 
-- `<apex:outputLabel>` A label for an input or output field. (similar to inputfield)eg:
+- `<apex:outputLabel>` A label for an input or output field. (similar to inputfield)
+    - eg:
     ```
     <apex:outputLabel value="Checkbox" for="theCheckbox"/>
     <apex:inputCheckbox value="{!inputValue}" id="theCheckbox"/> 
@@ -98,14 +101,14 @@ tags: Salesforce Note #post tag, seperated by space
     - < apex:commandLink >
     - < apex:outputLink >
     - < apex:outputText >
-    - < flow:interview >
+    - < flow:interview >   
     ```
     <apex:page >
         <apex:outputText style="font-style:italic" value="This is {0} text with {1}."> 
             <apex:param value="my"/> 
             <apex:param value="arguments"/>
         </apex:outputText>
-         <apex:outputLink value="http://google.com/search">
+        <apex:outputLink value="http://google.com/search">
             Search Google
             <apex:param name="q" value="{!account.name}"/>
         </apex:outputLink>
@@ -142,18 +145,18 @@ tags: Salesforce Note #post tag, seperated by space
     - within either an < apex:pageBlock > or < apex:pageBlockSection > component
     - similar to a related list or list view in a standard Salesforce page
     -  Like an < apex:dataTable>, an < apex:pageBlockTable > is defined by iterating over a set of data, displaying information about one item of data per row. The set of data can contain up to 1,000 items.
-        ```
-        <apex:page standardController="Lead" recordSetVar="Leads">
-            <apex:pageBlock title="pageBlockTable">
-                <apex:pageBlockTable value="{!Leads}" var="le">
-                    <apex:column value="{!le.name}"/> 
-                    <apex:column value="{!le.Phone}"/>
-                    <apex:column value="{!le.Company}"/>
-                </apex:pageBlockTable> 
-            </apex:pageBlock> 
-        </apex:page>
-        //this example shows all leads in a table with name, phone and company fields
-        ```
+    ```
+    <apex:page standardController="Lead" recordSetVar="Leads">
+        <apex:pageBlock title="pageBlockTable">
+            <apex:pageBlockTable value="{!Leads}" var="le">
+                <apex:column value="{!le.name}"/> 
+                <apex:column value="{!le.Phone}"/>
+                <apex:column value="{!le.Company}"/>
+            </apex:pageBlockTable> 
+        </apex:pageBlock> 
+    </apex:page>
+    //this example shows all leads in a table with name, phone and company fields
+    ```
 
 - `<apex:column>` must always be a child of an < apex:dataTable > or < apex:pageBlockTable > component.
 
@@ -188,9 +191,9 @@ tags: Salesforce Note #post tag, seperated by space
     ```
 
 - `<apex:toolbar> `A stylized, horizontal toolbar that can contain any number of child components. By default, all child components are aligned to the left side of the toolbar. Use an 
- <apex:toolbarGroup> component to align one or more child components to the right.
+ < apex:toolbarGroup > component to align one or more child components to the right.
 
-- `<apex:toolbarGroup> ` A group of components within a toolbar that can be aligned to the left or right of the toolbar.
+- `<apex:toolbarGroup>` A group of components within a toolbar that can be aligned to the left or right of the toolbar.
     ```
     <apex:page id="thePage">
         <apex:toolbar id="theToolbar">

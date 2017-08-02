@@ -71,7 +71,7 @@ tags: Salesforce Note #post tag, seperated by space
 
 
 Useful link: 
-1. (Creating Custom Web-To-Case Forms Using Visualforce and Sites)[https://developer.salesforce.com/page/Creating_Custom_Web-To-Case_Forms_Using_Visualforce_and_Sites]
-2. (user interface setting)[https://help.salesforce.com/articleView?id=customize_ui_settings.htm&language=en_US]
+1. [Creating Custom Web-To-Case Forms Using Visualforce and Sites](https://developer.salesforce.com/page/Creating_Custom_Web-To-Case_Forms_Using_Visualforce_and_Sites)
+2. [user interface setting](https://help.salesforce.com/articleView?id=customize_ui_settings.htm&language=en_US)
 3. JIRA(Atlassian) for agile team, to plan track and release, real-time reporting, match the way your team works, create issue easy and manage bug by dragging, check the bug log. convenient.
 4. Conga  for data management, salesforce appexchange
