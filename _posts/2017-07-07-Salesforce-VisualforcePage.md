@@ -228,6 +228,7 @@ tags: Salesforce Note #post tag, seperated by space
         </apex:panelBar>
     </apex:page>
     ```
+    
 - `<apex:panelBarItem>` 
 
 - `<apex:panelGrid>` each component found in the body of the 
