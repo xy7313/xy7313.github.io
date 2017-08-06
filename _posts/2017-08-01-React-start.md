@@ -10,7 +10,6 @@ tags: React Note #post tag, seperated by space
 1. Download code:  https://github.com/buckyroberts/React-Boilerplate, My editon with notes: https://github.com/xy7313/React-Boilerplate
 
 2. Include JSX 
-
 ```
 //after download, also can ref online file,
 <script src="../../js/react.min.js"></script>
