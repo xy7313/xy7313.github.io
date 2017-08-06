@@ -17,7 +17,6 @@ tags: React Note #post tag, seperated by space
 <script src="../../js/browser.min.js"></script>
 ```
 The last line transpile jsx file to plain js file so that browser can understand jsx. There are also some online tools can do the same work for developer.
-
  - an example:
  ~~~ html
   <!DOCTYPE html>
