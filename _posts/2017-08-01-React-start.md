@@ -101,134 +101,134 @@ The last line transpile jsx file to plain js file so that browser can understand
  - make template for one component and customize in different ways. Using curly brace{}
  - Property is essentially an HTML attribute that we can pass in to customize our components in different kinds of ways.
    
-  ```
-  <body>
+   ```
+   <body>
 
-     <div id="container"></div>
+      <div id="container"></div>
 
-     <script type="text/babel">
-       var Movie = React.createClass({ 
-         render:function(){
-           return(
-                   <div>
-                     <h1>{this.props.title}</h1>
-                     <h2>{this.props.genre}</h2>
-                   </div>
-             );
-         }
-       });
-         ReactDOM.render(
-           <div>
-             <Movie title="Avatar" genre="action"/>
-             <Movie title="The NoteBook" genre="romance"/>
-             <Movie title="Cube" genre="thriller"/>
-           </div>,document.getElementById('container')
-         );
-     </script>
+      <script type="text/babel">
+        var Movie = React.createClass({ 
+          render:function(){
+            return(
+                    <div>
+                      <h1>{this.props.title}</h1>
+                      <h2>{this.props.genre}</h2>
+                    </div>
+              );
+          }
+        });
+          ReactDOM.render(
+            <div>
+              <Movie title="Avatar" genre="action"/>
+              <Movie title="The NoteBook" genre="romance"/>
+              <Movie title="Cube" genre="thriller"/>
+            </div>,document.getElementById('container')
+          );
+      </script>
 
-   </body>
-  //output: Avatar, action, The NoteBook, romance, Cube, thriller
-  ```
+    </body>
+   //output: Avatar, action, The NoteBook, romance, Cube, thriller
+   ```
 
 8. Event handling
  Example: Built a sticky note app, where users can add new notes, delete or edit notes and write any notes.
  - can not use class as prop's name, because class is one of the reserve words in js
  - children property(built-in prop), between the opening tag and closing tag, like: ` <Comment>hey-sample txt</Comment>`
 
-  ```
-  <!DOCTYPE html>
-  <html>
+   ```
+   <!DOCTYPE html>
+   <html>
 
-   <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>React-stickyNote</title>
-      <script src="../../js/react.min.js"></script>
-      <script src="../../js/react-dom.min.js"></script>
-      <script src="../../js/browser.min.js"></script>
-      <link rel = "stylesheet" type="text/css" href = "../../css/main.css">
-    </head>
+    <head>
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1">
+       <title>React-stickyNote</title>
+       <script src="../../js/react.min.js"></script>
+       <script src="../../js/react-dom.min.js"></script>
+       <script src="../../js/browser.min.js"></script>
+       <link rel = "stylesheet" type="text/css" href = "../../css/main.css">
+     </head>
 
-    <body>
+     <body>
 
-      <div id="container"></div>
+       <div id="container"></div>
 
-      <script type="text/babel">
-        var Comment = React.createClass({ 
-          edit: function(){
-            alert("edit");
-          },
-          remove: function(){
-            alert("remove");
-          },
-          render: function(){
-            return(
-              //can not use class, because class is reserve word in js
-               //children property, between the opening tag and closing tag
-                    <div className = "commentContainer">
-                      <div className = "commentText"> {this.props.children} </div>
-                      <button  onClick={this.edit} className = "button-primary">Edit</button>
-                      <button onClick={this.remove} className = "button-danger" >Remove</button>
-                    </div>
-              );
-          }
-        });
-          ReactDOM.render(
-            <div className = "board">
-              <Comment>hey-sample txt</Comment>
-              <Comment>beans</Comment>
-              <Comment>TUNA txt</Comment>
-            </div>,document.getElementById('container')
-          );
-      </script>
+       <script type="text/babel">
+         var Comment = React.createClass({ 
+           edit: function(){
+             alert("edit");
+           },
+           remove: function(){
+             alert("remove");
+           },
+           render: function(){
+             return(
+               //can not use class, because class is reserve word in js
+                //children property, between the opening tag and closing tag
+                     <div className = "commentContainer">
+                       <div className = "commentText"> {this.props.children} </div>
+                       <button  onClick={this.edit} className = "button-primary">Edit</button>
+                       <button onClick={this.remove} className = "button-danger" >Remove</button>
+                     </div>
+               );
+           }
+         });
+           ReactDOM.render(
+             <div className = "board">
+               <Comment>hey-sample txt</Comment>
+               <Comment>beans</Comment>
+               <Comment>TUNA txt</Comment>
+             </div>,document.getElementById('container')
+           );
+       </script>
 
-    </body>
+     </body>
 
-  </html>
-  ```
+   </html>
+   ```
 
 9. State
  Customize the components using properties and states. Whenever something is gonna stay the same uses properties, whenever changes uses states.
  - You don't need to explicitly say whenever your state changes to redraw a certain part of your webpage, it automatically watches for your states. Whenever their state changes, the part of web page gets redrawn automatically to fit that. 
  
-  ```
-  <body>
+   ```
+   <body>
 
-     <div id="container"></div>
+      <div id="container"></div>
 
-     <script type="text/babel">
+      <script type="text/babel">
 
-       var CheckBox = React.createClass({ 
+        var CheckBox = React.createClass({ 
 
-         getInitialState: function(){
-             return {checked:true}
-         },
-         handleChecked: function(){
-             this.setState({checked:!this.state.checked})
-         },
-         render: function(){
-             var msg;
-             if(this.state.checked){
-                 msg='checked'
-             }else{
-                 msg='unchecked'
-             }
+          getInitialState: function(){
+              return {checked:true}
+          },
+          handleChecked: function(){
+              this.setState({checked:!this.state.checked})
+          },
+          render: function(){
+              var msg;
+              if(this.state.checked){
+                  msg='checked'
+              }else{
+                  msg='unchecked'
+              }
 
-            return(
-                    <div className = "commentContainer">
-                      <input type = "checkbox" defaultChecked={this.state.checked} onChange = {this.handleChecked}/>
-                      <h3>checkBox is {msg}</h3> 
-                    </div>
-              );
-         }
-       });
-         ReactDOM.render(
-           <CheckBox />,document.getElementById('container')
-         );
-     </script>
+             return(
+                     <div className = "commentContainer">
+                       <input type = "checkbox" defaultChecked={this.state.checked} onChange = {this.handleChecked}/>
+                       <h3>checkBox is {msg}</h3> 
+                     </div>
+               );
+          }
+        });
+          ReactDOM.render(
+            <CheckBox />,document.getElementById('container')
+          );
+      </script>
 
-   </body>
-  ```
+    </body>
+   ```
 
 10. Add state to component(contd on the sticky note app)
  Requirements: This note switches bewteen two modes/states: editing, normal. That is, whenever we click edit, the text area can be changed to a form for editing. After complish editing, the form turns to text area. 
