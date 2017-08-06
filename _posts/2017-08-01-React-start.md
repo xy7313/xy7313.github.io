@@ -98,8 +98,8 @@ The last line transpile jsx file to plain js file so that browser can understand
 ```
 
 7. Properties: 
-  - make template for one component and customize in different ways. Using curly brace{}
-  - Property is essentially an HTML attribute that we can pass in to customize our components in different kinds of ways.
+ - make template for one component and customize in different ways. Using curly brace{}
+ - Property is essentially an HTML attribute that we can pass in to customize our components in different kinds of ways.
 
    ```
   <body>
@@ -295,7 +295,9 @@ Requirements: This note switches bewteen two modes/states: editing, normal. That
 ```
 
 11. refs (contd on the sticky note app)
+
 Requirements: Save whatever the textarer looks like now.
+
  - First, get the text just typed
  - Second, show it 
  - eg: `var val = this.refs.newText.value;` + `<textarea ref = "newText" defaultValue = {this.props.children}></textarea>`
