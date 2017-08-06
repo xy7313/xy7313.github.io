@@ -348,13 +348,13 @@ tags: Salesforce Note #post tag, seperated by space
 - `<apex:enhancedList>` Enhanced lists are used when you want to display a specific list view for a standard or custom object, rather than having all list views available for the user to select.
     - Listid = "15 digit" to reference to a custom list view
     
-    ```
-    <apex:page>
-        <apex:enhancedList type="Account" height="300" rowsPerPage="10" id="AccountList" />
-        <apex:enhancedList type="Lead" height="300" rowsPerPage="25"
-            id="LeadList" customizable="False" />
-    </apex:page>
-    ```
+        ```
+        <apex:page>
+            <apex:enhancedList type="Account" height="300" rowsPerPage="10" id="AccountList" />
+            <apex:enhancedList type="Lead" height="300" rowsPerPage="25"
+                id="LeadList" customizable="False" />
+        </apex:page>
+        ```
 
 - `<apex:actionStatus> ` displays the status of an AJAX update request;  display some gif (graphic Interchange Format), which shows to user that their request is in progress.
     - Example:  [eg1](http://sfdcsrini.blogspot.com/2014/09/actionstatus-visualforce-disable-screen.html),[eg2](http://sfdcsrini.blogspot.com/2015/02/how-to-use-apexactionstatus-tag-in.html)
@@ -369,26 +369,26 @@ tags: Salesforce Note #post tag, seperated by space
     - if an < apex:actionPoller > is ever re-rendered as the result of another action, it resets itself.
     - avoid using this component with enhanced lists.
     - e.g. : counter++ every 15 seconds
-    
-    ```
-    <apex:page controller="exampleCon2">
-        <apex:form >     
-            <apex:outputText value="Watch this counter: {!count}" id="counter"/>
-            <apex:actionPoller action="{!incrementCounter}" rerender="counter" interval="15"/>     
-        </apex:form>
-    </apex:page>
-    //Controller Class:
-    public class exampleCon2 {  
-        Integer count = 0;                         
-        public PageReference incrementCounter() {
-            count++;
-            return null;
-        }                  
-        public Integer getCount() {
-            return count;
+
+        ```
+        <apex:page controller="exampleCon2">
+            <apex:form >     
+                <apex:outputText value="Watch this counter: {!count}" id="counter"/>
+                <apex:actionPoller action="{!incrementCounter}" rerender="counter" interval="15"/>     
+            </apex:form>
+        </apex:page>
+        //Controller Class:
+        public class exampleCon2 {  
+            Integer count = 0;                         
+            public PageReference incrementCounter() {
+                count++;
+                return null;
+            }                  
+            public Integer getCount() {
+                return count;
+            }
         }
-    }
-    ```
+        ```
 
 - `<apex:actionRegion> ` An area of a Visualforce page that demarcates which components should be processed by the Force.com server when an AJAX request is generated. Only the components in the body of the
 < apex:actionRegion > are processed by the server, thereby increasing the performance of the page. **it does not define what area(s) of the page are re-rendered when the request completes. To control that behavior, use the rerender attribute on an < apex:actionSupport >,< apex:actionPoller >,  < apex:commandButton >, < apex:commandLink >, < apex:tab >, or< apex:tabPanel > component.**
