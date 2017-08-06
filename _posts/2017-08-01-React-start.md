@@ -131,6 +131,7 @@ The last line transpile jsx file to plain js file so that browser can understand
    ```
 
 8. Event handling
+
  Example: Built a sticky note app, where users can add new notes, delete or edit notes and write any notes.
  - can not use class as prop's name, because class is one of the reserve words in js
  - children property(built-in prop), between the opening tag and closing tag, like: ` <Comment>hey-sample txt</Comment>`
@@ -188,6 +189,7 @@ The last line transpile jsx file to plain js file so that browser can understand
    ```
 
 9. State
+
  Customize the components using properties and states. Whenever something is gonna stay the same uses properties, whenever changes uses states.
  - You don't need to explicitly say whenever your state changes to redraw a certain part of your webpage, it automatically watches for your states. Whenever their state changes, the part of web page gets redrawn automatically to fit that. 
  
@@ -231,66 +233,68 @@ The last line transpile jsx file to plain js file so that browser can understand
    ```
 
 10. Add state to component(contd on the sticky note app)
+
  Requirements: This note switches bewteen two modes/states: editing, normal. That is, whenever we click edit, the text area can be changed to a form for editing. After complish editing, the form turns to text area. 
 
-```
- <body>
-    
-    <div id="container"></div>
+ ```
+  <body>
 
-    <script type="text/babel">
-      var Comment = React.createClass({ 
-        getInitialState: function(){
-          return {editing: false}
-        },
-        edit: function(){
-          this.setState({editing:true});
-        },
-        save: function(){
-          this.setState({editing:false});
-        },
-        remove: function(){
-          alert("remove");
-        },
+     <div id="container"></div>
 
-        renderForm: function(){
-          return(
-                  <div className = "commentContainer">
-                   <textarea defaultValue = {this.props.children}></textarea>
-                    <button onClick={this.save} className = "button-success" >Save</button>
-                  </div>
-            );
-        },
-        renderNormal: function(){
-          return(
-                  <div className = "commentContainer">
-                    <div className = "commentText"> {this.props.children} </div>
-                    <button  onClick={this.edit} className = "button-primary">Edit</button>
-                    <button onClick={this.remove} className = "button-danger" >Remove</button>
-                  </div>
-            );
-        },
-        render: function(){
-          if(this.state.editing){
-            return this.renderForm();
-          }else{
-            return this.renderNormal();
-          }
-        }
-      });
-        ReactDOM.render(
-          <div className = "board">
-            <Comment>hey-sample txt</Comment>
-            <Comment>beans</Comment>
-            <Comment>TUNA txt</Comment>
-          </div>,document.getElementById('container')
-        );
-    </script>
+     <script type="text/babel">
+       var Comment = React.createClass({ 
+         getInitialState: function(){
+           return {editing: false}
+         },
+         edit: function(){
+           this.setState({editing:true});
+         },
+         save: function(){
+           this.setState({editing:false});
+         },
+         remove: function(){
+           alert("remove");
+         },
 
-  </body>
-```
+         renderForm: function(){
+           return(
+                   <div className = "commentContainer">
+                    <textarea defaultValue = {this.props.children}></textarea>
+                     <button onClick={this.save} className = "button-success" >Save</button>
+                   </div>
+             );
+         },
+         renderNormal: function(){
+           return(
+                   <div className = "commentContainer">
+                     <div className = "commentText"> {this.props.children} </div>
+                     <button  onClick={this.edit} className = "button-primary">Edit</button>
+                     <button onClick={this.remove} className = "button-danger" >Remove</button>
+                   </div>
+             );
+         },
+         render: function(){
+           if(this.state.editing){
+             return this.renderForm();
+           }else{
+             return this.renderNormal();
+           }
+         }
+       });
+         ReactDOM.render(
+           <div className = "board">
+             <Comment>hey-sample txt</Comment>
+             <Comment>beans</Comment>
+             <Comment>TUNA txt</Comment>
+           </div>,document.getElementById('container')
+         );
+     </script>
+
+   </body>
+ ```
 
 11. refs (contd on the sticky note app)
+
  Requirements: Save whatever the textarer looks like now.
  - First, get the text just typed
  - Second, show it 
