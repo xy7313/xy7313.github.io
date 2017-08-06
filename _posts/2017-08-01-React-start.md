@@ -97,7 +97,7 @@ The last line transpile jsx file to plain js file so that browser can understand
 </script>
 ```
 
- 7. Properties: 
+7. Properties: 
   - make template for one component and customize in different ways. Using curly brace{}
   - Property is essentially an HTML attribute that we can pass in to customize our components in different kinds of ways.
 
