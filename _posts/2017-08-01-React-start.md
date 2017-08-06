@@ -17,34 +17,35 @@ tags: React Note #post tag, seperated by space
 <script src="../../js/browser.min.js"></script>
 ```
 The last line transpile jsx file to plain js file so that browser can understand jsx. There are also some online tools can do the same work for developer.
- - an example:
- ~~~ html
-  <!DOCTYPE html>
-  <html>
+ 
+  - an example:
+  ~~~ html
+   <!DOCTYPE html>
+   <html>
 
-    <head>
-      <script data-require="react@*" data-semver="15.5.0" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.5.0/react.min.js"></script>
-      <script data-require="react@*" data-semver="15.5.0" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.5.0/react-dom.min.js"></script>
-      <script data-require="react@*" data-semver="15.5.0" src="    https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
-      <link rel="stylesheet" href="style.css" />
-    </head>
+     <head>
+       <script data-require="react@*" data-semver="15.5.0" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.5.0/react.min.js"></script>
+       <script data-require="react@*" data-semver="15.5.0" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.5.0/react-dom.min.js"></script>
+       <script data-require="react@*" data-semver="15.5.0" src="    https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.24/browser.min.js"></script>
+       <link rel="stylesheet" href="style.css" />
+     </head>
 
-    <body>
+     <body>
 
-      <div id="container"></div>
+       <div id="container"></div>
 
-      <script type="text/babel">
-          ReactDOM.render(
-              <h2>Welcome to React!</h2>,
-              document.getElementById('container')
-          );
-      </script>
+       <script type="text/babel">
+           ReactDOM.render(
+               <h2>Welcome to React!</h2>,
+               document.getElementById('container')
+           );
+       </script>
 
-    <script src="script.js"></script>
-    </body>
+     <script src="script.js"></script>
+     </body>
 
-  </html>
-  ~~~
+   </html>
+   ~~~
 
 3. Include bable: we add a h2 tag into the html element whoes id is 'container'
 ```
