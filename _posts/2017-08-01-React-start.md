@@ -100,34 +100,33 @@ The last line transpile jsx file to plain js file so that browser can understand
 7. Properties: 
  - make template for one component and customize in different ways. Using curly brace{}
  - Property is essentially an HTML attribute that we can pass in to customize our components in different kinds of ways.
-
    ```
-  <body>
+   <body>
 
-      <div id="container"></div>
+       <div id="container"></div>
 
-      <script type="text/babel">
-        var Movie = React.createClass({ 
-          render:function(){
-            return(
-                    <div>
-                      <h1>{this.props.title}</h1>
-                      <h2>{this.props.genre}</h2>
-                    </div>
-              );
-          }
-        });
-          ReactDOM.render(
-            <div>
-              <Movie title="Avatar" genre="action"/>
-              <Movie title="The NoteBook" genre="romance"/>
-              <Movie title="Cube" genre="thriller"/>
-            </div>,document.getElementById('container')
-          );
-      </script>
+       <script type="text/babel">
+         var Movie = React.createClass({ 
+           render:function(){
+             return(
+                     <div>
+                       <h1>{this.props.title}</h1>
+                       <h2>{this.props.genre}</h2>
+                     </div>
+               );
+           }
+         });
+           ReactDOM.render(
+             <div>
+               <Movie title="Avatar" genre="action"/>
+               <Movie title="The NoteBook" genre="romance"/>
+               <Movie title="Cube" genre="thriller"/>
+             </div>,document.getElementById('container')
+           );
+       </script>
 
-    </body>
-  //output: Avatar, action, The NoteBook, romance, Cube, thriller
+     </body>
+   //output: Avatar, action, The NoteBook, romance, Cube, thriller
    ```
 
 8. Event handling
