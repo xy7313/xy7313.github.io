@@ -233,62 +233,62 @@ The last line transpile jsx file to plain js file so that browser can understand
 10. Add state to component(contd on the sticky note app)
  - Requirements: This note switches bewteen two modes/states: editing, normal. That is, whenever we click edit, the text area can be changed to a form for editing. After complish editing, the form turns to text area. 
  
-   ```
-    <body>
+    ```
+     <body>
 
-      <div id="container"></div>
+       <div id="container"></div>
 
-      <script type="text/babel">
-        var Comment = React.createClass({ 
-          getInitialState: function(){
-            return {editing: false}
-          },
-          edit: function(){
-            this.setState({editing:true});
-          },
-          save: function(){
-            this.setState({editing:false});
-          },
-          remove: function(){
-            alert("remove");
-          },
+       <script type="text/babel">
+         var Comment = React.createClass({ 
+           getInitialState: function(){
+             return {editing: false}
+           },
+           edit: function(){
+             this.setState({editing:true});
+           },
+           save: function(){
+             this.setState({editing:false});
+           },
+           remove: function(){
+             alert("remove");
+           },
 
-          renderForm: function(){
-            return(
-                    <div className = "commentContainer">
-                     <textarea defaultValue = {this.props.children}></textarea>
-                      <button onClick={this.save} className = "button-success" >Save</button>
-                    </div>
-              );
-          },
-          renderNormal: function(){
-            return(
-                    <div className = "commentContainer">
-                      <div className = "commentText"> {this.props.children} </div>
-                      <button  onClick={this.edit} className = "button-primary">Edit</button>
-                      <button onClick={this.remove} className = "button-danger" >Remove</button>
-                    </div>
-              );
-          },
-          render: function(){
-            if(this.state.editing){
-              return this.renderForm();
-            }else{
-              return this.renderNormal();
-            }
-          }
-        });
-          ReactDOM.render(
-            <div className = "board">
-              <Comment>hey-sample txt</Comment>
-              <Comment>beans</Comment>
-              <Comment>TUNA txt</Comment>
-            </div>,document.getElementById('container')
-          );
-      </script>
+           renderForm: function(){
+             return(
+                     <div className = "commentContainer">
+                      <textarea defaultValue = {this.props.children}></textarea>
+                       <button onClick={this.save} className = "button-success" >Save</button>
+                     </div>
+               );
+           },
+           renderNormal: function(){
+             return(
+                     <div className = "commentContainer">
+                       <div className = "commentText"> {this.props.children} </div>
+                       <button  onClick={this.edit} className = "button-primary">Edit</button>
+                       <button onClick={this.remove} className = "button-danger" >Remove</button>
+                     </div>
+               );
+           },
+           render: function(){
+             if(this.state.editing){
+               return this.renderForm();
+             }else{
+               return this.renderNormal();
+             }
+           }
+         });
+           ReactDOM.render(
+             <div className = "board">
+               <Comment>hey-sample txt</Comment>
+               <Comment>beans</Comment>
+               <Comment>TUNA txt</Comment>
+             </div>,document.getElementById('container')
+           );
+       </script>
 
-    </body>
-   ```
+     </body>
+    ```
 
 11. refs (contd on the sticky note app)
  - Requirements: Save whatever the textarer looks like now.
