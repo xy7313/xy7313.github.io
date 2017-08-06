@@ -10,6 +10,7 @@ tags: React Note #post tag, seperated by space
 1. Download code:  https://github.com/buckyroberts/React-Boilerplate, My editon with notes: https://github.com/xy7313/React-Boilerplate
 
 2. Include JSX 
+
 ```
 //after download, also can ref online file,
 <script src="../../js/react.min.js"></script>
@@ -18,6 +19,7 @@ tags: React Note #post tag, seperated by space
 ```
 
 The last line transpile jsx file to plain js file so that browser can understand jsx. There are also some online tools can do the same work for developer.
+
  - an example:
  
  ```
@@ -46,8 +48,6 @@ The last line transpile jsx file to plain js file so that browser can understand
   </body>
 
 </html>
-
-
  ```
  
 
