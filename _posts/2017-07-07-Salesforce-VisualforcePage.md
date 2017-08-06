@@ -87,10 +87,11 @@ tags: Salesforce Note #post tag, seperated by space
 
 - `<apex:outputLabel>` A label for an input or output field. (similar to inputfield)
     - eg:
-    ```
-    <apex:outputLabel value="Checkbox" for="theCheckbox"/>
-    <apex:inputCheckbox value="{!inputValue}" id="theCheckbox"/> 
-    ```
+
+        ```
+        <apex:outputLabel value="Checkbox" for="theCheckbox"/>
+        <apex:inputCheckbox value="{!inputValue}" id="theCheckbox"/> 
+        ```
 
 - `<apex:outputText>` Displays text. Displays. You can customize the appearance using CSS styles, in which case the generated text is wrapped in an HTML < span > tag. You can also escape the rendered text if it contains sensitive HTML and XML characters. This component does take localization into account. There are some example with `param`, `toolbar`, `panalGrid`...
 
@@ -102,30 +103,32 @@ tags: Salesforce Note #post tag, seperated by space
     - < apex:outputLink >
     - < apex:outputText >
     - < flow:interview >   
-    ```
-    <apex:page >
-        <apex:outputText style="font-style:italic" value="This is {0} text with {1}."> 
-            <apex:param value="my"/> 
-            <apex:param value="arguments"/>
-        </apex:outputText>
-        <apex:outputLink value="http://google.com/search">
-            Search Google
-            <apex:param name="q" value="{!account.name}"/>
-        </apex:outputLink>
-        //when we click the link, we search account name in google
-    </apex:page>
-    ```
+   
+       ```
+        <apex:page >
+            <apex:outputText style="font-style:italic" value="This is {0} text with {1}."> 
+                <apex:param value="my"/> 
+                <apex:param value="arguments"/>
+            </apex:outputText>
+            <apex:outputLink value="http://google.com/search">
+                Search Google
+                <apex:param name="q" value="{!account.name}"/>
+            </apex:outputLink>
+            //when we click the link, we search account name in google
+        </apex:page>
+        ```
 
 - `<apex:pageBlockSectionItem>` 
     - A single piece of data in an < apex:pageBlockSection > that takes up one column in one row. 
     - An < apex:pageBlockSectionItem > component can include up to two child components. 
     - If no content is specified, the column is rendered as an empty space. If one child component is specified, the content spans both cells of the column. If two child components are specified, the content of the first is rendered in the left, "label" cell of the column, while the content of the second is rendered in the right, "data" cell of the column.(like the example below)
-    ```
-    <apex:pageBlockSectionItem >
-          <apex:outputLabel value="Account Type" for="account__type"/>
-          <apex:inputText value="{!account.type}" id="account__type"/>
-    </apex:pageBlockSectionItem>
-    ```
+    
+        ```
+        <apex:pageBlockSectionItem >
+              <apex:outputLabel value="Account Type" for="account__type"/>
+              <apex:inputText value="{!account.type}" id="account__type"/>
+        </apex:pageBlockSectionItem>
+        ```
 
 - `<apex:dataTable> ` An HTML table that is defined by iterating over a set of data, displaying information about one item of data per row. The set of data can contain up to 1,000 items.
     ```
@@ -145,18 +148,19 @@ tags: Salesforce Note #post tag, seperated by space
     - within either an < apex:pageBlock > or < apex:pageBlockSection > component
     - similar to a related list or list view in a standard Salesforce page
     -  Like an < apex:dataTable>, an < apex:pageBlockTable > is defined by iterating over a set of data, displaying information about one item of data per row. The set of data can contain up to 1,000 items.
-    ```
-    <apex:page standardController="Lead" recordSetVar="Leads">
-        <apex:pageBlock title="pageBlockTable">
-            <apex:pageBlockTable value="{!Leads}" var="le">
-                <apex:column value="{!le.name}"/> 
-                <apex:column value="{!le.Phone}"/>
-                <apex:column value="{!le.Company}"/>
-            </apex:pageBlockTable> 
-        </apex:pageBlock> 
-    </apex:page>
-    //this example shows all leads in a table with name, phone and company fields
-    ```
+
+        ```
+        <apex:page standardController="Lead" recordSetVar="Leads">
+            <apex:pageBlock title="pageBlockTable">
+                <apex:pageBlockTable value="{!Leads}" var="le">
+                    <apex:column value="{!le.name}"/> 
+                    <apex:column value="{!le.Phone}"/>
+                    <apex:column value="{!le.Company}"/>
+                </apex:pageBlockTable> 
+            </apex:pageBlock> 
+        </apex:page>
+        //this example shows all leads in a table with name, phone and company fields
+        ```
 
 - `<apex:column>` must always be a child of an < apex:dataTable > or < apex:pageBlockTable > component.
 
@@ -219,46 +223,49 @@ tags: Salesforce Note #post tag, seperated by space
     - A page area that includes one or more < apex:panelBarItem > tags that can expand when a user clicks the associated header. 
     - An < apex:panelBar > can include up to 1,000 < apex:panelBarItem > tags.
     - When an < apex:panelBarItem > is expanded, the header and the content of the item are displayed while the content of all other items are hidden. When another < apex:panelBarItem > is expanded, the content of the original item is hidden again. 
-    ```
-    <apex:page >
-        <apex:panelBar >
-        <apex:panelBarItem label="Item1">data1</apex:panelBarItem>
-        <apex:panelBarItem label="Item2">data2</apex:panelBarItem>
-            <apex:panelBarItem label="Item3">data3            </apex:panelBarItem>
-        </apex:panelBar>
-    </apex:page>
-    ```
+   
+       ```
+        <apex:page >
+            <apex:panelBar >
+            <apex:panelBarItem label="Item1">data1</apex:panelBarItem>
+            <apex:panelBarItem label="Item2">data2</apex:panelBarItem>
+                <apex:panelBarItem label="Item3">data3            </apex:panelBarItem>
+            </apex:panelBar>
+        </apex:page>
+        ```
     
 - `<apex:panelBarItem>` 
 
 - `<apex:panelGrid>` each component found in the body of the 
 < apex:panelGrid > is placed into a corresponding cell in the first row until the number of columns is reached. At that point, the next component wraps to the next row and is placed in the first cell.
     - eg: it shows like: (line one): First Second Third; (line two): Fourth
-    ```
-    <apex:page >
-        <apex:panelGrid columns="3" id="theGrid">
-            <apex:outputText value="First" id="theFirst"/>
-            <apex:outputText value="Second" id="theSecond"/>
-            <apex:outputText value="Third" id="theThird"/>
-            <apex:outputText value="Fourth" id="theFourth"/>
-        </apex:panelGrid>
-    </apex:page>
-    ```
+   
+       ```
+        <apex:page >
+            <apex:panelGrid columns="3" id="theGrid">
+                <apex:outputText value="First" id="theFirst"/>
+                <apex:outputText value="Second" id="theSecond"/>
+                <apex:outputText value="Third" id="theThird"/>
+                <apex:outputText value="Fourth" id="theFourth"/>
+            </apex:panelGrid>
+        </apex:page>
+        ```
 
 - `<apex:panelGroup> `A container for multiple child components so that they can be displayed in a single panelGrid cell. An < apex:panelGroup > must be a child component of an < apex:panelGrid >.
     - eg: it shows like: (line one): First Second ThirdFourth
-    ```
-    <apex:page >
-        <apex:panelGrid columns="3" id="theGrid">
-            <apex:outputText value="First" id="theFirst"/>
-            <apex:outputText value="Second" id="theSecond"/>
-            <apex:panelGroup id="theGroup">
-                <apex:outputText value="Third" id="theThird"/>
-                <apex:outputText value="Fourth" id="theFourth"/>
-            </apex:panelGroup>
-        </apex:panelGrid>
-    </apex:page>
-    ```
+   
+       ```
+        <apex:page >
+            <apex:panelGrid columns="3" id="theGrid">
+                <apex:outputText value="First" id="theFirst"/>
+                <apex:outputText value="Second" id="theSecond"/>
+                <apex:panelGroup id="theGroup">
+                    <apex:outputText value="Third" id="theThird"/>
+                    <apex:outputText value="Fourth" id="theFourth"/>
+                </apex:panelGroup>
+            </apex:panelGrid>
+        </apex:page>
+        ```
 
 - `<apex:repeat>` An iteration component that allows you to output the contents of a collection according to a structure that you specify. The collection can include up to 1,000 items.
     -  if used within an < apex:pageBlockSection > or < apex:panelGrid > component, all content generated by a child < apex:repeat > component is placed in a single < apex:pageBlockSection > or < apex:panelGrid > cell.
@@ -266,20 +273,21 @@ tags: Salesforce Note #post tag, seperated by space
         - first: For example, if you did not want to display the first two elements in the set of records specified by the value attribute, set first="2".
         - value: The collection of data that is iterated over.
         - var: The name of the variable that represents the current item in the iteration.
-    ```
-    <apex:page controller="repeatCon" id="thePage">
-        <apex:repeat value="{!strings}" var="string" id="theRepeat">
-            <apex:outputText value="{!string}" id="theValue"/> 
-            <br/>
-        </apex:repeat>
-    </apex:page>
-    //Controller class:
-    public class repeatCon {
-        public String[] getStrings() {
-            return new String[]{'ONE','TWO','THREE'};
+
+        ```
+        <apex:page controller="repeatCon" id="thePage">
+            <apex:repeat value="{!strings}" var="string" id="theRepeat">
+                <apex:outputText value="{!string}" id="theValue"/> 
+                <br/>
+            </apex:repeat>
+        </apex:page>
+        //Controller class:
+        public class repeatCon {
+            public String[] getStrings() {
+                return new String[]{'ONE','TWO','THREE'};
+            }
         }
-    }
-    ```
+        ```
 
 -  `<apex:detail>` The standard detail page for a particular object, as defined by the associated page layout for the object in Setup. eg:`<apex:detail subject="{!account.ownerId}" relatedList="false" title="false"/>`
 
@@ -288,31 +296,32 @@ tags: Salesforce Note #post tag, seperated by space
     - reduce repetitive and verbose expressions within a page.
     - does not support reassignment inside of an iteration component,
     - an example: output all accounts in the collection using loop in visualforce page
-    ```
-    <apex:page controller="repeaterCon">
-        <apex:variable value="{!1}" var="rowNum"/>
-        <apex:repeat value="{!collection}" var="row">
-            {!rowNum}-{!row}<br/>
-            <apex:variable var="rowNum" value="{!rowNum + 1}"/>
-        </apex:repeat>
-    </apex:page>
-    //custom controller:
-    public class repeaterCon {
-    public List<String> collection {
-            get {
-                if (collection == null) {
-                    collection = new List<String>();
-                    for (Account a : [SELECT ID, Name FROM 
-                        Account  LIMIT  10]) {
-                        collection.add(a.Name);
+    
+        ```
+        <apex:page controller="repeaterCon">
+            <apex:variable value="{!1}" var="rowNum"/>
+            <apex:repeat value="{!collection}" var="row">
+                {!rowNum}-{!row}<br/>
+                <apex:variable var="rowNum" value="{!rowNum + 1}"/>
+            </apex:repeat>
+        </apex:page>
+        //custom controller:
+        public class repeaterCon {
+        public List<String> collection {
+                get {
+                    if (collection == null) {
+                        collection = new List<String>();
+                        for (Account a : [SELECT ID, Name FROM 
+                            Account  LIMIT  10]) {
+                            collection.add(a.Name);
+                        }
                     }
+                    return collection;
                 }
-                return collection;
+                private set;
             }
-            private set;
         }
-    }
-    ```
+        ```
 
 - `<apex:stylesheet>` A link to a stylesheet that can be used to style components on the Visualforce page. 
     1. create a css file eg: CssExample.css
