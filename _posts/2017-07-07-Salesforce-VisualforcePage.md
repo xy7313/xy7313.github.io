@@ -318,6 +318,7 @@ tags: Salesforce Note #post tag, seperated by space
     1. create a css file eg: CssExample.css
     2. upload this file as a static resource: setup-develop-static resource, new+public
     3. write visualforce page like:
+    
     ```
     <apex:page standardstylesheets="false" showheader="false">
         <apex:stylesheet value="{!$Resource.CssExample}"/>
@@ -346,6 +347,7 @@ tags: Salesforce Note #post tag, seperated by space
  
 - `<apex:enhancedList>` Enhanced lists are used when you want to display a specific list view for a standard or custom object, rather than having all list views available for the user to select.
     - Listid = "15 digit" to reference to a custom list view
+    
     ```
     <apex:page>
         <apex:enhancedList type="Account" height="300" rowsPerPage="10" id="AccountList" />
@@ -367,6 +369,7 @@ tags: Salesforce Note #post tag, seperated by space
     - if an < apex:actionPoller > is ever re-rendered as the result of another action, it resets itself.
     - avoid using this component with enhanced lists.
     - e.g. : counter++ every 15 seconds
+    
     ```
     <apex:page controller="exampleCon2">
         <apex:form >     
