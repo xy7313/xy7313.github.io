@@ -19,6 +19,7 @@ tags: React Note #post tag, seperated by space
 
 The last line transpile jsx file to plain js file so that browser can understand jsx. There are also some online tools can do the same work for developer.
  - an example:
+ 
  ```
  <!DOCTYPE html>
 <html>
