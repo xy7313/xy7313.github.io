@@ -319,12 +319,12 @@ tags: Salesforce Note #post tag, seperated by space
     2. upload this file as a static resource: setup-develop-static resource, new+public
     3. write visualforce page like:
     
-    ```
-    <apex:page standardstylesheets="false" showheader="false">
-        <apex:stylesheet value="{!$Resource.CssExample}"/>
-        <h1> This text is displayed using CSS </h1>
-    </apex:page>
-    ```
+        ```
+        <apex:page standardstylesheets="false" showheader="false">
+            <apex:stylesheet value="{!$Resource.CssExample}"/>
+            <h1> This text is displayed using CSS </h1>
+        </apex:page>
+        ```
 
 - `<apex:sectionHeader title="One of Your Opportunities" subtitle="Exciting !"/>` A title bar for a page. In a standard Salesforce page, the title bar is a colored header displayed directly under the tab bar.
 
