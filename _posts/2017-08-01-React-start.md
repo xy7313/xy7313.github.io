@@ -47,7 +47,6 @@ The last line transpile jsx file to plain js file so that browser can understand
 
     </html>
     ```
-
 3. Include bable: we add a h2 tag into the html element whoes id is 'container'
 ```
  <script type="text/babel">
