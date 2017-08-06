@@ -131,8 +131,7 @@ The last line transpile jsx file to plain js file so that browser can understand
    ```
 
 8. Event handling
-
-  Example: Built a sticky note app, where users can add new notes, delete or edit notes and write any notes.
+ - Example: Built a sticky note app, where users can add new notes, delete or edit notes and write any notes.
  - can not use class as prop's name, because class is one of the reserve words in js
  - children property(built-in prop), between the opening tag and closing tag, like: ` <Comment>hey-sample txt</Comment>`
 
@@ -189,8 +188,7 @@ The last line transpile jsx file to plain js file so that browser can understand
    ```
 
 9. State
-
-  Customize the components using properties and states. Whenever something is gonna stay the same uses properties, whenever changes uses states.
+ - Customize the components using properties and states. Whenever something is gonna stay the same uses properties, whenever changes uses states.
  - You don't need to explicitly say whenever your state changes to redraw a certain part of your webpage, it automatically watches for your states. Whenever their state changes, the part of web page gets redrawn automatically to fit that. 
  
    ```
@@ -233,8 +231,7 @@ The last line transpile jsx file to plain js file so that browser can understand
    ```
 
 10. Add state to component(contd on the sticky note app)
-
-  Requirements: This note switches bewteen two modes/states: editing, normal. That is, whenever we click edit, the text area can be changed to a form for editing. After complish editing, the form turns to text area. 
+ - Requirements: This note switches bewteen two modes/states: editing, normal. That is, whenever we click edit, the text area can be changed to a form for editing. After complish editing, the form turns to text area. 
 
  ```
   <body>
@@ -294,8 +291,7 @@ The last line transpile jsx file to plain js file so that browser can understand
  ```
 
 11. refs (contd on the sticky note app)
-
- Requirements: Save whatever the textarer looks like now.
+ - Requirements: Save whatever the textarer looks like now.
  - First, get the text just typed
  - Second, show it 
  - eg: `var val = this.refs.newText.value;` + `<textarea ref = "newText" defaultValue = {this.props.children}></textarea>`
