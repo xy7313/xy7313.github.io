@@ -1,6 +1,6 @@
 ---
 layout: post #post
-title: React prologue #post title
+title: React prologue and Build a note app #post title
 categories: React #post category, seperated by space
 tags: React Note #post tag, seperated by space
 ---
