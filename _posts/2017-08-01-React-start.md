@@ -7,7 +7,7 @@ tags: React Note #post tag, seperated by space
 
 [tutorial video](https://www.youtube.com/watch?v=-AbaV3nrw6E&list=PL6gx4Cwl9DGBuKtLgPR_zWYnrwv-JllpA&index=1)
 
-1. Download code:  https://github.com/buckyroberts/React-Boilerplate, My editon with notes: https://github.com/xy7313/React-Boilerplate
+1. Download code:  https://github.com/buckyroberts/React-Boilerplate, My editon with notes: https://github.com/xy7313/React-Boilerplate. Final note app click [here](https://react-note-xy.herokuapp.com), code [here](https://github.com/xy7313/ReactNoteApp)
 
 2. Include JSX 
 ```
@@ -372,9 +372,7 @@ The last line transpile jsx file to plain js file so that browser can understand
 
 
 
-## Summary
 
-Project [here](), source code [here](https://github.com/xy7313/React-Boilerplate/blob/master/src/demos/xy-react/react-note.html)
 
 
 
