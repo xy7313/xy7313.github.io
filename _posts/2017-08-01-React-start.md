@@ -369,7 +369,6 @@ The last line transpile jsx file to plain js file so that browser can understand
 
 
 16. Js can not figure out the scope, so we need to call band : `<button className = "button-info create" onClick = {this.addComment.bind(null,'Type here')}>New A Comment</button>`. 
-
  Notice that: Don't .bind in the render() function - that creates a new function every time render is called (which will be often.) .bind in the component constructor. We will create too many comment components and get an error.
 
 
