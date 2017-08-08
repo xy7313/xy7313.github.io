@@ -333,35 +333,34 @@ The last line transpile jsx file to plain js file so that browser can understand
 13. Updating state and remove notes(contd on the sticky note app)
  - clean up the render function
  - array.splice(index,num); remove num elements from index of array
-  
-  ```
-  //all in var Board
-  removeComment: function(i){
-      console.log("remove:"+i);
-      var arr = this.state.comments;
-      arr.splice(i,1);
-      this.setState({comments:arr});
-    },
-    updateComment: function(newText,i){
-      console.log("new text:"+newText);
-      var arr = this.state.comments;
-      arr[i] = newText;
-      this.setState({comments:arr});
-    },
-    eachComment: function(text,i){
-      // unique identifier, i: increment for the array
-      return (<Comment key = {i} index = {i}>
-                {text}
-              </Comment>);
-    },
-    render: function(){
-      return (
-         <div className = "board">
-          {this.state.comments.map(this.eachComment)}
-        </div>
-      );
-    }
-  ```
+ ```
+ //all in var Board
+ removeComment: function(i){
+     console.log("remove:"+i);
+     var arr = this.state.comments;
+     arr.splice(i,1);
+     this.setState({comments:arr});
+   },
+   updateComment: function(newText,i){
+     console.log("new text:"+newText);
+     var arr = this.state.comments;
+     arr[i] = newText;
+     this.setState({comments:arr});
+   },
+   eachComment: function(text,i){
+     // unique identifier, i: increment for the array
+     return (<Comment key = {i} index = {i}>
+               {text}
+             </Comment>);
+   },
+   render: function(){
+     return (
+        <div className = "board">
+         {this.state.comments.map(this.eachComment)}
+       </div>
+     );
+   }
+ ```
   
 14. Passing functions as props (contd on the sticky note app)
  - how to call functions from entirely different components? using props
@@ -369,7 +368,9 @@ The last line transpile jsx file to plain js file so that browser can understand
 15. Add new component (contd on the sticky note app)
 
 
-16. Js can not figure out the scope, so we need to call band : `<button className = "button-info create" onClick = {this.addComment.bind(null,'Type here')}>New A Comment</button>`. Notice that: Don't .bind in the render() function - that creates a new function every time render is called (which will be often.) .bind in the component constructor. We will create too many comment components and get an error.
+16. Js can not figure out the scope, so we need to call band : `<button className = "button-info create" onClick = {this.addComment.bind(null,'Type here')}>New A Comment</button>`. 
+
+Notice that: Don't .bind in the render() function - that creates a new function every time render is called (which will be often.) .bind in the component constructor. We will create too many comment components and get an error.
 
 
 
