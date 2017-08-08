@@ -333,7 +333,8 @@ The last line transpile jsx file to plain js file so that browser can understand
 13. Updating state and remove notes(contd on the sticky note app)
  - clean up the render function
  - array.splice(index,num); remove num elements from index of array
-  ```
+  
+  ```
   //all in var Board
   removeComment: function(i){
       console.log("remove:"+i);
