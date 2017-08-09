@@ -9,15 +9,30 @@ tags: React Note #post tag, seperated by space
 Udemy course
 
 
-1. why redux
-  - application state, store all components' state, children components get these states by this.props. children components can also have its state 
-  - state container, store application states.
-  - setup:
-  - workflow: store(create and maintain states)-->provider(passing down store as props)-->actions(fire actions to update states)-->middleware(useful, create a kind of chain of action when the action reaches the user which evaluates what to do with the action)-->reducers(update the data in the store which then updates the app)-->store(so on in a cycle)
-  - middleware: hook function
+### 1. why redux
+
+1. application state, store all components' state, children components get these states by this.props. children components can also have its state 
+2. state container, store application states.
+3. setup:
+4. workflow: 
+
+   store(create and maintain states)-->
+   
+   provider(passing down store as props)-->
+   
+   actions(fire actions to update states)-->
+   
+   middleware(optional, useful when create a kind of chain of action when the action reaches the user which evaluates what to do with the action)-->
+   
+   reducers(update the data in the store which then updates the app)-->
+   
+   store(so on in a cycle)
+5. middleware: hook function
  
- 2. setup 
-  - install express, webpack, babel
+ ### 2. setup 
+ 
+1. install express, webpack, babel
+
   ```
   npm init
   npm i --save express
@@ -25,7 +40,9 @@ Udemy course
   npm i --save babel-core babel-loader babel-preset-es2015 babel-preset-stage-1 babel-preset-react
   npm i --save redux
   ```
-  - design file tree:
+  
+2. design file tree:
+
   ```
   --AppFile
     - node_modulus(folder)
@@ -37,7 +54,9 @@ Udemy course
     - server.js
     - webpack.config.js   
   ```
- 3. start. Start node and webpack, go to localhost:3000
+  
+3. start. Start node and webpack, go to localhost:3000
+
  ```
  node server.js
  webpack
