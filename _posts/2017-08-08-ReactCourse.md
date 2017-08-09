@@ -33,31 +33,31 @@ Udemy course
  
 1. install express, webpack, babel
 
-  ```
-  npm init
-  npm i --save express
-  npm i --save webpack
-  npm i --save babel-core babel-loader babel-preset-es2015 babel-preset-stage-1 babel-preset-react
-  npm i --save redux
-  ```
+```
+npm init
+npm i --save express
+npm i --save webpack
+npm i --save babel-core babel-loader babel-preset-es2015 babel-preset-stage-1 babel-preset-react
+npm i --save redux
+```
   
 2. design file tree:
 
-  ```
-  --AppFile
-    - node_modulus(folder)
-    - public(folder)
-      - index.html
-    - src(folder)
-      - app.js
-    - package.json
-    - server.js
-    - webpack.config.js   
-  ```
+```
+--AppFile
+ - node_modulus(folder)
+ - public(folder)
+   - index.html
+ - src(folder)
+   - app.js
+ - package.json
+ - server.js
+ - webpack.config.js   
+```
   
 3. start. Start node and webpack, go to localhost:3000
 
- ```
- node server.js
- webpack
- ```
+```
+node server.js
+webpack
+```
