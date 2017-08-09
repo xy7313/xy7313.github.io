@@ -22,11 +22,12 @@ Udemy course
    
    actions(fire actions to update states)-->
    
-   middleware(optional, useful when create a kind of chain of action when the action reaches the user which evaluates what to do with the action)-->
+   middleware(optional, useful when create a kind of chain of action when the action reaches the user which evaluates what to do with the action)-->
    
    reducers(update the data in the store which then updates the app)-->
    
-   store(so on in a cycle)
+   store(so on in a cycle)
+   
 5. middleware: hook function
  
  ### 2. setup 
