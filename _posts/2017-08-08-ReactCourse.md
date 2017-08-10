@@ -80,25 +80,25 @@ npm i --save redux
 
 -  using "use strict" directive to make sure you receive an error, writing js need to specify "use strict", writing jsx, use strict is default
 
-So the server.js is like:
+- So the server.js is like:
 
-```
-"use strict"
-var express = require('express');
-var app = express();
-var path = require('path');
+    ```
+    "use strict"
+    var express = require('express');
+    var app = express();
+    var path = require('path');
 
-//middleware to define folder for strict files
-app.use(express.static('public'));
+    //middleware to define folder for strict files
+    app.use(express.static('public'));
 
-app.get('/', function(req,res){
-    res.sendFile(path.resolve(__dirname,'public','index.html'))
-});
+    app.get('/', function(req,res){
+        res.sendFile(path.resolve(__dirname,'public','index.html'))
+    });
 
-app.listen(3000,function(){
-    console.log('listening 3000');
-});
-```
+    app.listen(3000,function(){
+        console.log('listening 3000');
+    });
+    ```
 
 4. config webpack, webpack.config.js
 
