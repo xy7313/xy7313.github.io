@@ -46,14 +46,14 @@ npm i --save redux
 
 ```
 -- AppFile
- - node_modulus(folder)
- - public(folder)
-   - index.html
- - src(folder)
-   - app.js
- - package.json
- - server.js
- - webpack.config.js   
+    - node_modulus(folder)
+    - public(folder)
+      - index.html
+    - src(folder)
+      - app.js
+    - package.json
+    - server.js
+    - webpack.config.js   
 ```
  
 3. write server.js
@@ -65,7 +65,40 @@ npm i --save redux
    - to access functionality located in other files in your project.
 
    - In Node module system each of your javascript file is a module and can expose functionality to be required by other files.
-- 
+   
+- Express: 
+
+   - Express in nodejs is a framework which provides features like: Middlewares to respond to your request, Routing, Render html web pages 
+   
+   - Routing: handle multiple url context in a website, or how they respond to client requests
+   
+   - Route paths can be strings, string patterns, or regular expressions.
+   
+   - Middleware functions are functions that have access to the request / response objects, and the next middleware function in the application’s request-response cycle. 
+   
+   - Serving Static Files: Express provides a built-in middleware express.static to serve static files, such as images, CSS, JavaScript etc
+
+-  using use strict directive to make sure you receive an error, writing js need to specify "use strict", writing jsx, use strict is default
+
+So the server.js is like:
+
+```
+"use strict"
+var express = require('express');
+var app = express();
+var path = require('path');
+
+//middleware to define folder for strict files
+app.use(express.static('public'));
+
+app.get('/', function(req,res){
+    res.sendFile(path.resolve(__dirname,'public','index.html'))
+});
+
+app.listen(3000,function(){
+    console.log('listening 3000');
+});
+```
 
 4. config webpack, webpack.config.js
 
