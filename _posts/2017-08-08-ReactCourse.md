@@ -45,7 +45,7 @@ npm i --save redux
 2. design file tree:
 
 ```
---AppFile
+-- AppFile
  - node_modulus(folder)
  - public(folder)
    - index.html
@@ -55,10 +55,28 @@ npm i --save redux
  - server.js
  - webpack.config.js   
 ```
-  
-3. start. Start node and webpack, go to localhost:3000
+ 
+3. write server.js
+
+- require() function 
+
+   - loads a module and assigns it to a variable for your application to use
+
+   - to access functionality located in other files in your project.
+
+   - In Node module system each of your javascript file is a module and can expose functionality to be required by other files.
+- 
+
+4. config webpack, webpack.config.js
+
+
+5. start. Start node and webpack, go to localhost:3000
 
 ```
 node server.js
 webpack
 ```
+
+
+
+### 3. 
