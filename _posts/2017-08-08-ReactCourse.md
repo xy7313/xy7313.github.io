@@ -68,17 +68,17 @@ npm i --save redux
    
 - Express: 
 
-   - Express in nodejs is a framework which provides features like: Middlewares to respond to your request, Routing, Render html web pages 
+   - Express in nodejs is a framework which provides features like: Middlewares to respond to your request, Routing, Render html web pages. 
    
-   - Routing: handle multiple url context in a website, or how they respond to client requests
+   - Routing: handle multiple url context in a website, or how they respond to client requests.
    
-   - Route paths can be strings, string patterns, or regular expressions.
+   - Route paths can be strings, string patterns, or regular expressions.
    
    - Middleware functions are functions that have access to the request / response objects, and the next middleware function in the application’s request-response cycle. 
    
    - Serving Static Files: Express provides a built-in middleware express.static to serve static files, such as images, CSS, JavaScript etc
 
--  using use strict directive to make sure you receive an error, writing js need to specify "use strict", writing jsx, use strict is default
+-  using "use strict" directive to make sure you receive an error, writing js need to specify "use strict", writing jsx, use strict is default
 
 So the server.js is like:
 
