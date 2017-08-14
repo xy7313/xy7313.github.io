@@ -96,9 +96,7 @@ cal.set(2017,0,1);
 ```
 9. StringTokenizer: like split
 10. Random: class, function called next.int()
-<!--11. author reference to book
-12. database driver
-13. -->
+
 
 
 ## Enum
