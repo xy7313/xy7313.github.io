@@ -42,69 +42,75 @@ for(key in userObj){
 document.write(userObj.place);
 ```
 16. create function
-```
-function display(username="xy", place="nj"){
-    return username+','+place;
-}
-document.write(display());
-document.write(display("xy1","ny"));
-```
-```
-//anonymous function
-function(){
-    return 'anonymous function';
-}
-```
-```
-var fn = function(){
-    return 'anonymous function';
-}
-document.write(fn());
-//output anonymous function
-document.write(fn);
-//output all function body
+    ```
+    function display(username="xy", place="nj"){
+        return username+','+place;
+    }
+    document.write(display());
+    document.write(display("xy1","ny"));
+    ```
 
-//anonymous function Can be passed as parameter to another function
-function display(fnName){
-    return fnName;
-}
-document.write(display(fn()));
-//output anonymous function
-```
-```
-//Self invoking function
-(fn = function(){
-    return 'anonymous function';
-})();
-```
-```
-function user(){
-  return {
-     "username":"xy",
-    "place":"nj",
-  };
-}
-document.write(user().place);
-```
+    ```
+    //anonymous function
+    function(){
+        return 'anonymous function';
+    }
+    ```
+
+    ```
+    var fn = function(){
+        return 'anonymous function';
+    }
+    document.write(fn());
+    //output anonymous function
+    document.write(fn);
+    //output all function body
+
+    //anonymous function Can be passed as parameter to another function
+    function display(fnName){
+        return fnName;
+    }
+    document.write(display(fn()));
+    //output anonymous function
+    ```
+
+    ```
+    //Self invoking function
+    (fn = function(){
+        return 'anonymous function';
+    })();
+    ```
+
+    ```
+    function user(){
+    return {
+        "username":"xy",
+        "place":"nj",
+    };
+    }
+    document.write(user().place);
+    ```
 
 17. timeout, interval
-```
-setTimeout(function(){
-  document.write('hello');
-},1000);
-```
-```
-setInterval(function(){
-  document.write('hello');
-},1000);
-```
-```
-var interval_var = setInterval(function(){
-  document.write('hello');
-},1000);
+    ```
+    setTimeout(function(){
+    document.write('hello');
+    },1000);
+    ```
 
-setTimeout(function(){
-  clearInterval(interval_var);
-},5000);
-```
+    ```
+    setInterval(function(){
+    document.write('hello');
+    },1000);
+    ```
+
+    ```
+    var interval_var = setInterval(function(){
+    document.write('hello');
+    },1000);
+
+    setTimeout(function(){
+    clearInterval(interval_var);
+    },5000);
+    ```
 
