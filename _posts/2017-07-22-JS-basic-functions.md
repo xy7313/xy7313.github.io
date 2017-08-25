@@ -49,14 +49,12 @@ function display(username="xy", place="nj"){
 document.write(display());
 document.write(display("xy1","ny"));
 ```
-
 ```
 //anonymous function
 function(){
     return 'anonymous function';
 }
 ```
-
 ```
 var fn = function(){
     return 'anonymous function';
@@ -73,14 +71,12 @@ function display(fnName){
 document.write(display(fn()));
 //output anonymous function
 ```
-
 ```
 //Self invoking function
 (fn = function(){
     return 'anonymous function';
 })();
 ```
-
 ```
 function user(){
   return {
@@ -97,13 +93,11 @@ setTimeout(function(){
   document.write('hello');
 },1000);
 ```
-
 ```
 setInterval(function(){
   document.write('hello');
 },1000);
 ```
-
 ```
 var interval_var = setInterval(function(){
   document.write('hello');
