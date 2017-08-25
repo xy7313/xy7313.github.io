@@ -6,7 +6,7 @@ tags: React Note #post tag, seperated by space
 ---
 
 
-Udemy course
+*Udemy course*
 
 
 ### 1. why redux

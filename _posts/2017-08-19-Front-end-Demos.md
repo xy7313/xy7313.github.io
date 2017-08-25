@@ -7,7 +7,7 @@ tags: Demo #post tag, seperated by space
 
 
 
-1. (Basic JavaScript)[]
+1. (Basic JavaScript practice)[https://github.com/xy7313/FrontDemo]
 
 2. (Salesforce Conference)[https://conference-try2.herokuapp.com]
 

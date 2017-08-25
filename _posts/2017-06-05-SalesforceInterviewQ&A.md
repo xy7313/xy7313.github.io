@@ -41,7 +41,7 @@ Governor limits are runtime limits enforced by the Apex runtime engine. Because 
 2. Junction Object: A Many-to-Many relationship created with two lookup master-detail relationship
 
 
-## email to case:
+## Email to case:
 1. Salesforce can automatically create a case when an email is sent to one of your company's email addresses, such as support@company.com. 
 2. This Email-to-Case functionality auto-populates case fields from the content of each email. For example, an email subject heading becomes a case subject.
 3. Email-to-Case requires downloading and installing the agent. Use Email-to-Case if you have a requirement to keep all email traffic within your firewall, and you want to accept email attachments larger than 25 MB from customers.
@@ -115,10 +115,6 @@ Governor limits are runtime limits enforced by the Apex runtime engine. Because 
 8. Dashboard snapshot on the home page displays First row of any available dashboards.
 
 
-
-
-
-
 ## Standard controller & custom controller:
 1. Standard controller: by using standard controller you need not have to write apex code. Standard controller can be accessed on one object and referenced by visualforce page. It also  provides some save, cancel, clone for that object. Standard controller provides the same functionality what standard pages provide
 2. custom controller: A custom controller is an Apex class that implements all of the logic for a page without leveraging a standard controller. Use custom controllers when you want your Visualforce page to run entirely in system mode, which does not enforce the permissions and field-level security of the current user.
@@ -127,15 +123,6 @@ Governor limits are runtime limits enforced by the Apex runtime engine. Because 
     - You want to leverage the built-in functionality of a standard controller but override one or more actions, such as edit, view, save, or delete.
     - You want to add new actions.
     - You want to build a Visualforce page that respects user permissions. Although a controller extension class executes in system mode, if a controller extension extends a standard controller, the logic from the standard controller does not execute in system mode. Instead, it executes in user mode, in which permissions, field-level security, and sharing rules of the current user apply.
-
-
-
-
-
-
-
-
-
 
 ## Export
 7. How to schedule export backup of salesforce data
@@ -174,9 +161,6 @@ Governor limits are runtime limits enforced by the Apex runtime engine. Because 
         - You cannot copy your configuration or data onto the Developer Edition, but you can customize it to match your instance’s look and feel. Once it is customized, you can use it for training, testing or anything else you want.
 6. How to migrate data from developer sandbox to production?
 You have to use full sandbox to deploy the data from sandbox to production. You have to request salesforce for this or else you can use data loader to export the data from one org and import the same on another org.
-
-
-
 
       
 ## Web Service
@@ -280,8 +264,6 @@ manually sharing: sharing to anyone you want access greater.
 profile-baseline /permission set-additional
 
 
-
-
 ## Workflow, trigger, process builder
 1. trigger: many objects, before and after
     - Trigger will perform actions before / after the record creation/update, it not only work on records, but also on diff places of declarative functionality of force.com platform
@@ -317,12 +299,6 @@ Visual Workflow enables you to create flows, which are triggered by users rather
     - custom template
     - visualforce
 1. A customer service manager would like to automatically assign cases to the most appropriate agent to handle the request
-
-
-
-
-
-
 
 ## test & size
 ##### Roles:

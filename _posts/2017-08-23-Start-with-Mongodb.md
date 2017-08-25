@@ -5,18 +5,22 @@ categories: Mongodb MEAN #post category, seperated by space
 tags: Database MEAN #post tag, seperated by space
 ---
 
+
+## Databases
+1. database: can have relations between tables
+
+2. relational db -- non-relational db, tables -- collections, object -- document
+
+
+## Mongodb
 1. Find how to download on mongodb website, install using homebrew is recommended.
 
 2. `which mongo` check the installation directory of mongodb
 
 3. Node.js: a platform
 
-4. packages in node
+4. packages in node: file, request handling, express
 
-file, request handling, express
-
-//database: can have relations between tables
-//relational db -- non-relational db, tables -- collections, object -- document
 
 5. run mongodb on mac: mongod
 

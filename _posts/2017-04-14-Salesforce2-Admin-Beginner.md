@@ -161,7 +161,7 @@ All content from: https://trailhead.salesforce.com/trails
 3. You can override the behavior of standard buttons on record detail pages. You can also override the tab home page that displays when a user clicks a standard, custom, or external object tab.
 4. Button overrides are global
 
-##### 5. mobile salesforce1
+##### 5. Mobile salesforce1
 1. You can’t set different menu configurations for different types of users.
 2. if a user is assigned to a profile that has the Groups tab set to Tab Hidden, the user won’t see the Groups menu item in Salesforce1, even though an administrator has included it in the menu.
 3. Salesforce1 Navigation：The first item in the Selected list becomes your users’ Salesforce1 landing page.

@@ -110,7 +110,7 @@ Class notes
     - out
     - pageContent
 
-**Notes stopped here did not mean my classes were finished, I just can not follow the class anymore... and I skipped Oracle part.**
+**Notes stopped here and I skipped Oracle part.**
 
 
 

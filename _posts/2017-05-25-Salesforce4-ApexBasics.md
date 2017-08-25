@@ -9,7 +9,7 @@ tags: Salesforce #post tag, seperated by space
 Notes from: https://trailhead.salesforce.com/trails 
 All content from: https://trailhead.salesforce.com/trails 
 
-## 5. Developer Beginner
+## 5. Developer Beginner （ Get the platform developer1 certificate, yay!）
 
 ###### 1. Formula Fields
 - Let’s take a single field from an Account and show it on a Contact using what’s called a **cross-object formula**.
