@@ -2,7 +2,7 @@
 layout: post #post
 title: Salesforce Visualforce Page #post title
 categories: Salesforce #post category, seperated by space
-tags: Salesforce Note #post tag, seperated by space
+tags: Salesforce Front-end #post tag, seperated by space
 ---
 
 

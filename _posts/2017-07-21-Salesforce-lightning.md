@@ -2,7 +2,7 @@
 layout: post #post
 title: Salesforce Lightning #post title
 categories: Salesforce #post category, seperated by space
-tags: Salesforce Note #post tag, seperated by space
+tags: Salesforce lightning #post tag, seperated by space
 ---
 
 

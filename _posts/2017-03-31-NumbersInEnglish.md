@@ -1,8 +1,8 @@
 ---
 layout: post #post
 title: Funny number roots in English #post title
-categories: Funny  #post category, seperated by space
-tags: English Funny #post tag, seperated by space
+categories: Fun  #post category, seperated by space
+tags: English Fun #post tag, seperated by space
 ---
 
 ##Funny Numbers

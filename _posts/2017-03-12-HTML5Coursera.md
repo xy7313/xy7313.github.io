@@ -1,7 +1,7 @@
 ---
 layout: post #post
 title: HTML5 COURSERA-notes #post title
-categories: Front-end #post category, seperated by space
+categories: JavaScript #post category, seperated by space
 tags: Front-end JavaScript Coursera CSS #post tag, seperated by space
 ---
 

@@ -1,8 +1,8 @@
 ---
 layout: post #post
 title: Get Start with Mongodb #post title
-categories: Mongodb MEAN #post category, seperated by space
-tags: Database MEAN #post tag, seperated by space
+categories: Database MEAN #post category, seperated by space
+tags: Database MEAN Mongodb #post tag, seperated by space
 ---
 
 

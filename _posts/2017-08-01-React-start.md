@@ -2,7 +2,7 @@
 layout: post #post
 title: React prologue and Build a note app #post title
 categories: React #post category, seperated by space
-tags: React Note #post tag, seperated by space
+tags: React Front-end JavaScript #post tag, seperated by space
 ---
 
 [tutorial video](https://www.youtube.com/watch?v=-AbaV3nrw6E&list=PL6gx4Cwl9DGBuKtLgPR_zWYnrwv-JllpA&index=1)

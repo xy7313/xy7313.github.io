@@ -1,8 +1,8 @@
 ---
 layout: post #post
 title: Front end Demos #post title
-categories: Front end #post category, seperated by space
-tags: Demo #post tag, seperated by space
+categories: Demos #post category, seperated by space
+tags: Demo Front-end JavaScript Salesforce #post tag, seperated by space
 ---
 
 

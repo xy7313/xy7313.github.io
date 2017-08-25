@@ -1,8 +1,8 @@
 ---
 layout: post #post
 title: React Course and Build a Book Store #post title
-categories: React #post category, seperated by space
-tags: React Note #post tag, seperated by space
+categories: React  #post category, seperated by space
+tags: React Front-end Coursera JavaScript #post tag, seperated by space
 ---
 
 

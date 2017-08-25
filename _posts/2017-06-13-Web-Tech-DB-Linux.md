@@ -2,7 +2,7 @@
 layout: post #post
 title: Web Technologies + DB/SQL + Linux/unix #post title
 categories: Web #post category, seperated by space
-tags: Web interview #post tag, seperated by space
+tags: Web Interview DB #post tag, seperated by space
 ---
 
 
