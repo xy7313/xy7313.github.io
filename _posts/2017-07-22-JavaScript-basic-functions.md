@@ -1,8 +1,8 @@
 ---
 layout: post #post
 title: JavaScript Basics and functions #post title
-categories: JavaScript #post category, seperated by space
-tags: Front-end JavaScript #post tag, seperated by space
+categories: JavaScript #post category, separated by space
+tags: Front-end JavaScript #post tag, separated by space
 ---
 
 
@@ -34,7 +34,7 @@ var userObj = {
     "username":"xy";
     "place":"nj";
 };
-userObj.addr = "India";
+userObj.addr = "Chi";
 for(key in userObj){
     //output
     document.write(userObj[key]);
