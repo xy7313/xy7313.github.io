@@ -8,43 +8,43 @@ tags: Front-end JavaScript #post tag, separated by space
 
 
 ## Notes
-18. 
-  ```
-  var fn = function(){
-    setTimeout(function(){
-      return 'called';
-    },3000);
-  };
-
-  var resp = fn();
-
-  document.write(resp);
-  //output: undefined
-  ```
-
-  ```
-  var fn = function(){
-    var promise = new Promise(function(resolve,reject){
+18. promise
+    ```
+    var fn = function(){
       setTimeout(function(){
-          //resolve('called');
-          reject('err');
-          
-        },3000);
+        return 'called';
+      },3000);
+    };
+
+    var resp = fn();
+
+    document.write(resp);
+    //output: undefined
+    ```
+
+    ```
+    var fn = function(){
+      var promise = new Promise(function(resolve,reject){
+        setTimeout(function(){
+            //resolve('called');
+            reject('err');
+            
+          },3000);
+      });
+      return promise;
+    };
+
+    var resp = fn();
+
+    document.write(resp);
+
+    resp.then(function(data){
+      document.write(data);
+    },
+    function(err){
+      document.write(err);
     });
-    return promise;
-  };
-
-  var resp = fn();
-
-  document.write(resp);
-
-  resp.then(function(data){
-    document.write(data);
-  },
-  function(err){
-    document.write(err);
-  });
-  ```
+    ```
 
 19. closure: inner function can access outer function variable.
   ```

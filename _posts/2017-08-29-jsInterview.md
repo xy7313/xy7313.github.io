@@ -41,3 +41,32 @@ clousure, hide prop, do not want balance are visible
 
 14. use strict, 
 
+15. 2. Javascript 各种， create object, create functions. Javascript closure (不知道)
+javascript的一些exception和error detection,
+
+
+1. ES6 Good Features
+
+    1. Put the default values of parameters directly in the signature of functions; `var link = function(height = 50, color = 'red', url = 'http://azat.co') {...}`
+
+    2. Template Literals in ES6: output variables using new syntax `${variableName}` inside of the back-ticked string rather than template literals or interpolation; 
+        ```
+        var url = `http://localhost:3000/api/messages/${id}`
+        ```
+    
+    3. Multi-line strings using back-tick, too.
+
+    4. Destructuring: retrieve prop value of an object, we can use `var {name,id} = $('student').data()` or works with arrays like:`var [col1, col2]  = $('.column'),[line1, line2, line3, , line5] = file.split('\n')`, rather than writing in two sentences like `var stu = $('student').data(), name = stu.name, id = stu.id;`. (sweet sugarcoating)
+
+    5. Enhanced object literals: mind blowing now! In ES5, object literals is glorified version of JSON; to ES6, it becomes to something closely resembling classes.
+
+    6. Arrow Functions
+
+    7. Promise？？
+
+    8. Block-scoped constructs let and const
+
+    9. Class in ES6 has map, set object？？
+
+    10. Modules in ES6: export import with modules
+
