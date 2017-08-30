@@ -47,6 +47,7 @@ tags: Front-end JavaScript #post tag, separated by space
     ```
 
 19. closure: inner function can access outer function variable.
+
     ```
     //before:
     var fn = function(){
@@ -127,24 +128,26 @@ tags: Front-end JavaScript #post tag, separated by space
     ```
 
 20. js operate html
-  ```
-  //js manipulate dom, js should load after html, at the buttom of html
-  //or use this onload function in the top of js file to make sure the js code is executed
 
-  window.onload = function(){
-    var elem = document.getElementById('div');
-    elem.innerHTML = 'div3';
-    
-    var elems = document.getElementsByTagName('div');
-    elems[0].innerHTML = 'div1';
-    
-    //retrieve custom attribute using query selector
-    var elem4 = document.querySelector('div[username="4"]');
-    elem4.innerHTML = '4~';
-  }
-  ```
+    ```
+    //js manipulate dom, js should load after html, at the buttom of html
+    //or use this onload function in the top of js file to make sure the js code is executed
+
+    window.onload = function(){
+      var elem = document.getElementById('div');
+      elem.innerHTML = 'div3';
+      
+      var elems = document.getElementsByTagName('div');
+      elems[0].innerHTML = 'div1';
+      
+      //retrieve custom attribute using query selector
+      var elem4 = document.querySelector('div[username="4"]');
+      elem4.innerHTML = '4~';
+    }
+    ```
 
 21. js event handling
+
     ```
     window.onload = function(){
       document.getElementById('btn').onclick = function(){
@@ -178,6 +181,7 @@ tags: Front-end JavaScript #post tag, separated by space
     ```
 
 22. event listener
+
     ```
     //two kinds: element listener, event listener
     window.onload = function(){
@@ -202,6 +206,7 @@ tags: Front-end JavaScript #post tag, separated by space
 
 ## A practice - shift input to output box and keep the order
 - script.js
+
     ```
     window.onload = function(){
       var interval_var ;
