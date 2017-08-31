@@ -15,7 +15,7 @@ tags: Front-end JavaScript #post tag, separated by space
     4. id of tag, unique identifier
     5. value of tag, 
     6. name of tag
-    7. title of a tay
+    7. title of a tag
     8. any custom attributions like location, organization
 4. cookie: all browser information in client side
 5. local storage and session storage. session-temp； local-permanent

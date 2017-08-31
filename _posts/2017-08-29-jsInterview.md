@@ -70,3 +70,188 @@ javascript的一些exception和error detection,
 
     10. Modules in ES6: export import with modules
 
+    ```
+    概念讨论题：
+    1. What is website accessibility and how to improve the accessibility of a website?
+
+    2. Have you ever used any CSS preprocessors? Give the pros and cons of using CSS preprocessor.
+    (谈谈CSS预处理器使用上的经验，比如SASS、LESS之类。分析一下CSS预处理器的优缺点)
+
+    3. Tell me about event bubbling. How could you use it?
+
+    Coding题：
+    1. 预测结果：
+    var Foo = function(a) {  
+        function bar() {   
+            console.log(a); 
+        };
+        this.baz = function() {
+            console.log(a);
+        };
+    };
+
+    Foo.prototype = {  
+        biz: function() {    
+            console.log(a); 
+        }
+    };
+
+    var f = new Foo(7); 
+    //输出结果：
+    f.bar(); // result: TypeError, f.bar is not a function.  
+    f.baz(); // result: 7  
+    f.biz(); // result: ReferenceError, a: undefined
+
+    2.  已知endorsement array, 要求写一个function实现想要输出的结果：
+    // function input
+    var endorsements = [
+    { skill: 'javascript', user: 'Chad' },
+    { skill: 'javascript', user: 'Bill' },
+    { skill: 'javascript', user: 'Sue' },
+    { skill: 'html', user: 'Sue' },
+    { skill: 'css', user: 'Sue' },
+    { skill: 'css', user: 'Bill' }
+    ];
+    // function output
+    [
+        { skill: 'javascript', user: [ 'Chad', 'Bill', 'Sue' ], count: 3 },
+        { skill: 'css', user: [ 'Sue', 'Bill' ], count: 2 },
+        { skill: 'html', user: [ 'Sue' ], count: 1 } 
+    ];
+    solution:
+    var endorsements = [
+        { skill: 'javascript', user: 'Chad' },
+        { skill: 'javascript', user: 'Bill' },
+        { skill: 'css', user: 'Sue' },
+        { skill: 'javascript', user: 'Sue' },
+        { skill: 'css', user: 'Bill' },
+        { skill: 'html', user: 'Sue' }
+        ];
+    let after =[];
+        
+    endorsements.reduce((dict, item)=>{
+        if(!dict[item.skill]){
+        dict[item.skill] = {
+            skill:item.skill,
+            user:[item.user],
+            count:1
+            };
+            after.push(dict[item.skill]);
+        }else{
+            dict[item.skill].user.push(item.user);
+            dict[item.skill].count++;
+            
+        }
+        return dict;
+    },{});
+    after = after.sort((a, b) => b.count - a.count)
+    console.log(after);
+
+    /*result:
+    [
+        { skill: 'javascript', user: [ 'Chad', 'Bill', 'Sue' ], count: 3 },
+        { skill: 'css', user: [ 'Sue', 'Bill' ], count: 2 },
+        { skill: 'html', user: [ 'Sue' ], count: 1 }
+    ];
+    */
+
+    ```
+
+
+#### 6 interview questions on JavaScript
+
+1. How do you implement an extend function that takes an object &extends it with new properties and makes it work on n levels of recursion?  duplicate jquery extend
+
+2. Write an event emitter base class that allows you to add event listeners? How would you write one that is distributed?
+
+3. Functions as objects, how does it affect variable scope
+
+4. What modern frameworks and utilities excite you?
+
+5. .call() vs. .apply()  this keyword is not as predictable as any other languages that function can be applied to other objects and generally  be treated as data
+
+6. Inheritance in javascript: JavaScript inheritance module is unique
+ally as ob and 
+
+7. Favorite feature in html5 and css3
+
+    - html5 new elements, header footer nav, a bunch of new element, can use canvas, new element for audio and can embed video
+
+    - css3 media query, make website responding to different devices, css3 now has animation now, css box model,
+
+8. Describe workflow when you are creating webpage
+
+    - First: ps mockup code page html, css, sublime/vscode(code editor) after html/css, using js, 
+
+    - Put js at bottom, so the page load faster, imgs are optimized: load faster, minify css, delete useless whitespace, (website accessibility)
+
+    - After finish, make sure the code to w3 standard, check project in different browser or mobile, 
+
+9. Diff css resetting, css normalizing
+
+    - Resetting a way when have h1 or p browser do by default give a margin, padding, resetting remove everything automatically added to elements, so you can define you own style
+
+    - Normalizing, render htm element consistently in the same way in any browsers make sure they have the same style
+
+10. Diff inline block, block element
+
+    - span{display:inline;}
+
+        - inline element does not accept any width, height attribute,
+
+        - inline accept margin left/right, but no margin top or bottom, allow you to stylize paddings everywhere(four directions)
+
+    - span{display:inline-block;}
+
+        allows you to put width, height, margin ,
+
+    - span{display:block;}
+    
+        accept all, take all width, full width, other element will surround it
+
+11. explain css box model
+
+        an example:
+
+        content:
+        padding:
+        border:
+        margin: 
+
+12. What happens if two functions call each other recursively? 
+    
+    - The recursive calls stop after some time automatically
+
+13. NaN, undefined
+
+14. associative array: map, dict, key is unique 
+
+15. Which function returns a part of an array without affecting it? slice(), not join(), concat(),splice()
+
+16. navigator object represents  browser, document the whole dom, document object model
+
+17. Diff var vs let vs const
+
+    - var has been in js since the beginning; has function scope, do not respect all other blocks except function block; gets hoisted
+
+    - let was introduced recently in ES2015; has block scope, which means a variable defined will die at the end of the block is defined scope or gc
+
+    - const after the first assignment value, you can not assign a new value again. `const c; c = 1;` we get an error because the first declaration will assign "undefined" to c, but if c is an object, we can modify it like c.push(), add an element to c
+
+18. Diff triple equal sign vs ==: value and data type, only value
+
+19. NaN vs undefined
+
+when you not define a variable, an object, js puts a placeholder: undefined, typeof(undefined) -> undefined, typeof(null) -> obuject.
+
+20. this:
+
+this must belong to an object,
+
+non strict, function is window, this-->window
+strict
+
+this.bind copy code from original function, this point to first para in bind, call/apply, call immediatly
+
+
+21. NaN number, 

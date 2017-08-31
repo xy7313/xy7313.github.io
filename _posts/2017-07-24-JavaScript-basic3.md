@@ -100,6 +100,7 @@ promise.then(successCallback, failureCallback);
 //or
 doSomething().then(successCallback failureCallback);
 ```
+
 2. 
 ```
 doSomething()
@@ -122,3 +123,73 @@ myFirstPromise.then((successMessage) => {
   console.log("Yay! " + successMessage);
 }, failureCallback);
 ```
+
+
+4. promise 
+
+    ```
+    function abc(){
+    var promise = new Promise(function(resolve,reject){
+        setTimeout(function(){
+        resolve('display');
+        //reject(some http err, maybe)
+        },3000);
+    });
+    return promise;
+    }
+
+    var resp = abc();
+    //first func handles resolve, second handles reject
+    resp.then(function(data){
+    console.log("data,"+data);
+    },
+    function(err){
+    console.log(err);
+    })
+    ```
+
+    4. arguments, 
+
+```
+function(){
+    //return:["ar", "br", "cr", callee: ƒ, Symbol(Symbol.iterator): ƒ]
+    console.log(arguments);
+    //return a slice: ["ar", "br", "cr"]
+    console.log(Array.prototype.slice.call(arguments));
+}
+abc('ar',"br","cr");
+```
+
+2. we want define arr.display();
+
+    ```
+    var arr = ['ar',"br","cr"];
+    Array.prototype.display = function(){
+    //display array
+    console.log(this);
+    return this.concat(this);
+    }
+
+    arr.display();
+
+    console.log(arr.display());
+    //display arr twice in a array: ["ar", "br", "cr", "ar", "br", "cr"]
+    ```
+
+3. 
+    ```
+    function abc(){
+    var username = "xy",
+        place = "nj";
+        var display = function(){
+            return username +","+ place;
+        }
+        return display;
+    }
+
+    document.write(abc()());
+
+    //or
+    var fn = abc();
+    document.write(fn());
+    ```
