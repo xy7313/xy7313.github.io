@@ -39,7 +39,7 @@ nav:
     - '/blog/'
     - { Categories: '/blog/categories/' }
     - { Tags: '/blog/tags/' }
-  About:          
+  Demo:          
     - '/about/'
   Resume: 
     - 'http://xy7313.github.io/resume.html'
