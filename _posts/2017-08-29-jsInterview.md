@@ -15,7 +15,7 @@ tags: Front-end JavaScript Interview #post tag, separated by space
 2. bind, apply&call:
     - bind function want later call
 
-3. visibility hidden exist dom tree
+3. visibility, hidden exist dom tree/none??
 4. block none, not exist
 
 5. position: fixed, view board, screen
@@ -160,7 +160,7 @@ javascript的一些exception和error detection,
 
 #### 6 interview questions on JavaScript
 
-1. How do you implement an extend function that takes an object &extends it with new properties and makes it work on n levels of recursion?  duplicate jquery extend
+1. How do you implement an extend function that takes an object & extends it with new properties and makes it work on n levels of recursion?  duplicate jquery extend
 
 2. Write an event emitter base class that allows you to add event listeners? How would you write one that is distributed?
 
@@ -255,3 +255,161 @@ this.bind copy code from original function, this point to first para in bind, ca
 
 
 21. NaN number, 
+
+22. IIFE, all variables inside are local variables, it will not be changed by outside operations and will not mess up global variables.
+
+23. require是在React部分问的，所以答AMD是对的，因为AMD（异步加载，异步执行）是浏览器端目前的模块规范，如果是Nodejs，应该回答CommonJS（同步加载，同步执行）。如果问最新规范或者ES6推荐规范，应该回答CMD（异步加载，同步执行）
+
+24. Angular
+AngularJS is a toolset for building the framework most suited to your application development. It is fully extensible and works well with other libraries. Every feature can be modified or replaced to suit your unique development workflow and feature needs.
+
+
+
+
+
+
+
+JavaScript
+1. What is the significance of, and reason for, wrapping the entire content of a JavaScript source file in a function block?
+1. This is an increasingly common practice, many JS libraries have adopted this. This technique creates a closure
+     around the entire JS file, this helps to avoid the clashes between different JS modules and libraries.
+2. This technique allows an easily referenceable alias for a global variable. It's most common in jQuery plugins,
+     used $ to reference jQuery.
+(function($){})(jQuery)
+ 
+2: What is callbacks?
+A callback function is a function that is
+1) passed as parameters to another function, and
+2) will be invoked after some kind of events.
+A callback function is a function you provide to another piece of code, allowing it to be called by that code.
+ 
+2. What is the advantages of including 'use strict' at the beginning of JS file?
+1. Compile time check. Means when you are writing your code, you can easily correct your typos or duplicate
+declarations.
+2. Eliminates this coercion, prevent accidental globals. like a= 4
+ 
+3. What is closure in JS?
+1. A closure is an inner function that has access to the outer function even the outer function has closed.
+2. It provides different methods that could get the data from the parent object scope and return with wantted way.
+ 
+4. What are the advantages of using JavaScript?
+1. Less server interaction, improve performance
+2. Immediate feedback to visitors
+3. Increase interactivity with users
+4. Build dynamic User interfaces
+ 
+5.  Why Javascript is asynchronous.
+1. Javascript is almost all I/O non-blocking, this could be concluded as Web Api's, Calls such as Ajax, SetTimeOut,
+    Events etc.
+2. CallBack Queue: All the async callback functions or events like onclick are pushed to this queue.
+3. Event loop. There is always one function to look in the stack and queue and if the stack is empty, push the contents
+    from callback queue to the stack.
+ 
+6. What is scope chain, hoisting.
+Hoisting is Javascript's default behavior of moving the variable and function declarations to the top.
+Scope chain: When a variable is used, the program traverses the scope chain until it finds an entry for that variable. Redeclaring a variable or passing it into a function is a way of separating it from its previous existence in the scope chain.
+ 
+7. Difference between class inheritance and prototype inheritance?
+Class inheritance: instances inherit from classes, sub-class relationships. It's a kind of creating tight coupling or hierarchies.
+Prototypes:  instances inheirt directly from other objects. Instances are typically instantiated via 'Object.create()'.
+    Instances may be composed from many different objects, allowing for easy selective inheritance.
+ 
+8. Pros and cons of OOP and FP?
+OOP Pros: Modularity for easier troubleshooing, Reuse of code through inheritance, flexibility through polymorphism and
+      effective problem solving.
+         cons: Too many relationships to handle, OOP depends on shared state. Lead to undesirable behavior such as race conditions
+FP pros: Avoid any shared state or side-effects, eliminates the race conditions for the same resources.
+               Instead of concentrate on what to do, letting the underlying functions take care of the how. This leaves tremendous latitude
+      for refactoring and performance optimization.
+FP Cons: Over exploitation of FP features such as point-free style and large compositions can potentially reduce readability because the resulting code is often more abstractly specified, more terse, and less concrete.
+ 
+9. What is this, how to change the ownership of this?
+This refers to the object that owns this code.
+The value of this is determined by how a function is called.
+There are two ways to manually set this value. They are .apply() and .call() .
+.apply and .call have very small difference.
+For both of them, the first argument must be this, and the second parameter for .apply is [], but .call can accept any arguments.
+ 
+10. Bind vs Call vs Appliy?
+https://stackoverflow.com/questions/15455009/javascript-call-apply-vs-bind
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind
+Use .bind() when you want that function to later be called with a certain context, useful in events, and bind() function creates a new bound
+function(BF), that wraps the original function object.
+Use .call() or .apply() when you want to invoke the function immediately, and modify this value.
+For bind(), we use it primarily to call a funtion with this value set explicitly. Bind() allows us to easily set which specific object will be bound
+to this when a function or method is invoked.
+ 
+11. What is event bubbling?
+Event bubbling directs an event to its intended target, it works like this
+1. a button is clicked and the event is directed to the button
+2. if an event handler is set for that object, the event is triggered
+3. if no event handler is set for that object, the event bubbles up to the objects parent
+And event bubbles up from parent to parent until it is handled or it reaches the document object.
+ 
+12. Good features of ES6.
+https://webapplog.com/es6/
+Default Parameters in ES6 :  var height = height || 50;
+Template Literals in ES6: ${syntax} in back stick expression
+Multi-line Strings in ES6
+Destructuring Assignment in ES6
+Enhanced Object Literals in ES6
+Arrow Functions in ES6
+Promises in ES6
+Block-Scoped Constructs Let and Const
+Classes in ES6, has Map, Set object
+Modules in ES6: export import with modules
+ 
+13. What is controlled & uncontrolled component?
+Controlled component is a component where React is in control and is the single source of truth for the form data.
+Uncontrolled component is where your form data is handled by the DOM, instead of inside your React component.
+ 
+14. Javascript inheritance?
+Javascript has only one construct: object. Each object has a private property (prototype) which holds a link to another object called its prototype.
+And that prototype object has its own prototype, and so on until an object reached null as its prototype. Also null is the final link in the prototyp
+chain.
+ 
+15. What is promise?
+Promise is a JavaScript object used to handle asynchronized operations, and the result would be get in the future.
+To avoid loop hell, nested functions
+It has 3 states: pending, fullfilled, rejected.
+A common need is excute 2 or more asynchronous operations, where each subsequent  operation starts when the previous operation succeeds,
+with the result from previous step. We accomplish this by creating a promise chain instead of two many nested functions.
+doSomething(function(result) {
+  doSomethingElse(result, function(newResult) {
+    doThirdThing(newResult, function(finalResult) {
+      console.log('Got the final result: ' + finalResult);
+    }, failureCallback);
+  }, failureCallback);
+}, failureCallback);
+-------------------------------------------------------------------------
+doSomething().then(function(result) {
+  return doSomethingElse(result);
+})
+.then(function(newResult) {
+  return doThirdThing(newResult);
+})
+.then(function(finalResult) {
+  console.log('Got the final result: ' + finalResult);
+})
+.catch(failureCallback);
+From <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises>
+ 
+16. What is map and reduce?
+The map() method creates a new array with the results of calling a provided function on every element in the calling array.
+The reduce() method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value.
+ 
+17. What is curry and compose?
+First, currying is translating a function that takes multiple arguments into a sequence of functions, each accepting one argument.
+Notice the distinct way in which a curried function is applied, one argument at a time.
+Second, function composition is the combination of two functions into one, that when applied, returns the result of the chained functions.
+It's very common practise in React, ex. React middle ware, that uses enhancer to compose a list of middle ware, and works like a work flow to pass the states.
+The two concepts are closely related as they play well with one another.
+
+
+
+1. cookie: all browser information in client side
+local storage and session storage. session-temp； local-permanent
+
+
+
+//more code in interview-xy

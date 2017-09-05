@@ -9,13 +9,13 @@ tags: React Front-end Coursera JavaScript #post tag, seperated by space
 *Udemy course*
 
 
-### 1. why redux
+## 1. why redux
 
-1. Application state, store all components' state, children components get these states by this.props. children components can also have its state 
+1. Application state, store all components' state, children components get these states by this.props. 
 
 2. State container, store application states.
 
-3. Setup:
+3. Setup: 
 
 4. Workflow: 
 
@@ -51,9 +51,9 @@ tags: React Front-end Coursera JavaScript #post tag, seperated by space
     -- AppFile
         - node_modulus(folder)
         - public(folder)
-        - index.html
+            - index.html//include bundle.js in script tags
         - src(folder)
-        - app.js
+            - app.js
         - package.json
         - server.js
         - webpack.config.js   
@@ -94,7 +94,7 @@ tags: React Front-end Coursera JavaScript #post tag, seperated by space
         //middleware to define folder for strict files or images
         app.use(express.static('public'));
 
-        //catch the main route, send back response as index.html
+        //catch the main route, send back response in index.html
         app.get('/', function(req,res){
             res.sendFile(path.resolve(__dirname,'public','index.html'))
         });
@@ -106,9 +106,11 @@ tags: React Front-end Coursera JavaScript #post tag, seperated by space
 
 4. Config webpack, webpack.config.js
 
-    - We make our module available using module.exports
+    - We make our module available outside using module.exports
 
     - Watch: true. So that every time we save our changes in one of the files are linked with the app.js, webpack will recompile the bundle file automatically
+
+    - scan all js files, to prevent long compile time, we exclude the old js files inside node_modules
 
     ```
     var path = require('path');
@@ -125,7 +127,6 @@ tags: React Front-end Coursera JavaScript #post tag, seperated by space
         module:{
             loaders:[
                 {
-                    //scan all js files, to prevent long compile time, we exclude the old js files inside
                     test: /\.js$/,
                     exclude: /node_modules/,
                     loader: 'babel-loader',
@@ -172,3 +173,283 @@ tags: React Front-end Coursera JavaScript #post tag, seperated by space
 
     - reducer is used to evaluate what to du when they receive an action
 
+5. Try the subscribe method, our listener in app.js
+
+    ```
+    "use strict";
+    import { createStore } from "redux";
+
+    //step 3 define reducers in order to create the store
+    //create reducer by passing two arguments, set the initial value for the state
+    //set initial value to state in function()
+    //the use of reducers are evaluate what to do using switch
+    const reducer = function(state = 0, action) {
+    console.log("reducer...state: ", state, "action: ", action);
+    switch (action.type) {
+        case "INCREMENT":
+        return state + action.payload;
+        break;
+        case "decrement":
+        return state - action.payload;
+        break;
+    }
+    return state;
+    };
+
+    //step 1 create the store, pass reducers as parameter
+    //see the current of store, use the subscript method, add listener,
+    const store = createStore(reducer);
+    console.log("store: ", store);
+    store.subscribe(function() {
+    console.log("current state: " + store.getState());
+    });
+
+    //step 2 create and dispatch actions
+    //an action is made by an object that has two properties, type and payload
+    //type, key words in redux, payload, call it as you wish
+    store.dispatch({ type: "INCREMENT", payload: 1 });
+
+    store.dispatch({ type: "INCREMENT", payload: 1 });
+
+    store.dispatch({ type: "decrement", payload: 1 });
+    ```
+
+6. When we have complex payload with actions:
+
+    ```
+    "use strict";
+    import { createStore } from "redux";
+
+    //reducer
+    //when payload is an array, state = [], when payload only have one obj, state = {}
+    const reducer = function(state = [], action) {
+    switch (action.type) {
+        case "post_book":
+        return state = action.payload;
+        break;
+    }
+    return state;
+    };
+
+    //store,state
+    const store = createStore(reducer);
+    store.subscribe(function() {
+    // console.log("current state: " , store.getState().price);
+    //when the payload is an array:
+    console.log("current state: " , store.getState()[1].price);
+
+    });
+
+    //action
+    store.dispatch({
+    type:"post_book",
+    payload:[
+        {
+        id:1,
+        title:'book title',
+        description:'im a book',
+        price:10000
+        },
+        {
+        id:2,
+        title:'book title2',
+        description:'im another book',
+        price:10002
+        }
+    ]
+    });
+    ```
+
+7. CRUD operations, (create, read, update, delete)
+    ```
+    const reducer = function(state = {books:[]}, action) {
+        switch (action.type) {
+            case "post_book":
+            //we want add third book in, with out this concat, third book overwrite previous payload,
+            //never use push to concatenate array in redux, use concat method, 
+            //because, push is a mutable, in redux, should never mutate the state
+            // let books = state.books.concat(action.payload);
+            // return {books};
+            return {books:[...state.books,...action.payload]}
+            break;
+        }
+        return state;
+    };
+    ```
+destruct??
+
+8. Pure function, give the same input, always output the same output. Reducer should be pure function.
+
+9. Three principles of redux
+
+    1. Single source of truth: the state of whole app is stored in an object tree within a single store(under one object - state)
+
+    2. States are read-only: The only way to change the state is to emit an action
+
+    3. Changes are made with pure functions: reducers hae to be pure functions
+
+10. prevent mute state mutation. 
+
+    1. Operate arrays: concat(), slice() or ...spread operator, ~~push(),splice()~~
+
+    2. Operate objects: Object.Assign() or ...spread operator
+
+11. Delete
+
+    ```
+    //when all in one file
+    //action, we can write a sequence dispatches of actions
+    store.dispatch({
+        type:"post_book",
+        payload:[
+            {
+            id:1,
+            title:'book title',
+            description:'im a book',
+            price:10000
+            },
+            {
+            id:2,
+            title:'book title2',
+            description:'im another book',
+            price:10002
+            }
+        ]
+    });
+
+    //we using logger,so we can remove subscribe method
+    const store = createStore(reducers, middleware);
+    store.subscribe(function() {
+        console.log("current state: " , store.getState());
+        // console.log("current state: " , store.getState().price);
+        // when the payload is an array:
+        // console.log("current state: " , store.getState()[1].price);
+
+        });
+
+    store.dispatch({
+        type:"post_book",
+        payload:[
+            {
+            id:3,
+            title:'book title3',
+            description:'im a 3rd book',
+            price:10003
+            },
+        ]
+    });
+    store.dispatch({
+        type:"delete_book",
+        payload:{id:1}, 
+        });
+
+        store.dispatch({
+        type:"update_book",
+        payload:
+            {
+            id:2,
+            title:'book title updated'
+            }
+    });
+
+    store.dispatch({
+        type:"add_to_cart",
+        payload:[{id:1}]
+        });
+
+
+    //reducer
+    //when payload is an array, state = [], when payload only have one obj, state = {}
+    const reducer = function(state = {books:[]}, action) {
+        switch (action.type) {
+            case "post_book":
+            //we want add third book in, with out this concat, third book overwrite previous payload,
+            //never use push to concatenate array in redux, use concat method, 
+            //because, push is a mutable, in redux, should never mutate the state
+            // let books = state.books.concat(action.payload);
+            // return {books};
+            return {books:[...state.books,...action.payload]}
+            break;
+            case "delete_book":
+            const currentBookToDelete = [...state.books];
+            const indexToDelete = currentBookToDelete.findIndex(
+                // (book)=>{book.id===action.payload.id;}
+                function(book){
+                return book.id===action.payload.id;
+                }
+            )
+                    console.log("delete",action.payload.id);
+
+            return {books:[...currentBookToDelete.slice(0,indexToDelete),
+                ...currentBookToDelete.slice(indexToDelete+1)]}
+            break;
+            case "update_book":
+            const currentBookToUpdate = [...state.books];
+            const indexToUpdate = currentBookToUpdate.findIndex(
+                // (book)=>{book.id===action.payload.id;}
+                function(book){
+                return book.id===action.payload.id;
+                }
+            );
+            const bookToUpdate = {
+                ...currentBookToUpdate[indexToUpdate],
+                title:action.payload.title
+            };
+                    console.log("update",bookToUpdate);
+
+            return {books:[...currentBookToUpdate.slice(0,indexToUpdate),bookToUpdate,
+                ...currentBookToUpdate.slice(indexToUpdate+1)]}
+            break;
+
+        }
+        return state;
+    };
+    ```
+
+12. Separate actions and reducers: shopping cart, in one file, easy to understand, but code become hard to maintain, solution: separate into different files, use reducer.combine(),
+
+13. Notice: when import, {}, find the obj in {} from '', without {} means import the obj which is export in '' and name it as ..
+
+    - eg: `import  reducers  from './reducers/index';` vs. `import {addToCart} from './actions/cartActions';` name the export object in index as reducer; import addToCart, which is in cartActions.
+
+14. Middleware(optional): implement a state logger to save state and show it pretty. we using logger,so we can remove store.subscribe method
+
+    1. install: `npm i --save-dev redux-logger`
+
+    2. add 
+
+        ```
+        import { applyMiddleware, createStore } from "redux";
+        import logger from 'redux-logger';
+
+        const middleware = applyMiddleware(logger);
+        const store = createStore(reducers, middleware);
+        ```
+
+## 2. Create app
+
+1. install react : `npm i --save react`, and then`npm i --save react-dom`, and ` npm i --save react-redux`, and ` npm i --save react-router`
+
+2. render a class in html
+
+    ```
+    render(
+        <BooksList />, document.getElementById('app')
+    )
+    //in class BooksList(bookList.js):
+    class BooksList extends React.Component{
+
+        render(){
+            return (
+                <div>
+                    <h1>hi react-xy</h1>
+                </div>
+            )
+        }
+    }
+
+    ```
+
+3. redux+react: it will make the redux store available in react, we need the redux component called provider, the provider wraps the entire react app and pass the store as props to react component.
+
+4. connect react and redux: when pass mapStateToProp as an argument to connect(), component is subscribing to the store, by doing this, returns the updated states to our local component
