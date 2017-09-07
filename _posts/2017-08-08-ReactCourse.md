@@ -428,9 +428,9 @@ destruct??
 
 ## 2. Create app
 
-1. install react : `npm i --save react`, and then`npm i --save react-dom`, and ` npm i --save react-redux`, and ` npm i --save react-router`
+1. Install react : `npm i --save react`, and then`npm i --save react-dom`, and ` npm i --save react-redux`, and ` npm i --save react-router`
 
-2. render a class in html
+2. Render a class in html
 
     ```
     render(
@@ -450,6 +450,58 @@ destruct??
 
     ```
 
-3. redux+react: it will make the redux store available in react, we need the redux component called provider, the provider wraps the entire react app and pass the store as props to react component.
+3. Redux + React: it will make the redux store available in react, we need the redux component called provider, the provider wraps the entire react app and pass the store as props to react component.
 
-4. connect react and redux: when pass mapStateToProp as an argument to connect(), component is subscribing to the store, by doing this, returns the updated states to our local component
+4. Connect react and redux: when pass mapStateToProp as an argument to connect(), component is subscribing to the store, by doing this, returns the updated states to our local component
+
+5. Dispatch actions: 
+
+    1. export function in bookActions.js
+
+    2. deal with action in bookReducer.js
+
+    3. connect in component: bookList.js
+
+6. Design shopping cart
+
+    1. react-bootstrap, recommended, translate bootstrap into pure react component `$ npm install --save react-bootstrap`
+
+7. Architecture
+
+    - main.js
+
+        - menu.js
+
+        - footer.js
+
+        - booksList.js: a list of books, bookItem.js+cart.js
+
+        - booksForm.js
+
+        - about.js
+
+        - contacts.js
+
+8. Create bookItem component
+
+    - title, 
+    
+    - description
+
+    - price
+
+    - buy now btn
+
+
+
+
+
+
+
+
+
+## Note
+
+1. virtual DOM, only update the changed element.
+2. babel, jsx javascript compile engine
+3. redux framework, flux
