@@ -343,84 +343,84 @@ myFirstPromise.then((successMessage) => {
 
 #### 13. closure: inner function can access outer function variable.
 
-    ```
-    //before:
-    var fn = function(){
-      var cntr = 0;
-      var inc = function(){
-        cntr++;
-        return cntr;
-      };
-      return inc();
-    };
+```
+//before:
+var fn = function(){
+  var cntr = 0;
+  var inc = function(){
+    cntr++;
+    return cntr;
+  };
+  return inc();
+};
 
-    var resp = fn();
+var resp = fn();
 
-    document.write(fn()+'<br/ >');
-    document.write(fn()+'<br/ >');
-    document.write(fn()+'<br/ >');
-    output:1,1,1
-    ```
+document.write(resp+'<br/ >');
+document.write(resp+'<br/ >');
+document.write(resp+'<br/ >');
+//output:1,1,1
+```
 
-    ```
-    //after
-    var fn = function(){
-      var cntr = 0;
-      var inc = function(){
-        cntr++;
-        return cntr;
-      };
-      return inc;
-    };
+```
+//after
+var fn = function(){
+  var cntr = 0;
+  var inc = function(){
+    cntr++;
+    return cntr;
+  };
+  return inc;
+};
 
-    var resp = fn();
+var resp = fn();
 
-    document.write(resp()+'<br/ >');
-    document.write(resp()+'<br/ >');
-    document.write(resp()+'<br/ >');
-    //output: 1,2,3
-    ```
+document.write(resp()+'<br/ >');
+document.write(resp()+'<br/ >');
+document.write(resp()+'<br/ >');
+//output: 1,2,3
+```
 
-    ```
-    //return more than one func
-    var fn = function(){
-      var cntr = 0;
-      
-      var inc = function(){
-        cntr++;
-        return cntr;
-      };
-      
-      var reset = function(){
-        return cntr=0;
-      };
-      
-      return {
-        'inc':inc,
-        'reset':reset
-      };
-    };
+```
+//return more than one func
+var fn = function(){
+  var cntr = 0;
+  
+  var inc = function(){
+    cntr++;
+    return cntr;
+  };
+  
+  var reset = function(){
+    return cntr=0;
+  };
+  
+  return {
+    'inc':inc,
+    'reset':reset
+  };
+};
 
-    var resp = fn();
-    document.write(resp.inc()+'<br/ >');
-    document.write(resp.inc()+'<br/ >');
-    document.write(resp.inc()+'<br/ >');
-    ```
+var resp = fn();
+document.write(resp.inc()+'<br/ >');
+document.write(resp.inc()+'<br/ >');
+document.write(resp.inc()+'<br/ >');
+```
 
-    ```
-    //a funny example
-    function abc(a){
-      return function(b){
-        console.log("a+b",a+b);
-        return function(c){
-          console.log("all:",a,b,c);
-          return a+b+c;
-        }
-      }
+```
+//a funny example
+function abc(a){
+  return function(b){
+    console.log("a+b",a+b);
+    return function(c){
+      console.log("all:",a,b,c);
+      return a+b+c;
     }
+  }
+}
 
-    console.log("final:",abc(2)(3)(4));
-    ```
+console.log("final:",abc(2)(3)(4));
+```
 
 #### 14. js operate html
 
@@ -462,6 +462,12 @@ myFirstPromise.then((successMessage) => {
       };
     };
     ```
+
+22. insertAdjacentHTML:
+    - 'beforebegin': Before the element itself.
+    - 'afterbegin': Just inside the element, before its first child.
+    - 'beforeend': Just inside the element, after its last child.
+    - 'afterend': After the element itself.
 
     ```
     window.onload = function(){
