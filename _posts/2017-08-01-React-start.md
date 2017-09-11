@@ -163,13 +163,11 @@ The last line transpile jsx file to plain js file so that browser can understand
            },
            render: function(){
              return(
-               //can not use class, because class is reserve word in js
-                //children property, between the opening tag and closing tag
-                     <div className = "commentContainer">
-                       <div className = "commentText"> {this.props.children} </div>
-                       <button  onClick={this.edit} className = "button-primary">Edit</button>
-                       <button onClick={this.remove} className = "button-danger" >Remove</button>
-                     </div>
+                <div className = "commentContainer">
+                  <div className = "commentText"> {this.props.children} </div>
+                  <button  onClick={this.edit} className = "button-primary">Edit</button>
+                  <button onClick={this.remove} className = "button-danger" >Remove</button>
+                </div>
                );
            }
          });
@@ -192,42 +190,36 @@ The last line transpile jsx file to plain js file so that browser can understand
  - You don't need to explicitly say whenever your state changes to redraw a certain part of your webpage, it automatically watches for your states. Whenever their state changes, the part of web page gets redrawn automatically to fit that. 
  
    ```
-   <body>
+    <script type="text/babel">
 
-      <div id="container"></div>
+      var CheckBox = React.createClass({ 
 
-      <script type="text/babel">
+        getInitialState: function(){
+            return {checked:true}
+        },
+        handleChecked: function(){
+            this.setState({checked:!this.state.checked})
+        },
+        render: function(){
+            var msg;
+            if(this.state.checked){
+                msg='checked'
+            }else{
+                msg='unchecked'
+            }
 
-        var CheckBox = React.createClass({ 
-
-          getInitialState: function(){
-              return {checked:true}
-          },
-          handleChecked: function(){
-              this.setState({checked:!this.state.checked})
-          },
-          render: function(){
-              var msg;
-              if(this.state.checked){
-                  msg='checked'
-              }else{
-                  msg='unchecked'
-              }
-
-             return(
-                     <div className = "commentContainer">
-                       <input type = "checkbox" defaultChecked={this.state.checked} onChange = {this.handleChecked}/>
-                       <h3>checkBox is {msg}</h3> 
-                     </div>
-               );
-          }
-        });
-          ReactDOM.render(
-            <CheckBox />,document.getElementById('container')
-          );
-      </script>
-
-    </body>
+            return(
+                <div className = "commentContainer">
+                  <input type = "checkbox" defaultChecked={this.state.checked} onChange = {this.handleChecked}/>
+                  <h3>checkBox is {msg}</h3> 
+                </div>
+              );
+        }
+      });
+        ReactDOM.render(
+          <CheckBox />,document.getElementById('container')
+        );
+    </script>
    ```
 
 10. Add state to component(contd on the sticky note app)
@@ -374,6 +366,12 @@ The last line transpile jsx file to plain js file so that browser can understand
 
 
 
+## An advantage of react
+1. Never think about re-rendering!
+
+The benefit of this separation of concerns is you don't have to concern yourself with whether something has been rendered before, or whether it's the first time. Since React rendering is immutable, the first render and the 100th render of the same component are handled the exact same way. When state changes, Redux only re-renders relevant components on the page.
+
+The reason React is much more successful in this regard is because it applies changes to a 'Virtual DOM' and creates a diff of the smallest change set possible, which it then applies to the DOM. Since updating the DOM is the lengthiest part of the render process, this massive reduction in DOM updates greatly improves performance. It means you really can forget about the rendering process, which has never been true before in front-end.
 
 
 
