@@ -492,6 +492,10 @@ destruct??
 
     - buy now btn
 
+9. Create bookForm component: Add post request 
+
+10. Create cart
+
 
 
 
@@ -505,3 +509,4 @@ destruct??
 1. virtual DOM, only update the changed element.
 2. babel, jsx javascript compile engine
 3. redux framework, flux
+4. 

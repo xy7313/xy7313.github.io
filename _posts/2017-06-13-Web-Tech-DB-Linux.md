@@ -279,8 +279,8 @@ Must be comfortable working in a Linux environment (as a user, not an admin) and
 - grep pipeline regard the input 
 - auex
 - cat `cat file1 file2` prints the content of file1 followed by file2 to stdout.
-- tee/>
-- top
+- tee 
+- top  usage of your machine
 - history
 - touch 
 - tar cvf archive_name.tar dirname/
@@ -301,6 +301,25 @@ Must be comfortable working in a Linux environment (as a user, not an admin) and
 - wget uri : download uri file
 - netstat -nap|grep (searchhub端 号)【显 进程的所有信息】 
 - curl localhost：8080 显示页面内容，一般不显示头, `curl --heat url` 显示头, `curl -i url` 显示所有内容
+- pwd
+- cd
+- ls -la
+- uname -a
+- cat /etc/*rel*
+- more /etc/passwd in xy
+- id/ pid
+- env
+- env|more
+- df -h / df -h ./ df -h|awk '{print $4}'|sort -nr
+- permission, owner, member in my group, others
+- chmod 777
+- ll -a|grep -i mar/  ll -a|grep "Mar">username
+- netstat -ap | grep -i listen|more
+- hohup df -h &
+- swapon
+- free -h
+- at ^c
+ 
 
 <span id="jump5"></span>
 ## OS

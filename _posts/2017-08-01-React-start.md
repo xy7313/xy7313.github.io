@@ -5,7 +5,7 @@ categories: React #post category, seperated by space
 tags: React Front-end JavaScript #post tag, seperated by space
 ---
 
-[tutorial video](https://www.youtube.com/watch?v=-AbaV3nrw6E&list=PL6gx4Cwl9DGBuKtLgPR_zWYnrwv-JllpA&index=1)
+**[Tutorial video in Youtube by Bucky Roberts](https://www.youtube.com/watch?v=-AbaV3nrw6E&list=PL6gx4Cwl9DGBuKtLgPR_zWYnrwv-JllpA&index=1)**
 
 1. Download code:  https://github.com/buckyroberts/React-Boilerplate, My editon with notes: https://github.com/xy7313/React-Boilerplate. Final note app click [here](https://react-note-xy.herokuapp.com), application code [here](https://github.com/xy7313/ReactNoteApp)
 
@@ -57,7 +57,7 @@ The last line transpile jsx file to plain js file so that browser can understand
 </script>
 ```
 
-4. Components parts of your website, entire application is made up of components.
+4. Components: parts of your website, entire application is made up of components.
 
 5. Super component:
 ```
@@ -290,13 +290,13 @@ The last line transpile jsx file to plain js file so that browser can understand
      </body>
     ```
 
-11. refs (contd on the sticky note app)
+11. Refs (contd on the sticky note app)
  - Requirements: Save whatever the textarer looks like now.
  - First, get the text just typed
  - Second, show it 
  - eg: `var val = this.refs.newText.value;` + `<textarea ref = "newText" defaultValue = {this.props.children}></textarea>`
 
-12. rearrange multiple independent components -- set up a 'parent' container (contd on the sticky note app)
+12. Rearrange multiple independent components -- set up a 'parent' container (contd on the sticky note app)
  - In the note example, we define a borad, which is like a magener of all note components
  - unique identifier, key is the way to uniquely identify each child by giving an ID 
  ```

@@ -44,8 +44,32 @@ clousure, hide prop, do not want balance are visible
 15. 2. Javascript 各种， create object, create functions. Javascript closure (不知道)
 javascript的一些exception和error detection,
 
+object, constructor
+    ```
+    //a test 
+    var Foo = function(a) {  
+        function bar() {   
+            console.log(a); 
+        };
+        this.baz = function() {
+            console.log(a);
+        };
+    };
 
-1. ES6 Good Features
+    Foo.prototype = {  
+        biz: function() {    
+            console.log(a); 
+        }
+    };
+
+    var f = new Foo(7); 
+    //输出结果：
+    f.bar(); // result: TypeError, f.bar is not a function.  
+    f.baz(); // result: 7  
+    f.biz(); // result: ReferenceError, a: undefined
+    ```
+
+1. ES6 Good Features(more examples [here](http://xy7313.github.io/javascript/2017/07/25/JavaScript-es6/))
 
     1. Put the default values of parameters directly in the signature of functions; `var link = function(height = 50, color = 'red', url = 'http://azat.co') {...}`
 
@@ -79,83 +103,8 @@ javascript的一些exception和error detection,
 
     3. Tell me about event bubbling. How could you use it?
 
-    Coding题：
-    1. 预测结果：
-    var Foo = function(a) {  
-        function bar() {   
-            console.log(a); 
-        };
-        this.baz = function() {
-            console.log(a);
-        };
-    };
+ 
 
-    Foo.prototype = {  
-        biz: function() {    
-            console.log(a); 
-        }
-    };
-
-    var f = new Foo(7); 
-    //输出结果：
-    f.bar(); // result: TypeError, f.bar is not a function.  
-    f.baz(); // result: 7  
-    f.biz(); // result: ReferenceError, a: undefined
-
-    2.  已知endorsement array, 要求写一个function实现想要输出的结果：
-    // function input
-    var endorsements = [
-    { skill: 'javascript', user: 'Chad' },
-    { skill: 'javascript', user: 'Bill' },
-    { skill: 'javascript', user: 'Sue' },
-    { skill: 'html', user: 'Sue' },
-    { skill: 'css', user: 'Sue' },
-    { skill: 'css', user: 'Bill' }
-    ];
-    // function output
-    [
-        { skill: 'javascript', user: [ 'Chad', 'Bill', 'Sue' ], count: 3 },
-        { skill: 'css', user: [ 'Sue', 'Bill' ], count: 2 },
-        { skill: 'html', user: [ 'Sue' ], count: 1 } 
-    ];
-    solution:
-    var endorsements = [
-        { skill: 'javascript', user: 'Chad' },
-        { skill: 'javascript', user: 'Bill' },
-        { skill: 'css', user: 'Sue' },
-        { skill: 'javascript', user: 'Sue' },
-        { skill: 'css', user: 'Bill' },
-        { skill: 'html', user: 'Sue' }
-        ];
-    let after =[];
-        
-    endorsements.reduce((dict, item)=>{
-        if(!dict[item.skill]){
-        dict[item.skill] = {
-            skill:item.skill,
-            user:[item.user],
-            count:1
-            };
-            after.push(dict[item.skill]);
-        }else{
-            dict[item.skill].user.push(item.user);
-            dict[item.skill].count++;
-            
-        }
-        return dict;
-    },{});
-    after = after.sort((a, b) => b.count - a.count)
-    console.log(after);
-
-    /*result:
-    [
-        { skill: 'javascript', user: [ 'Chad', 'Bill', 'Sue' ], count: 3 },
-        { skill: 'css', user: [ 'Sue', 'Bill' ], count: 2 },
-        { skill: 'html', user: [ 'Sue' ], count: 1 }
-    ];
-    */
-
-    ```
 
 
 #### 6 interview questions on JavaScript
@@ -407,9 +356,9 @@ The two concepts are closely related as they play well with one another.
 
 
 
-1. cookie: all browser information in client side
-local storage and session storage. session-temp； local-permanent
-
+4. Local storage, Cookie session storage
+    - Cookie: all browser information in client side
+    - Local storage and session storage. session-temp； local-permanent
 
 
 //more code in interview-xy
