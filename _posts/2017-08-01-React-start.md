@@ -226,60 +226,54 @@ The last line transpile jsx file to plain js file so that browser can understand
  - Requirements: This note switches bewteen two modes/states: editing, normal. That is, whenever we click edit, the text area can be changed to a form for editing. After complish editing, the form turns to text area. 
  
     ```
-     <body>
+    <script type="text/babel">
+      var Comment = React.createClass({ 
+        getInitialState: function(){
+          return {editing: false}
+        },
+        edit: function(){
+          this.setState({editing:true});
+        },
+        save: function(){
+          this.setState({editing:false});
+        },
+        remove: function(){
+          alert("remove");
+        },
 
-       <div id="container"></div>
-
-       <script type="text/babel">
-         var Comment = React.createClass({ 
-           getInitialState: function(){
-             return {editing: false}
-           },
-           edit: function(){
-             this.setState({editing:true});
-           },
-           save: function(){
-             this.setState({editing:false});
-           },
-           remove: function(){
-             alert("remove");
-           },
-
-           renderForm: function(){
-             return(
-                     <div className = "commentContainer">
-                      <textarea defaultValue = {this.props.children}></textarea>
-                       <button onClick={this.save} className = "button-success" >Save</button>
-                     </div>
-               );
-           },
-           renderNormal: function(){
-             return(
-                     <div className = "commentContainer">
-                       <div className = "commentText"> {this.props.children} </div>
-                       <button  onClick={this.edit} className = "button-primary">Edit</button>
-                       <button onClick={this.remove} className = "button-danger" >Remove</button>
-                     </div>
-               );
-           },
-           render: function(){
-             if(this.state.editing){
-               return this.renderForm();
-             }else{
-               return this.renderNormal();
-             }
-           }
-         });
-           ReactDOM.render(
-             <div className = "board">
-               <Comment>hey-sample txt</Comment>
-               <Comment>beans</Comment>
-               <Comment>TUNA txt</Comment>
-             </div>,document.getElementById('container')
-           );
-       </script>
-
-     </body>
+        renderForm: function(){
+          return(
+              <div className = "commentContainer">
+              <textarea defaultValue = {this.props.children}></textarea>
+                <button onClick={this.save} className = "button-success" >Save</button>
+              </div>
+            );
+        },
+        renderNormal: function(){
+          return(
+              <div className = "commentContainer">
+                <div className = "commentText"> {this.props.children} </div>
+                <button  onClick={this.edit} className = "button-primary">Edit</button>
+                <button onClick={this.remove} className = "button-danger" >Remove</button>
+              </div>
+            );
+        },
+        render: function(){
+          if(this.state.editing){
+            return this.renderForm();
+          }else{
+            return this.renderNormal();
+          }
+        }
+      });
+        ReactDOM.render(
+          <div className = "board">
+            <Comment>hey-sample txt</Comment>
+            <Comment>beans</Comment>
+            <Comment>TUNA txt</Comment>
+          </div>,document.getElementById('container')
+        );
+    </script>
     ```
 
 11. Refs (contd on the sticky note app)
@@ -325,34 +319,34 @@ The last line transpile jsx file to plain js file so that browser can understand
 13. Updating state and remove notes(contd on the sticky note app)
  - clean up the render function
  - array.splice(index,num); remove num elements from index of array
- ```
- //all in var Board
- removeComment: function(i){
-     console.log("remove:"+i);
-     var arr = this.state.comments;
-     arr.splice(i,1);
-     this.setState({comments:arr});
-   },
-   updateComment: function(newText,i){
-     console.log("new text:"+newText);
-     var arr = this.state.comments;
-     arr[i] = newText;
-     this.setState({comments:arr});
-   },
-   eachComment: function(text,i){
-     // unique identifier, i: increment for the array
-     return (<Comment key = {i} index = {i}>
-               {text}
-             </Comment>);
-   },
-   render: function(){
-     return (
-        <div className = "board">
-         {this.state.comments.map(this.eachComment)}
-       </div>
-     );
-   }
- ```
+  ```
+  //all in var Board
+  removeComment: function(i){
+      console.log("remove:"+i);
+      var arr = this.state.comments;
+      arr.splice(i,1);
+      this.setState({comments:arr});
+    },
+    updateComment: function(newText,i){
+      console.log("new text:"+newText);
+      var arr = this.state.comments;
+      arr[i] = newText;
+      this.setState({comments:arr});
+    },
+    eachComment: function(text,i){
+      // unique identifier, i: increment for the array
+      return (<Comment key = {i} index = {i}>
+                {text}
+              </Comment>);
+    },
+    render: function(){
+      return (
+          <div className = "board">
+          {this.state.comments.map(this.eachComment)}
+        </div>
+      );
+    }
+  ```
   
 14. Passing functions as props (contd on the sticky note app)
  - how to call functions from entirely different components? using props
