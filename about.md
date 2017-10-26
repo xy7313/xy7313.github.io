@@ -16,4 +16,5 @@ title: Demo
 5. [Angular Product Management](https://products-management.herokuapp.com/products/GDN-0011/Leaf%20Rake)
 
 6. Practice of FreeCodeCamp
-  - [Local Weather App](https://codepen.io/xy7313/pen/BwXmKy).
+
+   - [Local Weather App](https://codepen.io/xy7313/pen/BwXmKy).
