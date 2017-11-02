@@ -235,18 +235,18 @@ tags: Front-end JavaScript #post tag, separated by space
 #### 11. Arguments
 4. arguments, 
 
-    ```
-    function(){
-        //return:["ar", "br", "cr", callee: ƒ, Symbol(Symbol.iterator): ƒ]
-        console.log(arguments);
-        //return a slice: ["ar", "br", "cr"]
-        console.log(Array.prototype.slice.call(arguments));
-    }
-    abc('ar',"br","cr");
-    ```
+```
+function(){
+    //return:["ar", "br", "cr", callee: ƒ, Symbol(Symbol.iterator): ƒ]
+    console.log(arguments);
+    //return a slice: ["ar", "br", "cr"]
+    console.log(Array.prototype.slice.call(arguments));
+}
+abc('ar',"br","cr");
+```
 
 #### 12. promise
-[doc here] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), very helpful.
+[doc here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), very helpful.
 
 1. 
 ```
