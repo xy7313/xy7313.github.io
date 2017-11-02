@@ -246,7 +246,7 @@ tags: Front-end JavaScript #post tag, separated by space
     ```
 
 #### 12. promise
-[doc here] very helpful.(https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+[doc here] (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), very helpful.
 
 1. 
 ```
