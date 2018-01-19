@@ -273,12 +273,30 @@ To write an efficient query, you need to know how much data you have to acquire 
 
 For complex queries the best way to design the query is to start by drawing a diagram of all the tables involved, showing the joins between the tables, indicating the volume of data involved, and describing the indexes that allow you to get from one table to the next. A diagram of this sort will make it much easier to understand the efficiency of the possible paths that your query could take through the tables.
 
+
+
 <span id="jump4"></span>
 ## Linux/Unix
 Must be comfortable working in a Linux environment (as a user, not an admin) and will be expected to have a good working knowledge of user­-level Linux commands, shell scripting, regular expressions, etc.
 - grep pipeline regard the input 
 - auex
-- cat `cat file1 file2` prints the content of file1 followed by file2 to stdout.
+- sed: Strean EDitor, eg: replace all occurrences of string1 in current directory with string2
+    - sed is the stream editor, in that you can use | (pipe) to send standard streams (STDIN and STDOUT specifically) through sed and alter them programmatically on the fly
+    - eg:`sed -i -e 's/few/wt/g' afile.txt` 
+        - `s/`: subsitute the found expression 'few' with 'wt' in afile.txt. 
+        - `/g` stands for "global", meaning to do this for the whole line. If you leave off the /g (with s/few/asd/, there always needs to be three slashes no matter what), only the first few will be changed to wt. 
+        - `-i` option is used to edit in place on the file hello.txt.(in-place: save back to the original file))
+        - `-e` option indicates the expression/command to run, in this case s/.
+        - Note: It's important that you use -i -e to search/replace. If you do -ie, you create a backup of every file with the letter 'e' appended.
+        - Note2: On OS X you can't use `sed -i -e `since the extension of the backup file would be set to -e, so we need to use `sed -i '' -e 's/foo/bar/' target.file`
+        ```
+        few people
+        ==>
+        wt people
+        ```  
+        - Replace any of foo, bar or baz with foobar: `sed -Ei 's/foo|bar|baz/foobar/g' file`
+- or, we just using `perl -i -pe 's/vy/xy/g' ./* `, but this one will fail for file names ending in | or space.
+- cat: `cat file1 file2` prints the content of file1 followed by file2 to stdout.
 - tee 
 - top  usage of your machine
 - history
@@ -288,9 +306,16 @@ Must be comfortable working in a Linux environment (as a user, not an admin) and
 - `find -iname "MyCProgram.c"` find file
 - `ssh -l jsmith remotehost.example.com` login to remote host
 - Remove duplicate lines using awk
+- [delete lines that sum to zero](https://unix.stackexchange.com/questions/170588/delete-lines-that-sum-to-zero?noredirect=1&lq=1): `awk '{s=0; for (i=3;i<=NF;i++) s+=$i; if (s!=0)print}' infile > outfile`
 - su do /su -username:  Switch to a different user account using su command.
 - gzip / gzip -d
-- ps `ps -aux|grep 11338(pid)`
+- ps 
+    - `ps -aux|grep 11338(pid)`:
+        - a = show processes for all users
+        - u = display the process's user/owner
+        - x = also show processes not attached to a terminal
+    - sort processes by their port numbers in increasing order (no solutions found). sort processes by current CPU/memory usage can be implemented using `ps aux  | sort -r` or -m
+    
 - src `scp root@10.134.49.138:/root/yangxiaolu/vr_validation.jar .`scp root@对 地址:/ 件路径+名字 【.(放当前 录) /search(放某  录)】
 - mkdir
 - vim
@@ -319,6 +344,14 @@ Must be comfortable working in a Linux environment (as a user, not an admin) and
 - swapon
 - free -h
 - at ^c
+- [I/O Redirection](http://gd.tuwien.ac.at/linuxcommand.org/lts0060.html)
+    - Standard Output: Most command line programs that display their results do so by sending their results to a facility called standard output. 
+        - `ls > file_list.txt`: the ls command is executed and the results are written in a file named file_list.txt. Since the output of ls was redirected to the file, no results appear on the display.
+        - `ls >> file_list.txt`:  If you want the new results to be appended to the file, use ">>" like this(use '>', we will overwrite file_list.txt)
+    - Standard Input: Many commands can accept input from a facility called standard input. To redirect standard input from a file instead of the keyboard, the "<" character is used
+        - `sort < file_list.txt`: we used the sort command to process the contents of file_list.txt. The results are output on the display since the standard output is not redirected in this example. We could redirect standard output to another file
+    - Pipes: connect multiple commands together with what are called pipes. With pipes, the standard output of one command is fed into the standard input of another.      
+         
  
 
 <span id="jump5"></span>
