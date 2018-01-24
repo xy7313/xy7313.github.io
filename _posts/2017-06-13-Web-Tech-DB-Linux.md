@@ -307,6 +307,11 @@ Must be comfortable working in a Linux environment (as a user, not an admin) and
 - `ssh -l jsmith remotehost.example.com` login to remote host
 - Remove duplicate lines using awk
 - [delete lines that sum to zero](https://unix.stackexchange.com/questions/170588/delete-lines-that-sum-to-zero?noredirect=1&lq=1): `awk '{s=0; for (i=3;i<=NF;i++) s+=$i; if (s!=0)print}' infile > outfile`
+- `$ awk '{print}' employee.txt`: By default Awk prints every line of the file
+- ` awk '/manager/ {print}' employee.txt `: Print the lines which matches with the given pattern(matches with the ‘manager’).
+- `awk '{print NR,$0}' employee.txt `: Use of NR built-in variables (Display Line Number)
+- `awk '{print $1,$NF}' employee.txt `: `$1` means the 1st col, `$NF` means the last field
+- `awk 'NF > 0' geeksforgeeks.txt`: To print any non empty line if present. See more examples at [Geeksforgeeks](https://www.geeksforgeeks.org/awk-command-unixlinux-examples/)
 - su do /su -username:  Switch to a different user account using su command.
 - gzip / gzip -d
 - ps 
