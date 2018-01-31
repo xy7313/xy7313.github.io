@@ -361,4 +361,6 @@ The two concepts are closely related as they play well with one another.
     - Local storage and session storage. session-temp； local-permanent
 
 
+#### Some great articals
+1. About perfermance: [Best Practices for Speeding Up Your Web Site](https://developer.yahoo.com/performance/rules.html)
 //more code in interview-xy
