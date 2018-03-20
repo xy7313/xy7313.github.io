@@ -14,6 +14,7 @@ index:
 ###### [5. OS](#jump5)
 ###### [6. OOD](#jump6)
 ###### [7. VCS - Git](#jump7)
+###### [8. System Design](#jump8)
 
 <span id="jump1"></span>
 
@@ -470,6 +471,19 @@ PUT and DELETE are sometimes considered specialized versions of the POST verb, a
         - used to retrieve the hops that a request takes to round trip from the server. Each intermediate proxy or gateway would inject its IP or DNS name into the Via header field. This can be used for diagnostic purposes.
     - OPTIONS: used to retrieve the server capabilities. On the client-side, it can be used to modify the request based on what the server can support.
 
+
+<span id="jump8"></span>
+## System Design
+(In the order for dummies i recommend)
+1. http://www.lecloud.net/tagged/scalability all four parts is very useful
+2. https://www.youtube.com/watch?v=-W9F__D3oY4 class 0 shared some web basics, if you curious.
+3. https://www.hiredintech.com/classrooms/system-design/lesson/55 if you have enough time, go for it
+4. https://github.com/donnemartin/system-design-primer#next-steps you can find a lot more here, pay attention to the graphs, they are great.
+#### haven't finished reading, but somebody recommend it
+5. https://www.palantir.com/2011/10/how-to-rock-a-systems-design-interview/ 
+6. http://systemdesigns.blogspot.com/2015/11/0.html
+7. https://github.com/checkcheckzz/system-design-interview
+8. https://soulmachine.gitbooks.io/system-design/content/cn/task-scheduler.html?q=
 
 
 
